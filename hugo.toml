@@ -1,0 +1,51 @@
+baseURL = "https://GCoiffier.github.io/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Guillaume Coiffier - Personal Website"
+theme = "hello-friend-ng"
+
+[params]
+disableReadOtherPosts = false
+enableSharingButtons = true
+enableGlobalLanguageMenu = true
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/GCoiffier"
+  
+  [[params.social]]
+  name = "mastodon"
+  url = "https://social.sciences.re/@GCoiffier"
+
+[params.logo]
+logoHomeLink = "/"
+
+[languages]
+  [languages.en]
+    title = "Guillaume Coiffier - Personal Website"
+    languageCode = "en-us"
+    languageName = 'English'
+    [languages.en.params.logo]
+      logoHomeLink = "/en/"
+
+    
+  [languages.fr]
+    title = "Guillaume Coiffier - Site Personnel"
+    languageCode = "fr-FR"
+    languageName = 'Français'
+    [languages.fr.params.logo]
+      logoHomeLink = "/fr/"
+
+
+[[menu.main]]
+identifier = "about_me"
+name = "About me"
+url = "/about-me"
+weight = 10
+
+[[menu.main]]
+identifier = "publis"
+name = "Publications"
+url = "google.com"
+weight = 40
+
