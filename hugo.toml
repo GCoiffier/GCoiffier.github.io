@@ -13,12 +13,23 @@ enableGlobalLanguageMenu = true
   name = "github"
   url = "https://github.com/GCoiffier"
   
-  [[params.social]]
+[[params.social]]
   name = "mastodon"
   url = "https://social.sciences.re/@GCoiffier"
 
-[params.logo]
-logoHomeLink = "/"
+[[params.social]]
+  name = "googlescholar"
+  url = "https://scholar.google.fr/citations?user=g1giJ6sAAAAJ&hl"
+
+[[params.social]]
+  name = "orcid"
+  url = "https://orcid.org/0000-0001-5324-5122"
+
+
+[params.portrait]
+  path     = "img/me.jpg"
+  alt      = "Photo of me"
+  maxWidth = "300px"
 
 [languages]
   [languages.en]
@@ -40,12 +51,12 @@ logoHomeLink = "/"
 [[menu.main]]
 identifier = "about_me"
 name = "About me"
-url = "/about-me"
+url = ""
 weight = 10
 
 [[menu.main]]
 identifier = "publis"
 name = "Publications"
-url = "google.com"
+url = "/publications"
 weight = 40
 
