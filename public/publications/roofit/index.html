@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://GCoiffier.github.io/publications/roofit/" />
+
+
+    <title>
+        
+            Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction :: Guillaume Coiffier - Personal Website 
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.b78c3be9451dc4ca61ca377f3dc2cf2e6345a44c2bae46216a322ef366daa399.css" integrity="sha256-t4w76UUdxMphyjd/PcLPLmNFpEwrrkYhajIu82bao5k=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2021-11-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-11-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="0">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction"/>
+<meta name="twitter:description" content=""/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-11-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/en/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/">About me</a></li><li><a href="/publications">Publications</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+
+<link rel="stylesheet" href="https://GCoiffier.github.io/css/publication.css">
+
+<main class="post">
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h1 class="paper-title"> Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction </h1>
+
+            <div class="paper-author">
+                Guillaume Coiffier, Justine Basselin, Nicolas Ray, Dmitry Sokolov
+			</div>
+
+            <div class="published">
+                 <a class="paper-published"> Computer-Aided Design</a> ,
+                 <a> 01 November 2021</a> 
+            </div>
+
+            
+                <figure class="paper-cover">
+                    <img src="https://GCoiffier.github.io/img/roofit_cover.jpg" alt="Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction" />
+                
+                    
+                </figure>
+            
+            
+            <div class="paper-links">
+                 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href=https://hal.science/hal-03281816> pdf </a>
+                </a> 
+                
+                
+                 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href=https://dx.doi.org/10.1016/j.cad.2021.103090> doi </a> 
+                </a>
+                
+                
+                
+                
+                
+            </div>
+			
+        
+        <hr />
+        
+        <div class="paper-abstract">
+             Surface reconstruction is an essential step in most processing pipelines involving point clouds. By constructing a surfacic or volumetric model of the cloud, it is possible to infer large-scale semantic and geometric information required for most applications in computer graphics, simulation and virtual reality. Among the different types of point cloud and the variety of possible problems, we are interested in airborne Lidar data and the problem of building reconstruction for urban planning ranging from flood and light exposure simulation to virtual touristic visits. While most existing reconstruction methods are based on characteristic features extraction in point clouds such as planes, ridges, contours and their combination into a more complex model, we instead adopt a template-based approach relying on a library of complex primitives developed in an industrial context. This is formulated as a global fitting problem between a constrained triangulated mesh (our template) and the point cloud. More precisely, we design an energy function that takes into account the distance between both objects while integrating outliers rejection directly in our numerical optimization through the use of an M-estimator. This energy function being smooth everywhere, it can be efficiently minimized by quasi-Newtonian methods like the L-BFGS algorithm. We demonstrate the reliability of our approach on a collection of diverse roof models and several publicly available Lidar datasets, as well as its robustness and limits in function of initialization, point cloud quality and presence of outliers. By only fitting onto relevant points, this method allows a precise fitting as well as a correct outlier segmentation in a unique step, providing a reasonable initialization close to the barycenter of the cloud. 
+        </div>
+        
+        
+        <hr />
+            <div class="post-content">
+                
+            </div>
+        
+        </article>
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.205d491810c28f95aa953fae884e1c27abe13fdf93ec63b882d0036b248d4a6282eb2d134e4e7225c6ad6e86db87b08488a361ca4a7383d01fcff43f3d57b9c3.js" integrity="sha512-IF1JGBDCj5WqlT&#43;uiE4cJ6vhP9&#43;T7GO4gtADaySNSmKC6y0TTk5yJcatbobbh7CEiKNhykpzg9Afz/Q/PVe5ww=="></script>
+
+
+
+    </body>
+</html>

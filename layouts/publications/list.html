@@ -1,31 +1,62 @@
 {{ define "main" }}
+
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
     {{ $paginator := .Paginate .Data.Pages }}
     
     <main class="posts">
-        <h1>{{ .Title }}</h1>
-
+        <h1 class="paper-title">{{ .Title }}</h1>
+        
         {{ if .Content }}
-            <div class="content">{{ .Content }}</div>
+        <div class="content">{{ .Content }}</div>
         {{ end }}
-
+        
         {{ range $paginator.Pages.GroupByDate "2006" }}
-            <div class="posts-group">
-                <div class="post-year">{{ .Key }}</div>
-
-                <ul class="posts-list">
+        <div class="paper-list-group">
+            <div class="paper-list-year">{{ .Key }}</div>            
+            <hr/>
+                <ul class="paper-list">
                     {{ range .Pages }}
-                        <li class="post-item">
-                            <a href="{{.Permalink}}" class="post-item-inner">
-                                <span class="post-title">{{.Title}}</span>
-                                <span class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                        {{ .Date.Format .Site.Params.dateformShort }}
-                                    {{ else }}
-                                        {{ .Date.Format "Jan 2"}}
-                                    {{ end }}
-                                </span>
+                    <li class="paper-container">    
+                        <figure class="paper-thumbnail">
+                            <a href="{{.Permalink}}">
+                                <img src="{{ .Params.thumbnail | absURL }}" />
                             </a>
-                        </li>
+                        </figure> 
+                        <div class="paper-info">
+                            <a href="{{.Permalink}}" class="paper-list-title">
+                                {{.Title}}
+                            </a>
+                            <br>
+                            <a class="paper-list-author"> {{.Params.Authors }} </a> 
+                            <!-- <br>
+                            <a class="paper-list-published"> {{.Params.published_where}}</a> -->
+                            <div class="paper-list-buttons">
+                                {{ if .Params.pdf}} 
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.pdf}}> pdf </a>
+                                </a> 
+                                {{ end }}
+                                {{ if .Params.doi}} 
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.doi}}> doi </a> 
+                                </a>
+                                {{ end }}
+                                {{ if .Params.supplemental}} 
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.supplemental}}> supplemental </a> 
+                                </a>
+                                {{ end }}
+                                {{ if .Params.code}}
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.code}}> code </a> 
+                                </a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </li>    
                     {{ end }}
                 </ul>
             </div>

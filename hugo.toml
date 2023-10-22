@@ -7,7 +7,8 @@ theme = "hello-friend-ng"
 [params]
 disableReadOtherPosts = false
 enableSharingButtons = true
-enableGlobalLanguageMenu = true
+enableGlobalLanguageMenu = false
+custom_css = ["css/publication.css"]
 
 [[params.social]]
   name = "github"
@@ -39,13 +40,12 @@ enableGlobalLanguageMenu = true
     [languages.en.params.logo]
       logoHomeLink = "/en/"
 
-    
-  [languages.fr]
-    title = "Guillaume Coiffier - Site Personnel"
-    languageCode = "fr-FR"
-    languageName = 'Français'
-    [languages.fr.params.logo]
-      logoHomeLink = "/fr/"
+  # [languages.fr]
+  #   title = "Guillaume Coiffier - Site Personnel"
+  #   languageCode = "fr-FR"
+  #   languageName = 'Français'
+  #   [languages.fr.params.logo]
+  #     logoHomeLink = "/fr/"
 
 
 [[menu.main]]
@@ -59,4 +59,3 @@ identifier = "publis"
 name = "Publications"
 url = "/publications"
 weight = 40
-

@@ -1,6 +1,10 @@
 {{ define "main" }}
-    <main class="post">
 
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
+<main class="post">
         <div class="post-info">
             {{ if .IsTranslated }}
                 {{ i18n "postAvailable" }}
@@ -12,10 +16,19 @@
         </div>
 
         <article>
-            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+            <h1 class="paper-title"> {{ .Title | markdownify }} </h1>
+
+            <div class="paper-author">
+                {{ .Params.authors}}
+			</div>
+
+            <div class="published">
+                {{ if .Params.published_where}} <a class="paper-published"> {{ .Params.published_where }}</a> {{ end }},
+                {{ if .Params.published_date}} <a> {{ .Params.published_date }}</a> {{ end }}
+            </div>
 
             {{ if .Params.Cover }}
-                <figure class="post-cover">
+                <figure class="paper-cover">
                     <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" />
                 
                     {{ if .Params.CoverCaption }}
@@ -24,20 +37,46 @@
                 </figure>
             {{ end }}
             
-			<div class="authors">
-				{{ range .Params.authors }}
-				<a> pouet </a>
-				{{ end }}
-			</div>
-			
-			{{ if .Params.abstract}}
-            <div class="post-content">
-                {{ .Params.abstract }}
+            <div class="paper-links">
+                {{ if .Params.pdf}} 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.pdf}}> pdf </a>
+                </a> 
+                {{ end }}
+                
+                {{ if .Params.doi}} 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.doi}}> doi </a> 
+                </a>
+                {{ end }}
+                
+                {{ if .Params.supplemental}} 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.supplemental}}> supplemental </a> 
+                </a>
+                {{ end }}
+                
+                {{ if .Params.code}}
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.code}}> code </a> 
+                </a>
+                {{ end }}
             </div>
-			{{ end }}
-        </article>
-
+			
+        
         <hr />
+        {{ if .Params.abstract}}
+        <div class="paper-abstract">
+            {{ .Params.abstract }}
+        </div>
+        {{ end }}
+        
+        <hr />
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        
+        </article>
 
         <div class="post-info">
             {{ partial "tags.html" .Params.tags }}

@@ -1,0 +1,150 @@
+/* SINGLE */
+
+.paper-title {
+    text-align:center;
+}
+
+.paper-author {
+    font-size: x-large;
+}
+
+.paper-published {
+    font-style: italic;
+}
+
+.paper-links {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.paper-abstract {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.paper-cover {
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1px;
+  width:100%;
+}
+
+/* LIST */
+
+.paper-list {
+  list-style-type: none;
+  width: 100%;
+}
+
+.paper-list-group {
+  margin-bottom: 80px;
+}
+
+.paper-list-year {
+  font-size: xxx-large;
+}
+
+li.paper-container {
+  clear: none; 
+  overflow: auto;
+}
+
+.paper-thumbnail {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  perspective: 1px;
+  margin-right: 20px;
+}
+
+.paper-info{
+  text-align:left;
+  padding:20px 0;
+  text-decoration:none
+}
+
+.paper-list-title {
+  color:#EDEFF2;
+  font-size:larger;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.paper-list-author {
+  font-style: italic;
+}
+
+.paper-list-published {
+  font-style: italic;
+  margin-top: 100px;
+}
+
+.paper-list-buttons {
+  margin-top: 10px;
+  display: block;
+}
+
+/* BUTTON */
+
+.paper-button {
+  appearance: none;
+  background-color: #d6d6db;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing:border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.paper-button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.paper-button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.paper-button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.paper-button:focus {
+  outline: 1px transparent;
+}
+
+.paper-button:before {
+  display: none;
+}
+
+.paper-button:-webkit-details-marker {
+  display: none;
+}
