@@ -10,7 +10,7 @@ enableSharingButtons = true
 enableGlobalLanguageMenu = false
 custom_css = ["css/publication.css"]
 
-[[params.social]]https://github.com/randlab/DiAGAN_Examples/tree/master
+[[params.social]]
   name = "github"
   url = "https://github.com/GCoiffier"
   
