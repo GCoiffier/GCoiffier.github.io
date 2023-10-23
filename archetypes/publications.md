@@ -10,8 +10,10 @@ cover = "/img/cover.jpg"
 
 abstract = "This is an abstract"
 
-doi = ""
+web = ""
 pdf = ""
+doi = ""
+poster = ""
 code = ""
 supplemental = ""
 +++

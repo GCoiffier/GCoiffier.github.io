@@ -34,6 +34,11 @@
                             <!-- <br>
                             <a class="paper-list-published"> {{.Params.published_where}}</a> -->
                             <div class="paper-list-buttons">
+                                {{ if .Params.web }}
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.web}}> web </a>
+                                </a>
+                                {{ end }}
                                 {{ if .Params.pdf}} 
                                 <a style="padding:10px;"> 
                                     <a class="paper-button" href={{.Params.pdf}}> pdf </a>
@@ -43,6 +48,11 @@
                                 <a style="padding:10px;"> 
                                     <a class="paper-button" href={{.Params.doi}}> doi </a> 
                                 </a>
+                                {{ end }}        
+                                {{ if .Params.poster}} 
+                                <a style="padding:10px;"> 
+                                    <a class="paper-button" href={{.Params.poster}}> poster </a>
+                                </a> 
                                 {{ end }}
                                 {{ if .Params.supplemental}} 
                                 <a style="padding:10px;"> 
