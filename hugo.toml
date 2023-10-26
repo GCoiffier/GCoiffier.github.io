@@ -1,14 +1,15 @@
 baseURL = "https://GCoiffier.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Guillaume Coiffier - Personal Website"
+title = "Guillaume Coiffier"
 theme = "hello-friend-ng"
 
 [params]
 disableReadOtherPosts = false
 enableSharingButtons = true
-enableGlobalLanguageMenu = false
-custom_css = ["css/publication.css"]
+enableGlobalLanguageMenu = true
+home_css = "css/home.css"
+publication_css = "css/publication.css"
 
 [[params.social]]
   name = "github"
@@ -26,7 +27,6 @@ custom_css = ["css/publication.css"]
   name = "orcid"
   url = "https://orcid.org/0000-0001-5324-5122"
 
-
 [params.portrait]
   path     = "img/me.jpg"
   alt      = "Photo of me by ©l'oeilcreatif"
@@ -37,16 +37,13 @@ custom_css = ["css/publication.css"]
     title = "Guillaume Coiffier - Personal Website"
     languageCode = "en-us"
     languageName = 'English'
-    [languages.en.params.logo]
-      logoHomeLink = "/en/"
+    weight = 2
 
-  # [languages.fr]
-  #   title = "Guillaume Coiffier - Site Personnel"
-  #   languageCode = "fr-FR"
-  #   languageName = 'Français'
-  #   [languages.fr.params.logo]
-  #     logoHomeLink = "/fr/"
-
+  [languages.fr]
+    title = "Guillaume Coiffier - Site Personnel"
+    languageCode = "fr-FR"
+    languageName = 'Français'
+    weight = 1
 
 [[menu.main]]
 identifier = "about_me"

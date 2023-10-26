@@ -3,21 +3,29 @@
 {{ end }}
 
 {{ define "main" }}
-    <main aria-role="main">
+
+<link rel="stylesheet" href="{{ .Site.Params.home_css | absURL }}">
+
+<main aria-role="main">
         <div>
-            {{ if .Site.Params.Portrait.Path }}
-               <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
-            {{ end }}
+            <div class="home-portrait">
+                <img src="{{ .Site.Params.Portrait.Path | absURL }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
+            </div>
 
-            <h1>{{ .Site.Title }}</h1>
+            <h1 class="home-title">{{ .Site.Title }}</h1>
 
-            {{ partial "subtitle.html" . }}
+            <div class="home-email">
+                guillaume dot coiffier at inria dot fr
+            </div>
 
             {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
+            <div class="home-socials">
+                {{ partial "social-icons.html" . }}
+            </div>
             {{- end }}
+
+            {{ partial "homedescription.html" . }}
+
         </div>
-    </main>
+</main>
 {{ end }}

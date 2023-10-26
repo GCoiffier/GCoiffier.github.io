@@ -1,8 +1,6 @@
 {{ define "main" }}
 
-{{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{- end }}
+<link rel="stylesheet" href="{{ .Site.Params.publication_css | absURL }}">
 
 <main class="post">
         <div class="post-info">
