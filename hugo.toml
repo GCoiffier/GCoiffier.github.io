@@ -10,6 +10,7 @@ enableSharingButtons = true
 enableGlobalLanguageMenu = true
 home_css = "css/home.css"
 publication_css = "css/publication.css"
+misc_css = "css/misc.css"
 
 [[params.social]]
   name = "github"
@@ -55,4 +56,10 @@ weight = 10
 identifier = "publis"
 name = "Publications"
 url = "/publications"
-weight = 40
+weight = 20
+
+# [[menu.main]]
+# identifier = "misc"
+# name = "Misc"
+# url = "/misc"
+# weight = 30

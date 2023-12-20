@@ -2,25 +2,24 @@
 
 <link rel="stylesheet" href="{{ .Site.Params.publication_css | absURL }}">
 
-{{ $pages := where .Site.RegularPages "Section" "publications"}}
-{{ range .Site.Home.Translations }}
-{{ $pages = $pages | lang.Merge (where .Site.RegularPages "Section" "publications") }}
+{{ $pages := where (where .Site.AllPages "Section" "misc") ".Kind" "==" "page"}}
+{{ range (where .Site.Home.Translations "Section" "misc")}}
+{{ $pages = $pages | lang.Merge .Site.RegularPages }}
 {{ end }}
 {{ $paginator := .Paginate $pages }}
 
-<main class="paper-posts">
-    <h1 class="paper-title">{{ .Title }}</h1>
+<main class="misc-posts">
+    <h1 class="misc-title">{{ .Title }}</h1>
     
     {{ if .Content }}
     <div class="content">{{ .Content }}</div>
     {{ end }}
+
+    <hr>
     
-    {{ range $paginator.Pages.GroupByDate "2006" }}
-    <div class="paper-list-group">
-        <div class="paper-list-year">{{ .Key }}</div>            
-        <hr/>
+    {{ range $paginator.Pages }}
+    <div class="paper-list-group">       
             <ul class="paper-list">
-                {{ range .Pages }}
                 <li class="paper-container">    
                     <figure class="paper-thumbnail">
                         <a href="{{.Permalink}}">
@@ -74,11 +73,9 @@
                         </div>
                     </div>
                 </li>    
-                {{ end }}
             </ul>
         </div>
     {{ end }}
-{{ partial "pagination-list.html" . }}
 </main>
 
 {{ end }}

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ .Site.Params.home_css | absURL }}">
 
 <main aria-role="main">
-        <div>
+        <div class="home">
             <div class="home-portrait">
                 <img src="{{ .Site.Params.Portrait.Path | absURL }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
             </div>
@@ -26,6 +26,14 @@
 
             {{ partial "homedescription.html" . }}
 
+        </div>
+        <hr>
+        <div class="cv">
+            {{ range (where .Site.RegularPages "Section" "homepage")}}
+            <div class="home-section-title"> {{ .Title }} </div>
+            <div class="home-section"> {{ .Content }} </div>
+            <hr style="margin-top: 80px;">
+            {{ end }}
         </div>
 </main>
 {{ end }}

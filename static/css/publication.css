@@ -1,5 +1,13 @@
 /* SINGLE */
 
+.paper-posts {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  padding: 20px;
+  margin: 20px auto;
+}
+
 .paper-title {
     text-align:center;
 }
@@ -28,6 +36,10 @@
   overflow: hidden;
   perspective: 1px;
   width:100%;
+}
+
+.paper-content {
+  text-align: justify;
 }
 
 /* LIST */
@@ -80,7 +92,6 @@ li.paper-container {
 }
 
 .paper-list-published {
-  font-style: italic;
   margin-top: 100px;
 }
 
