@@ -12,7 +12,7 @@ pdf = "https://hal.univ-lorraine.fr/tel-04346473v1"
 
 This work was supervised by [Dmitry Sokolov](https://members.loria.fr/DSokolov/) and [Etienne Corman](https://members.loria.fr/ECorman/).
 
-The defense occurred on December 06 2023 at the Université de Lorraine.
+The defense occurred on December 6th 2023 at the Université de Lorraine.
 
 ### Jury
 
