@@ -1,3 +1,3 @@
-Je suis actuellement doctorant en informatique au _[Loria](https://www.loria.fr/fr/)_, Université de Lorraine, Nancy, France.
+Je suis actuellement un post-doctorant à l'_Université Catholique de Louvain_ (UCL), Louvain-la-Neuve, Belgique. Je travaille sur le projet [X-Mesh](https://www.x-mesh.eu/) qui vise à coupler des méthodes de maillages et de simulation numérique afin de représenter et suivre des interfaces physiques lors des simulations.
 
-Mon domaine de recherche est le _traitement numérique de la géométrie_, où je m'intéresse aux calculs de paramétrisations globales de surfaces pour des applications en maillage quadrangulés et hexahédriques.
+Mon domaine de recherche est le traitement numérique de la géométrie, où je m’intéresse aux différentes représentations numériques de données géométriques (nuage de points, triangulation, quadrangulation, fonction de distance signée,...), aux algorithmes de conversion entre ces représentations (reconstruction, remaillage,...), ainsi qu'aux applications que peut avoir l'apprentissage profond dans ce domaine.
