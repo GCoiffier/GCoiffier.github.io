@@ -11,22 +11,26 @@
             <div class="home-portrait">
                 <img src="{{ .Site.Params.Portrait.Path | absURL }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
             </div>
-
-            <h1 class="home-title">{{ .Site.Title }}</h1>
-
-            <div class="home-email">
-                guillaume dot coiffier at inria dot fr
+            
+            <div class="home-me">
+                <h1 class="home-title">{{ .Site.Title }}</h1>
+                
+                <div class="home-email">
+                    guillaume dot coiffier at inria dot fr
+                </div>
+                
+                {{- with .Site.Params.social }}
+                <div class="home-socials">
+                    {{ partial "social-icons.html" . }}
+                </div>
+                {{- end }}
             </div>
-
-            {{- with .Site.Params.social }}
-            <div class="home-socials">
-                {{ partial "social-icons.html" . }}
-            </div>
-            {{- end }}
-
-            {{ partial "homedescription.html" . }}
-
         </div>
+
+        <div class="home-about"> 
+            {{ .Content }}
+        </div>
+
         <hr>
         <div class="cv">
             {{ range (where .Site.RegularPages "Section" "homepage")}}
