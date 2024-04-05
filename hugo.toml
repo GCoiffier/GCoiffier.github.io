@@ -8,6 +8,7 @@ theme = "hello-friend-ng"
 disableReadOtherPosts = false
 enableSharingButtons = true
 enableGlobalLanguageMenu = true
+enableEmoji = true
 home_css = "css/home.css"
 publication_css = "css/publication.css"
 misc_css = "css/misc.css"

@@ -5,42 +5,61 @@
     <link>https://GCoiffier.github.io/homepage/</link>
     <description>Recent content in Homepages on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="https://GCoiffier.github.io/homepage/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://GCoiffier.github.io/homepage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications</title>
       <link>https://GCoiffier.github.io/homepage/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/homepage/publications/</guid>
       <description>See the list of publications</description>
     </item>
+    
     <item>
       <title>Talks</title>
       <link>https://GCoiffier.github.io/homepage/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/homepage/talks/</guid>
-      <description>JFIG 2023 : The Method of Moving Frames for Surface Global Parametrization [Slides]&#xA;Frames 2023 : Towards Integer Grid Maps in a Single Optimization&#xA;Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D&#xA;JFIG 2020 : Ajustement de surfaces paramétriques sur nuages de points [Video]&#xA;Petroleum Geostatistics 2019 : 3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks [Abstract]</description>
+      <description>JFIG 2023 : The Method of Moving Frames for Surface Global Parametrization [Slides]
+Frames 2023 : Towards grid-preserving surface parametrization in a single optimization
+Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D
+JFIG 2020 : Ajustement de surfaces paramétriques sur nuages de points [Video]
+Petroleum Geostatistics 2019 : 3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks [Abstract]</description>
     </item>
+    
     <item>
       <title>Teaching</title>
       <link>https://GCoiffier.github.io/homepage/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/homepage/teaching/</guid>
-      <description>[2022-2023] Assistant Professor, École des Mines de Nancy&#xA;Programmation and Data Structures Operational Research Algorithms and Complexity [2020-2022] Assistant Professor, Faculty of Sciences and Technology, Nancy, France&#xA;Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France</description>
+      <description>[2022-2023] Assistant Professor, École des Mines de Nancy
+ Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Assistant Professor, Faculty of Sciences and Technology, Nancy, France
+ Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France</description>
     </item>
+    
     <item>
       <title>Education</title>
       <link>https://GCoiffier.github.io/homepage/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/homepage/education/</guid>
-      <description>[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman&#xA;[2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France&#xA;[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France&#xA;Research Internships [02/2020 - 08/2020] &amp;ndash; Automatic Architecture Search for Deep Neural Networks&#xA;With Vincent Gripon &amp;ndash; IMT Atlantique, Brest, France</description>
+      <description>[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman
+[2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France
+[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France
+Research Internships [02/2020 - 08/2020] &amp;ndash; Automatic Architecture Search for Deep Neural Networks
+With Vincent Gripon &amp;ndash; IMT Atlantique, Brest, France</description>
     </item>
+    
     <item>
       <title>Awards</title>
       <link>https://GCoiffier.github.io/homepage/awards/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/homepage/awards/</guid>
-      <description> Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price JFIG 2020 : 2nd Best Paper Award </description>
+      <description> Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price JFIG 2020 : 2nd Best Paper Award  </description>
     </item>
+    
   </channel>
 </rss>

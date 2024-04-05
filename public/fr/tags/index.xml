@@ -5,7 +5,6 @@
     <link>https://GCoiffier.github.io/fr/tags/</link>
     <description>Recent content in Tags on Guillaume Coiffier - Site Personnel</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language>
-    <atom:link href="https://GCoiffier.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-FR</language><atom:link href="https://GCoiffier.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -5,28 +5,34 @@
     <link>https://GCoiffier.github.io/fr/misc/</link>
     <description>Recent content in Les autres trucs on Guillaume Coiffier - Site Personnel</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language>
-    <atom:link href="https://GCoiffier.github.io/fr/misc/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-FR</language><atom:link href="https://GCoiffier.github.io/fr/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JFIG Concours Shadertoy 2020</title>
       <link>https://GCoiffier.github.io/fr/misc/jfig_shader/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/fr/misc/jfig_shader/</guid>
-      <description>Depuis 2020 est organisé, à l&amp;rsquo;occasion des Journées Françaises de l&amp;rsquo;Informatique Graphique, un concours shadertoy. Ceci est ma soumission de l&amp;rsquo;année 2020, ainsi que la vidéo explicative :&#xA;https://www.shadertoy.com/view/WlSBRV </description>
+      <description>Depuis 2020 est organisé, à l&amp;rsquo;occasion des Journées Françaises de l&amp;rsquo;Informatique Graphique, un concours shadertoy. Ceci est ma soumission de l&amp;rsquo;année 2020, ainsi que la vidéo explicative :
+https://www.shadertoy.com/view/WlSBRV   </description>
     </item>
+    
     <item>
       <title>Lapins, Cartes et Coutures : Conférence Fête de la science 2023</title>
       <link>https://GCoiffier.github.io/fr/misc/fds_2023_louis_vincent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/fr/misc/fds_2023_louis_vincent/</guid>
-      <description> </description>
+      <description>   </description>
     </item>
+    
     <item>
       <title>Ma thèse en 180 secondes - 2022</title>
       <link>https://GCoiffier.github.io/fr/misc/mt180/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://GCoiffier.github.io/fr/misc/mt180/</guid>
-      <description>Passage à 57:16</description>
+      <description>Passage à 58:16</description>
     </item>
+    
   </channel>
 </rss>

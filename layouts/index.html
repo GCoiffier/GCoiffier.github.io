@@ -35,7 +35,7 @@
         <div class="cv">
             {{ range (where .Site.RegularPages "Section" "homepage")}}
             <div class="home-section-title"> {{ .Title }} </div>
-            <div class="home-section"> {{ .Content }} </div>
+            <div class="home-section"> {{ .Content | emojify }} </div>
             <hr style="margin-top: 80px;">
             {{ end }}
         </div>
