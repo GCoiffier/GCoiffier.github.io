@@ -49,6 +49,7 @@
   width: 100%;
 }
 
+
 .paper-list-group {
   margin-bottom: 80px;
 }
@@ -58,8 +59,15 @@
 }
 
 li.paper-container {
+  border-radius: 10px;
   clear: none; 
   overflow: auto;
+}
+
+.paper-container:hover {
+  background-color: #46494c;
+  text-decoration: none;
+  transition-duration: 0.2s;
 }
 
 .paper-thumbnail {
@@ -72,6 +80,7 @@ li.paper-container {
   object-fit: cover;
   perspective: 1px;
   margin-right: 20px;
+  margin-left: 10px;
 }
 
 .paper-info{

@@ -15,7 +15,7 @@
     <div class="content">{{ .Content }}</div>
     {{ end }}
     
-    {{ range $paginator.Pages.GroupByDate "2006" }}
+    {{ range $paginator.Pages.GroupByDate "2006" "desc" }}
     <div class="paper-list-group">
         <div class="paper-list-year">{{ .Key }}</div>            
         <hr/>

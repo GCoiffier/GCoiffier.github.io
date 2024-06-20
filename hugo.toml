@@ -11,7 +11,7 @@ enableGlobalLanguageMenu = true
 enableEmoji = true
 home_css = "css/home.css"
 publication_css = "css/publication.css"
-misc_css = "css/misc.css"
+blog_css = "css/blog.css"
 
 [[params.social]]
   name = "github"
@@ -50,7 +50,7 @@ misc_css = "css/misc.css"
 [[menu.main]]
 identifier = "about_me"
 name = "About me"
-url = ""
+url = "/cv"
 weight = 10
 
 [[menu.main]]
@@ -60,7 +60,7 @@ url = "/publications"
 weight = 20
 
 # [[menu.main]]
-# identifier = "misc"
-# name = "Misc"
-# url = "/misc"
+# identifier = "blog"
+# name = "Blog"
+# url = "/blog"
 # weight = 30
