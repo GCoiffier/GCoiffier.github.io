@@ -1,0 +1,109 @@
+.blog-title {
+    text-align: center;
+}
+
+.blog-list {
+    list-style-type: none;
+    width: 100%;
+    display: table;
+}
+
+
+.blog-container {
+    width: 49%;
+    float: left;
+    border-radius: 10px;
+    overflow:auto;
+    margin: 5px 5px;
+}
+
+.blog-container:hover {
+    background-color: #46494c;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+
+.blog-thumbnail {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    perspective: 1px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.blog-info{
+    text-align:left;
+    padding:30px 0;
+    text-decoration:none;
+    overflow:auto;
+  }
+
+.blog-description {
+    font-size: 14px;
+    text-align: justify;
+    margin-right: 5px;
+    overflow: hidden;
+    height: 6em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+}
+
+.blog-posts {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.blog-list-title {
+    margin-top: 5px;
+    text-align:center;
+    color:#EDEFF2;
+    font-size:larger;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.blog-list-tags {
+    margin-top: 10px;
+    display: block;
+}
+
+.blog-tag {
+    appearance: none;
+    background-color: #d6d6db;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 4px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing:border-box;
+    color: #24292E;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 4px 10px;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+
+.blog-tag.video {
+    background-color: #679FE0;
+}
+
+.blog-tag.code {
+    background-color: #E9AE86;
+}
+
+.blog-tag.event {
+    background-color: #86CB92;
+}

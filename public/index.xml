@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guillaume Coiffier - Personal Website</title>
+    <link>https://GCoiffier.github.io/</link>
+    <description>Recent content on Guillaume Coiffier - Personal Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Education</title>
+      <link>https://GCoiffier.github.io/cv/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/education/</guid>
+      <description>[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France
+[2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France
+[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman</description>
+    </item>
+    
+    <item>
+      <title>Research Internships</title>
+      <link>https://GCoiffier.github.io/cv/internships/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/internships/</guid>
+      <description>[02/2020 - 08/2020] &amp;ndash; Automatic Architecture Search for Deep Neural Networks
+With Vincent Gripon &amp;ndash; IMT Atlantique, Brest, France
+[10/2019 - 02/2020] &amp;ndash; Constrained mesh fitting on 3D point clouds
+With Dmitry Sokolov and Nicolas Ray &amp;ndash; LORIA, Université de Lorraine, Nancy, France
+[01/2019 - 06/2019] &amp;ndash; Deep neural network simplification using pattern mining approaches
+With Marc Plantevit, Stefan Duffner and Céline Robardet &amp;ndash; LIRIS, INSA de Lyon, Lyon, France</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://GCoiffier.github.io/cv/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/publications/</guid>
+      <description>See the list of publications</description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://GCoiffier.github.io/cv/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/talks/</guid>
+      <description>SIGGRAPH 2024 : The Method of Moving Frames for Surface Global Parametrization
+SGP 2024 : 1-Lipschitz Neural Distance Fields
+R-GTMG 2024 : Robust Neural Distance Fields using 1-Lipschitz Neural Networks [Slides]
+:trophy: Best Presentation Award
+JFIG 2023 : The Method of Moving Frames for Surface Global Parametrization [Slides]
+Frames 2023 : Towards grid-preserving surface parametrization in a single optimization
+Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://GCoiffier.github.io/cv/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/teaching/</guid>
+      <description>[2022-2023] Assistant Professor, École des Mines de Nancy
+ Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Assistant Professor, Faculty of Sciences and Technology, Nancy, France
+ Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France</description>
+    </item>
+    
+    <item>
+      <title>Awards</title>
+      <link>https://GCoiffier.github.io/cv/awards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/awards/</guid>
+      <description> Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price  </description>
+    </item>
+    
+    <item>
+      <title>Visualizing Frame Fields</title>
+      <link>https://GCoiffier.github.io/blog/frame_fields_polyscope/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/blog/frame_fields_polyscope/</guid>
+      <description>test \(z \in \mathbb{C}\)</description>
+    </item>
+    
+    <item>
+      <title>PhD Thesis: Global Parametrization Algorithms for Quadmeshing</title>
+      <link>https://GCoiffier.github.io/publications/phd_thesis/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/phd_thesis/</guid>
+      <description>This work was supervised by Dmitry Sokolov and Etienne Corman.
+The defense occurred on December 6th 2023 at the Université de Lorraine.
+Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  Abstract Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation.</description>
+    </item>
+    
+    <item>
+      <title>The Method of Moving Frames for Surface Parametrization</title>
+      <link>https://GCoiffier.github.io/publications/moving_frames/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/moving_frames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Robust One-Class Classification with Signed Distance Function using 1-Lipschitz Neural Networks</title>
+      <link>https://GCoiffier.github.io/publications/occsdf/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/occsdf/</guid>
+      <description>See https://lipschitznetworks.net/</description>
+    </item>
+    
+    <item>
+      <title>Mouette: the python library</title>
+      <link>https://GCoiffier.github.io/blog/mouette/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/blog/mouette/</guid>
+      <description>https://github.com/GCoiffier/mouette
+https://gcoiffier.github.io/mouette/</description>
+    </item>
+    
+    <item>
+      <title>Parametric Surface Fitting on Airborne Lidar Point Clouds for Building Reconstruction</title>
+      <link>https://GCoiffier.github.io/publications/roofit/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/roofit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ThriftyNets: Convolutional Neural Networks With Tiny Parameter Budget</title>
+      <link>https://GCoiffier.github.io/publications/thriftynet/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/thriftynet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3D Geological Image Synthesis from 2D Examples using Generative Adversarial Networks</title>
+      <link>https://GCoiffier.github.io/publications/diagan/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/diagan/</guid>
+      <description>A preliminary version of this work was presented at the Petroleum Geostatistics Conference in 2019.</description>
+    </item>
+    
+  </channel>
+</rss>

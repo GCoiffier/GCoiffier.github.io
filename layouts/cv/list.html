@@ -1,0 +1,14 @@
+{{ define "main" }}
+<link rel="stylesheet" href="{{ .Site.Params.home_css | absURL }}">
+
+<main aria-role="main">
+    <div style="padding-top: 50px;"></div>
+    <div class="cv">
+        {{ range (where .Site.RegularPages "Section" "cv")}}
+        <div class="home-section-title"> {{ .Title }} </div>
+        <div class="home-section"> {{ .Content | emojify }} </div>
+        <hr style="margin-top: 80px;">
+        {{ end }}
+    </div>
+</main>
+{{ end }}

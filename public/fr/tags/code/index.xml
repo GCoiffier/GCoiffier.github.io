@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code on Guillaume Coiffier - Site Personnel</title>
+    <link>https://GCoiffier.github.io/fr/tags/code/</link>
+    <description>Recent content in code on Guillaume Coiffier - Site Personnel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/fr/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JFIG Concours Shadertoy 2020</title>
+      <link>https://GCoiffier.github.io/fr/blog/jfig_shader/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/fr/blog/jfig_shader/</guid>
+      <description>Depuis 2020 est organisé, à l&amp;rsquo;occasion des Journées Françaises de l&amp;rsquo;Informatique Graphique, un concours shadertoy. Ceci est ma soumission de l&amp;rsquo;année 2020, ainsi que la vidéo explicative :
+https://www.shadertoy.com/view/WlSBRV   </description>
+    </item>
+    
+  </channel>
+</rss>

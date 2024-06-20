@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to the fun zone on Guillaume Coiffier - Personal Website</title>
+    <link>https://GCoiffier.github.io/blog/</link>
+    <description>Recent content in Welcome to the fun zone on Guillaume Coiffier - Personal Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visualizing Frame Fields</title>
+      <link>https://GCoiffier.github.io/blog/frame_fields_polyscope/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/blog/frame_fields_polyscope/</guid>
+      <description>test \(z \in \mathbb{C}\)</description>
+    </item>
+    
+    <item>
+      <title>Mouette: the python library</title>
+      <link>https://GCoiffier.github.io/blog/mouette/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/blog/mouette/</guid>
+      <description>https://github.com/GCoiffier/mouette
+https://gcoiffier.github.io/mouette/</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,70 @@
+.home {
+    margin-top: 150px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cv {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-about {
+    text-align: left;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.home-portrait {
+    float:left;
+    width: 30%;
+}
+
+.home-me {
+    float: left;
+    margin-top: 50px;
+    width: 70%;
+    vertical-align: middle;
+}
+
+h1.home-title {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.home-email {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.home-socials{
+    margin-bottom: 50px;
+}
+
+.home-section-title{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: left;
+}
+
+.home-section {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.home-section strong {
+    color: #d9d9d9;
+}
+
+.home-section em {
+    color: #b3b3bd;
+}

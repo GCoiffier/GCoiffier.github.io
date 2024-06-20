@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="{{ .Site.Params.publication_css | absURL }}">
+<link rel="stylesheet" href="{{ .Site.Params.blog_css | absURL }}">
+
+{{ $pages := where (where .Site.AllPages "Section" "blog") ".Kind" "==" "page"}}
+{{ range (where .Site.Home.Translations "Section" "blog")}}
+{{ $pages = $pages | lang.Merge .Site.RegularPages }}
+{{ end }}
+{{ $paginator := .Paginate $pages }}
+
+<main class="blog-posts">
+    <h1 class="blog-title">{{ .Title }}</h1>
+    
+    {{ if .Content }}
+    <div class="content">{{ .Content }}</div>
+    {{ end }}
+    <hr>
+    
+    <div class="blog-list">
+    {{ range $paginator.Pages.ByDate.Reverse }}
+        <div class="blog-container">    
+            <figure class="blog-thumbnail">
+                <a href="{{.Permalink}}">
+                    <img src="{{ .Params.thumbnail | absURL }}" />
+                </a>
+            </figure> 
+            <div class="blog-info">
+                <a class="blog-list-title" href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
+                <div class="blog-description">
+                {{.Description}}
+                </div>
+                <div class="blog-list-tags">
+                {{ if in .Params.tags "code" }}
+                <a style="padding:5px;"> 
+                    <a class="blog-tag code">Code</a>
+                </a>
+                {{ end }}
+                {{ if in .Params.tags "video"}} 
+                <a style="padding:5px;"> 
+                    <a class="blog-tag video">Video</a>
+                </a> 
+                {{ end }}
+                {{ if in .Params.tags "event"}} 
+                <a style="padding:5px;"> 
+                    <a class="blog-tag event">Event</a> 
+                </a>
+                {{ end }}        
+            </div>
+            </div>    
+        </div>    
+    {{ end }}
+    </div>
+</main>
+
+{{ end }}
