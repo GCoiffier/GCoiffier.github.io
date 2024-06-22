@@ -15,3 +15,25 @@ pdf = "https://hal.science/hal-03670525"
 code = "https://github.com/GCoiffier/moving_frames_parametrization"
 supplemental = "https://homepages.loria.fr/ECorman/Papers/cartan_supp.pdf"
 +++
+
+
+## Bibtex
+
+```latex
+@article{coiffier2023movingframes,
+	author = {Coiffier, Guillaume and Corman, Etienne},
+	title = {The Method of Moving Frames for Surface Global Parametrization},
+	year = {2023},
+	issue_date = {October 2023},
+	publisher = {Association for Computing Machinery},
+	volume = {42},
+	number = {5},
+	issn = {0730-0301},
+	url = {https://doi.org/10.1145/3604282},
+	doi = {10.1145/3604282},
+	journal = {ACM Trans. Graph.},
+	month = {sep},
+	articleno = {166},
+	numpages = {18}
+}
+```
