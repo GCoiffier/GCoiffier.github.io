@@ -7,7 +7,7 @@
 <meta name="author" content="">
 <meta name="description" content="This work was supervised by Dmitry Sokolov and Etienne Corman.
 The defense occurred on December 6th 2023 at the Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  Abstract Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation." />
+Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,15 +40,15 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
 <meta itemprop="name" content="PhD Thesis: Global Parametrization Algorithms for Quadmeshing">
 <meta itemprop="description" content="This work was supervised by Dmitry Sokolov and Etienne Corman.
 The defense occurred on December 6th 2023 at the Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  Abstract Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation."><meta itemprop="datePublished" content="2023-12-06T00:00:00+00:00" />
+Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  "><meta itemprop="datePublished" content="2023-12-06T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-12-06T00:00:00+00:00" />
-<meta itemprop="wordCount" content="261">
+<meta itemprop="wordCount" content="75">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PhD Thesis: Global Parametrization Algorithms for Quadmeshing"/>
 <meta name="twitter:description" content="This work was supervised by Dmitry Sokolov and Etienne Corman.
 The defense occurred on December 6th 2023 at the Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  Abstract Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation."/>
+Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  "/>
 
 
 
@@ -96,7 +96,7 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/cv">About me</a></li><li><a href="/publications">Publications</a></li>
+    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li>
         <div class="submenu">
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">en</a>
@@ -151,6 +151,8 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
                  <a class="paper-published"> Université de Lorraine</a>,
                  <a> 6 December 2023</a> 
             </div>
+            
+            
 
             
                 <figure class="paper-cover">
@@ -176,10 +178,18 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
                 
                 
                 
+
+                
+
+                
             </div>
 			
         
         <hr />
+        
+        <div class="paper-abstract">
+            Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation. A promising approach for automatic generation of high quality quadmeshes relies on the observation that they consist in a deformation of the regular grid almost everywhere, except at a few singular vertices. Thanks to the computation of a parametrization, that is to say a flat representation, of the surface to be meshed, it is then possible to overlay a grid to be lifted back as a quad mesh. For quads to be extracted from this surface parametrization, it has to be seamless, that is to say satisfy a set of alignment constraints on its boundary and its cuts. This needs a quantization as integer values of some of its degrees of freedom. These constraints are usually enforced progressively in a well-studied pipeline of operations, consisting in the computation of a smooth frame field, defining the future singular vertices of the mesh, an integration phase from which a rotationally seamless parametrization is recovered, and a quantization step to determine the translational degrees of freedom.
+        </div>
         
         
         <hr />
@@ -197,8 +207,6 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
 <li><a href="https://members.loria.fr/ECorman/">Etienne Corman</a>, CNRS, LORIA [Advisor]</li>
 <li><a href="https://members.loria.fr/DSokolov/">Dmitry Sokolov</a>, Université de Lorraine [Advisor]</li>
 </ul>
-<h3 id="abstract">Abstract</h3>
-<p>Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation. A promising approach for automatic generation of high quality quadmeshes relies on the observation that they consist in a deformation of the regular grid almost everywhere, except at a few singular vertices. Thanks to the computation of a parametrization, that is to say a flat representation, of the surface to be meshed, it is then possible to overlay a grid to be lifted back as a quad mesh. For quads to be extracted from this surface parametrization, it has to be seamless, that is to say satisfy a set of alignment constraints on its boundary and its cuts. This needs a quantization as integer values of some of its degrees of freedom. These constraints are usually enforced progressively in a well-studied pipeline of operations, consisting in the computation of a smooth frame field, defining the future singular vertices of the mesh, an integration phase from which a rotationally seamless parametrization is recovered, and a quantization step to determine the translational degrees of freedom.</p>
 
             </div>
         

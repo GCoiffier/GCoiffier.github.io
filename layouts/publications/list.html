@@ -39,6 +39,10 @@
                         {{ if .Params.published_where}} 
                         <br> <a class="paper-list-published"> {{.Params.published_where}}</a>
                         {{ end }}
+
+                        {{if .Params.award }}
+                        <br> <a class="paper-list-award"> 🏆 {{.Params.award}} </a>
+                        {{end}}
                         
                         <div class="paper-list-buttons">
                             {{ if .Params.web }}
@@ -56,11 +60,11 @@
                                 <a class="paper-button" href={{.Params.doi}}> doi </a> 
                             </a>
                             {{ end }}        
-                            {{ if .Params.poster}} 
+                            <!-- {{ if .Params.poster}} 
                             <a style="padding:10px;"> 
                                 <a class="paper-button" href={{.Params.poster}}> poster </a>
                             </a> 
-                            {{ end }}
+                            {{ end }} -->
                             {{ if .Params.supplemental}} 
                             <a style="padding:10px;"> 
                                 <a class="paper-button" href={{.Params.supplemental}}> supplemental </a> 

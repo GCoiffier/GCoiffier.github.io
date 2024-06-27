@@ -75,7 +75,7 @@
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/</loc>
-    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -86,6 +86,22 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://GCoiffier.github.io/"
+                />
+  </url><url>
+    <loc>https://GCoiffier.github.io/publications/onelipsdf/</loc>
+    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://GCoiffier.github.io/publications/</loc>
+    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://GCoiffier.github.io/fr/publications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://GCoiffier.github.io/publications/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/tags/code/</loc>
@@ -128,19 +144,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://GCoiffier.github.io/blog/"
-                />
-  </url><url>
-    <loc>https://GCoiffier.github.io/publications/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://GCoiffier.github.io/fr/publications/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://GCoiffier.github.io/publications/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/publications/phd_thesis/</loc>

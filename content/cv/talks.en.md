@@ -7,7 +7,7 @@ weight=4
 
 [**SGP 2024**](https://sgp2024.github.io/program/#technical-papers) : _1-Lipschitz Neural Distance Fields_
 
-[**R-GTMG 2024**](https://r-gtmg2024.sciencesconf.org/) : _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_ [[Slides]](pdf/robustNDF_gtmg.pdf)  
+[**R-GTMG 2024**](https://r-gtmg2024.sciencesconf.org/) : _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_ [[Slides]](/pdf/1lip_slides.pdf)  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :trophy: *Best Presentation Award*
 
 [**JFIG 2023**](https://jfig2023.lirmm.fr/program-at-a-glance/) : _The Method of Moving Frames for Surface Global Parametrization_ [[Slides]](https://seafile.lirmm.fr/d/45c93e8b628d4386ae66/files/?p=%2FSession_5_Surfaces_et_Analyse%2F3_JFIG2023_paper_1_presentation.pdf)

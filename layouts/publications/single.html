@@ -24,6 +24,12 @@
                 {{ if .Params.published_where}} <a class="paper-published"> {{ .Params.published_where }}</a>,{{ end }}
                 {{ if .Params.published_date}} <a> {{ .Params.published_date }}</a> {{ end }}
             </div>
+            
+            {{ if .Params.award }}
+            <div class="paper-award">
+                🏆 {{ .Params.award }}
+            </div>
+            {{ end }}
 
             {{ if .Params.Cover }}
                 <figure class="paper-cover">
@@ -69,6 +75,18 @@
                 {{ if .Params.code}}
                 <a style="padding:10px;"> 
                     <a class="paper-button" href={{.Params.code}}> code </a> 
+                </a>
+                {{ end }}
+
+                {{ if .Params.slides}}
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.slides}}> slides </a> 
+                </a>
+                {{ end }}
+
+                {{ if .Params.video }}
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href={{.Params.video}}> video </a> 
                 </a>
                 {{ end }}
             </div>

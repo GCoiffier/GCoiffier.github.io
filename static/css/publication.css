@@ -20,6 +20,11 @@
     font-style: italic;
 }
 
+.paper-award {
+  margin-top: 5px;
+  color : #FBC02D;
+}
+
 .paper-links {
     text-align: center;
     padding-bottom: 15px;
@@ -39,6 +44,7 @@
 }
 
 .paper-content {
+  padding-top: 50px;
   text-align: justify;
 }
 
@@ -102,6 +108,10 @@ li.paper-container {
 
 .paper-list-published {
   margin-top: 100px;
+}
+
+.paper-list-award {
+  color : #FBC02D;
 }
 
 .paper-list-buttons {

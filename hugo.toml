@@ -48,8 +48,8 @@ blog_css = "css/blog.css"
     weight = 1
 
 [[menu.main]]
-identifier = "about_me"
-name = "About me"
+identifier = "cv"
+name = "CV"
 url = "/cv"
 weight = 10
 

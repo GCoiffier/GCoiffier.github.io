@@ -6,7 +6,7 @@
     <description>Recent content on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Education</title>
       <link>https://GCoiffier.github.io/cv/education/</link>
@@ -73,7 +73,18 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/awards/</guid>
-      <description> Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price  </description>
+      <description>  Symposium on Geometry Processing 2024: Best Paper Award for 1-Lipschitz Neural Distance Fields
+  Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price
+  </description>
+    </item>
+    
+    <item>
+      <title>1-Lipschitz Neural Distance Fields</title>
+      <link>https://GCoiffier.github.io/publications/onelipsdf/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/onelipsdf/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -93,7 +104,7 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <guid>https://GCoiffier.github.io/publications/phd_thesis/</guid>
       <description>This work was supervised by Dmitry Sokolov and Etienne Corman.
 The defense occurred on December 6th 2023 at the Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  Abstract Quadrangular meshes are a central data structure in the domain of geometry processing, with applications ranging from computer graphics to numerical simulation.</description>
+Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technion Israel Institute of Technology [Reviewer] Marco Tarini, University of Milan [Reviewer] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Advisor] Dmitry Sokolov, Université de Lorraine [Advisor]  </description>
     </item>
     
     <item>
@@ -102,7 +113,7 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/publications/moving_frames/</guid>
-      <description></description>
+      <description>Bibtex @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } </description>
     </item>
     
     <item>
