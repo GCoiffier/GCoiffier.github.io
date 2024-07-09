@@ -33,7 +33,7 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/publications/moving_frames/</guid>
-      <description>BibTeX @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } </description>
+      <description>Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout.</description>
     </item>
     
     <item>

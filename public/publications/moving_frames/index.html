@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="BibTeX @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } " />
+<meta name="description" content="Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -36,13 +36,13 @@
 
 
 <meta itemprop="name" content="The Method of Moving Frames for Surface Parametrization">
-<meta itemprop="description" content="BibTeX @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } "><meta itemprop="datePublished" content="2023-09-20T00:00:00+00:00" />
+<meta itemprop="description" content="Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout."><meta itemprop="datePublished" content="2023-09-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-09-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="63">
+<meta itemprop="wordCount" content="1444">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Method of Moving Frames for Surface Parametrization"/>
-<meta name="twitter:description" content="BibTeX @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } "/>
+<meta name="twitter:description" content="Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout."/>
 
 
 
@@ -208,7 +208,163 @@
         
         <hr />
             <div class="paper-content">
-                <h2 id="bibtex">BibTeX</h2>
+                <h2 id="quadmeshing-with-seamless-parametrization">Quadmeshing with Seamless Parametrization</h2>
+<p>Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout. For this, the parametrization needs to have very specific properties, namely be an <em>(integer) seamless parametrization</em>, or integer grid map.</p>
+
+    <img class="figure" 
+    src="/img/moving_frames/integer_grid_map.jpg" 
+     
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 1. </a> The parametrization-based approach enables the computation of a high-quality quad mesh. The idea is to compute a flat represenation (parametrization) of the object, over which a grid is overlaid before being pulled back onto the surface. However, the parametrization needs to satisfy very specific constraints for a quad layout to be extracted.</p>
+    
+
+
+<p>Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 1a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.</p>
+<p>A <em>seamless parametrization</em> is a parametrization with two additionnal properties:</p>
+<ul>
+<li>Across a discontinuity of $\phi$, two versions of the same edge should match up to some rotation of angle $k\pi/2$ and some arbitrary translation (Fig. 1b)</li>
+<li>Any boundary curve should be axis-aligned in parameter space (Fig. 1c)</li>
+</ul>
+<p>To get an <em>integer seamless parametrization</em>, we also require that the translations across discontinuities have integer coordinates (Fig. 1d).</p>
+
+    <img class="figure" 
+    src="/img/moving_frames/param_def.jpeg" 
+     
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 2. </a> The different properties of a seamless parametrization. (a) Piecewise-linear parametrization. (b) Rotationally seamless parametrization. (c) Boundary-adapted seamless parametrization. (d) Integer grid map (quantized seamless parametrization)</p>
+    
+
+
+<p>When working with a seamless parametrization, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called <em>cones</em> or <em>singularities</em>. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.</p>
+<p>Computing an integer grid map is a challenging problem to formulate and solve in one go. This is why most state of the art method split the problem into several steps:</p>
+<ol>
+<li>Compute the position of the cones;</li>
+<li>Compute a seamless map that conforms to the cone distribution;</li>
+<li>Deform this seamless map to recover an integer grid map.</li>
+</ol>
+
+    <img class="figure" 
+    src="/img/moving_frames/pipeline.jpeg" 
+     
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 3. </a> The usual parametrization-based meshing pipeline. As the problem of computing an integer grid map is too challenging to be tackled directly, state of the art method split it into several steps. While mostly successful, this approach is not without downsides.</p>
+    
+
+
+<p>Although it provides good results most of the time, splitting the problem has also brought its own issues. Firstly, as problems are solved indepently, greedy choices are often made at some step that invalidates the result of the next step. For instance, not all cone distribution can yield a valid seamless parametrization. Moreover, the distribution of cones on the surface has a clear impact on the parametrization&rsquo;s distortion and the quality of elements in the final quadmesh. Determining the cones before computing the mapping prevents a method from taking advantage of this connection. This is why we propose an optimization that <em>simultaneously computes a cone distribution and a seamless parametrization</em>, thus merging the two first steps of the pipeline in a single one.</p>
+<h2 id="the-method-of-moving-frames">The Method of Moving Frames</h2>
+<p>The method of moving frames is a general framework developed by Elie Cartan to describe local deformations in differential geometry. At its heart is a set of <em>structure equations</em> which linka local deformation field with the local frames of reference. In this work, we extend the method to singular frame fields, allowing cones to appear, and apply it to the computation of seamless parametrization of triangle meshes.</p>
+<h3 id="face-based-vs-vertex-based-discretization">Face-based vs Vertex-based Discretization</h3>
+<p>As the theory of Cartan deals with smooth manifolds, one first need to discretize it to be used on surface meshes. There are at least two ways of doing it, both with pros and cons:</p>
+<ul>
+<li>In the article, we describe a &ldquo;dual&rdquo; vertex-based approach, where frames are located at vertices of a mesh. Only this approach garantees injectivity of the final parametrization (as it prevents double coverings around vertices).</li>
+<li>Here, we present a simpler face-based approach, where frames are located inside triangles. This discretization is simpler to understand and implement, but theoretical garantees about injectivity cannot be drawn anymore.</li>
+</ul>
+<p>In <a href="https://github.com/GCoiffier/moving_frames_parametrization">our implementation</a>, both versions are available.</p>
+<h3 id="the-structure-equations">The Structure Equations</h3>
+<p>Let $M=(V,E,F)$ be a manifold surface mesh. To express Cartan&rsquo;s structure equations on $M$, we need to define the following variables:</p>
+<ul>
+<li>A Jacobian matrix $J_t$ per triangle $t$, which will represent our parametrization $\phi$ as local linear deformations</li>
+<li>A $1$-form $\omega \in \mathbb{R}$ per edge</li>
+<li>A frame per triangle $v_t \in \mathbb{C}$ that integrates the symmetries of the square to allow singularities to appear. In practice, the four directions of the frame are taken as $4$-th roots of $v_t$.</li>
+</ul>
+
+    <img class="figure" 
+    src="/img/moving_frames/notations.jpeg" 
+     
+     style="width:500px;"  
+    />
+    
+    <p class="figure-caption"  style="width:500px;" > <a style="font-weight: bold;">Figure 4. </a> Notations and variables of the parametrization problem</p>
+    
+
+
+<p>Given these variables, Cartan&rsquo;s structure equations can be expressed as follows:</p>
+<p>$$\left\{\begin{align}
+\exp(\imath \omega_{ij}) r_{ij} J_j e_{ji} &amp;= J_i e_{ij} &amp;\text{  (First Structure Equation)} \\
+\exp(\imath \omega_{ij})^4 r_{ij}^4 v_i &amp;= v_j &amp;\text{  (Frames Regularity)} \\
+\det{J} &amp;&gt; 0 &amp;\text{   (Local injectivity)}
+\end{align}\right.$$</p>
+<p>where $r_{ij}$ is the parallel transport between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).</p>
+<h3 id="cayley-transform">Cayley Transform</h3>
+<p>To avoid optimizing through the exponential in the above system of equations, we make a change of variables. Instead of working with an angle $\omega$, we work with $\hat{\omega} = \tan{\omega/2}$ and apply a <a href="https://en.wikipedia.org/wiki/Cayley_transform#Complex_homography"><em>Cayley Transform</em></a>:</p>
+<p>$$\exp \left( \imath \omega \right) = \frac{1 - \imath \hat{\omega}/2 }{1 + \imath \hat{\omega}/2}$$</p>
+<p>which means that the equations are transformed as:</p>
+<p>$$\left\{\begin{align}
+(1 - \imath \omega_{ij}/2) r_{ij} J_j e_{ji} &amp;= (1 + \imath \omega_{ij}/2) J_i e_{ij} &amp; \text{ (First Structure Equation - Cayley)} \\
+(1 - \imath \omega_{ij}/2)^4 r_{ij}^4 v_i &amp;= (1 + \imath \omega_{ij}/2)^4 v_i &amp; \text{ (Frames Regularity - Cayley)}
+\end{align}\right.$$</p>
+<p>This system of equation per pairs of triangles is then fed into a <a href="https://en.wikipedia.org/wiki/Levenberg%E2%80%93Marquardt_algorithm"><em>Levenberg-Marquardt</em></a> optimizer in order to find a solution in terms of $J,\omega$ and $v$.</p>
+<h3 id="parametrization-reconstruction">Parametrization Reconstruction</h3>
+<p>After the optimization, we have a set of linear transformations $J_t$ per triangle. If the structure equations are satisfied, the transformed triangles can be assembled back in a seamless parametrization following these steps:</p>
+<ol>
+<li>Reconstruct triangles independently by applying their matrix $J_t$ to their initial coordinates;</li>
+<li>Recover a basis $z$ per triangle from the power vector $v$ by finding the smallest symmetry rotation along a spanning tree;</li>
+<li>Rotate each triangle with relation to their respective bases;</li>
+<li>Recursively stitch adjacent triangles along the tree.</li>
+</ol>
+
+    <img class="figure" 
+    src="/img/moving_frames/reconstruct.jpeg" 
+     alt="Three meshes with displayed parametrization as a checker texture, optimized with different distortion criteria. Each mesh display a different distribution of singularities (shown as little red/blue spheres on the surface)."  
+     style="width:100%;"  
+    />
+    
+    <p style="margin-top: 20px;"> </p>
+    
+
+
+<p>By doing so, singularities naturally appear as predicted by the $1$-form $\omega$. Note that the seamless parametrization does not come from the frame field variables in a classical integration procedure, but rather from the Jacobians.</p>
+<h3 id="distortion-minimization">Distortion minimization</h3>
+<p>As Jacobian matrices of the parametrization are available during optimization, one can try to minimize some distortion criterion alongside the structure equations to bias the optimization towards certain kinds of parametrizations. Basically any smooth function of the Jacobian matrices can be optimized in this manner. Some interesting functions are:</p>
+<p>$$\begin{align}
+\mathcal{D}_{\text{Conformal}}(J) &amp;= \sum_{t \in T} \left| J_t - \begin{pmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{pmatrix} J_t \right|^2 \\ \\
+\mathcal{D}_{\text{Isometric}}(J) &amp;= \sum_{t \in T} | J_t^T J_t - I_2 |^2 \\ \\
+\mathcal{D}_{\text{Area-preserving}}(J) &amp;= \sum_{t \in T} | \det(J_t) - 1 |^2 + \varepsilon \mathcal{D}_{\text{Conformal}}(J)
+\end{align}
+$$</p>
+<p>as we can see on Fig. 6 (and on the representative image on top of the page), minimizing those different criteria lead to a different placement of cones. In other words, we were able to influence the distribution of singularity cones in order to better minimize the distortion of the parametrization.</p>
+
+    <img class="figure" 
+    src="/img/moving_frames/distortion.jpeg" 
+     alt="Three meshes with displayed parametrization as a checker texture, optimized with different distortion criteria. Each mesh display a different distribution of singularity cones (shown as little red/blue spheres on the surface)."  
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 6. </a> Optimization of the same model while minimizing different distortion criteria. The optimization yields different cone distributions whether we optimize for an angle-preserving (conformal) or area-preserving mapping.</p>
+    
+
+
+<h2 id="gallery-of-results">Gallery of results</h2>
+
+    <img class="figure" 
+    src="/img/moving_frames/mosaic2.jpeg" 
+     alt="Many surface meshes in a mosaic with computed parametrization and cones displayed as a checker texture and little red/blue spheres."  
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 7. </a> Gallery of results on a variety of models.</p>
+    
+
+
+
+    <img class="figure" 
+    src="/img/moving_frames/gallery_quads.jpg" 
+     alt="Many quadmeshes in a mosaic"  
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 8. </a> Gallery of quadmeshes obtained using our parametrization algorithm.</p>
+    
+
+
+<h2 id="bibtex">BibTeX</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex">@article{coiffier2023movingframes,
 	author = {Coiffier, Guillaume and Corman, Etienne},
 	title = {The Method of Moving Frames for Surface Global Parametrization},
