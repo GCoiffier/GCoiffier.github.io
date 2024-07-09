@@ -57,7 +57,7 @@ caption="Plot of a the gradient norm of neural distance fields on a simple 2D do
 style="width:600px;" 
 >}}
 
-Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface. If the implicit function overestimates the distance (Fig 3. center), nothing can be said about the validity of the result nor the convergence. If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.
+Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.
 
 {{< figure src="/img/1lipSDF/queries.jpeg" 
 alt="Projection query on an implicit surface"
@@ -113,7 +113,7 @@ defined as:
 $$\mathcal{L}\_{KR}(f\_\theta,y) = \int\_D -yf\_\theta(x) \\, \rho(x) dx$$
 $$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\right)\\,\rho(x)dx.$$
 
-We show in the paper that the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.
+We show in the paper that, under mild assumptions on $\rho$, the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$ up to an error that is bounded by $m$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.
 
 ## Gallery of results
 
@@ -124,6 +124,11 @@ caption="Surface extracted from the zero level set of a 1-Lipschitz network trai
 style="width:100%;" 
 >}}
 
+{{< figure src="/img/1lipSDF/elephant.jpeg" 
+num=7
+caption="Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model." 
+style="width:100%;" 
+>}}
 
 ## BibTeX
 ```bibtex

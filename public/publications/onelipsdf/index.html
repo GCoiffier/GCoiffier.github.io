@@ -38,7 +38,7 @@
 <meta itemprop="name" content="1-Lipschitz Neural Distance Fields">
 <meta itemprop="description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"><meta itemprop="datePublished" content="2024-06-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-06-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1312">
+<meta itemprop="wordCount" content="1322">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
@@ -252,7 +252,7 @@
     
 
 
-<p>Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface. If the implicit function overestimates the distance (Fig 3. center), nothing can be said about the validity of the result nor the convergence. If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.</p>
+<p>Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.</p>
 
     <img class="figure" 
     src="/img/1lipSDF/queries.jpeg" 
@@ -302,7 +302,7 @@
 <p>defined as:</p>
 <p>$$\mathcal{L}_{KR}(f_\theta,y) = \int_D -yf_\theta(x) \, \rho(x) dx$$
 $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\,\rho(x)dx.$$</p>
-<p>We show in the paper that the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.</p>
+<p>We show in the paper that, under mild assumptions on $\rho$, the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$ up to an error that is bounded by $m$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.</p>
 <h2 id="gallery-of-results">Gallery of results</h2>
 
     <img class="figure" 
@@ -312,6 +312,17 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
     />
     
     <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
+    
+
+
+
+    <img class="figure" 
+    src="/img/1lipSDF/elephant.jpeg" 
+     
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 7. </a> Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model.</p>
     
 
 
