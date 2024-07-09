@@ -84,7 +84,7 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/publications/onelipsdf/</guid>
-      <description></description>
+      <description>Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@ Jury  Xavier Goaoc, Université de Lorraine [President] Mirela Ben-Chen, Technio
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/publications/moving_frames/</guid>
-      <description>Bibtex @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } </description>
+      <description>BibTeX @article{coiffier2023movingframes, author = {Coiffier, Guillaume and Corman, Etienne}, title = {The Method of Moving Frames for Surface Global Parametrization}, year = {2023}, issue_date = {October 2023}, publisher = {Association for Computing Machinery}, volume = {42}, number = {5}, issn = {0730-0301}, url = {https://doi.org/10.1145/3604282}, doi = {10.1145/3604282}, journal = {ACM Trans. Graph.}, month = {sep}, articleno = {166}, numpages = {18} } </description>
     </item>
     
     <item>

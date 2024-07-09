@@ -1,0 +1,17 @@
+.figure {
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.figure-caption {
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-style: italic;
+    font-size: small;
+    margin-bottom: 50px;
+}

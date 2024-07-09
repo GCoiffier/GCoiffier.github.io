@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="" />
+<meta name="description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -22,7 +22,7 @@
 
 
 
-<link rel="stylesheet" href="/main.b78c3be9451dc4ca61ca377f3dc2cf2e6345a44c2bae46216a322ef366daa399.css" integrity="sha256-t4w76UUdxMphyjd/PcLPLmNFpEwrrkYhajIu82bao5k=">
+<link rel="stylesheet" href="/main.7d1b805f582bb3c46d1c96e1c8a3b521f3feb98bd039f0c42cfa9690a13e47c6.css" integrity="sha256-fRuAX1grs8RtHJbhyKO1IfP&#43;uYvQOfDELPqWkKE&#43;R8Y=">
 
 
 
@@ -36,13 +36,13 @@
 
 
 <meta itemprop="name" content="1-Lipschitz Neural Distance Fields">
-<meta itemprop="description" content=""><meta itemprop="datePublished" content="2024-06-20T00:00:00+00:00" />
+<meta itemprop="description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"><meta itemprop="datePublished" content="2024-06-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-06-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="1312">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"/>
 
 
 
@@ -120,6 +120,21 @@
                 
 
 <link rel="stylesheet" href="https://GCoiffier.github.io/css/publication.css">
+<link rel="stylesheet" href="https://GCoiffier.github.io/css/figure.css">
+
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$','$']]       
+    }
+  };
+</script>
+
+
+
 
 <main class="post">
         <div class="post-info">
@@ -147,7 +162,7 @@
 
             
                 <figure class="paper-cover">
-                    <img src="https://GCoiffier.github.io/img/1lipSDF_cover.jpeg" alt="1-Lipschitz Neural Distance Fields" />
+                    <img src="https://GCoiffier.github.io/img/1lipSDF/cover.jpeg" alt="1-Lipschitz Neural Distance Fields" />
                 
                     
                 </figure>
@@ -197,7 +212,119 @@
         
         <hr />
             <div class="paper-content">
-                
+                <h2 id="signed-distance-function">Signed Distance Function</h2>
+<p>This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the <em>Signed Distance Function</em> (SDF) of $\Omega$, which is defined as:</p>
+<p>$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$</p>
+<p>where $\partial \Omega$ is the boundary of $\Omega$.</p>
+
+    <img class="figure" 
+    src="/img/1lipSDF/implicit_def.jpeg" 
+     alt="Definition of an implicit surface"  
+     style="width:600px;"  
+    />
+    
+    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 1. </a> An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface.</p>
+    
+
+
+<p>An important property of SDFs is that they satisfy an <em>Eikonal equation</em>:</p>
+<p>$$\left\{ \begin{array}{lll} ||\nabla S(x)|| &amp;= 1 \quad &amp;\forall x \in \mathbb{R}^n \\ S(x) &amp;= 0 \quad &amp;\forall x \in \partial \Omega \\ \nabla S(x) &amp;= n(x) \quad &amp;\forall x \in \partial \Omega \end{array} \right.$$</p>
+<p>Having access to the SDF of an object allows for easy geometrical queries and efficient rendering via <a href="https://iquilezles.org/articles/raymarchingdf/">ray marching</a>. For example, the projection onto the surface of $\Omega$ can be defined as:</p>
+<p>$$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$</p>
+<h2 id="neural-distance-fields">Neural Distance Fields</h2>
+<p>The problem with SDFs is that they are difficult to compute. For simple shapes, they may be computed in closed form (see <a href="https://iquilezles.org/articles/distfunctions/">this webpage</a> by Inigo Quilez that lists many of them), but they quickly become intractable when the objects grows in complexity. This is why there is an ongoing effort to compute good approximations of SDFs. In particular, the recent domain of <em>neural distance fields</em> proposes to use deep learning to solve this problem. The idea here is to define a neural network $f_\theta : \mathbb{R}^n \rightarrow \mathbb{R}$ that will approximate the SDF. However, this approach has two critical limitations:</p>
+<ol>
+<li>
+<p>The neural function is usually trained in a regression setting by fitting the correct values on a dataset of points where the true distance function is known. This implies that the input geometry needs to already be known very precisely for such a dataset to be extracted. In other words, one usually need to know the SDF to compute an approximation of the SDF&hellip;</p>
+</li>
+<li>
+<p>The final neural network is an approximation of the SDF, which means that it does not exactly satisfy the Eikonal equation. In practice, this means that the norm of its gradient can be a little less or a little more than 1, even with regularization in the loss function:</p>
+</li>
+</ol>
+
+    <img class="figure" 
+    src="/img/1lipSDF/grad.jpeg" 
+     
+     style="width:600px;"  
+    />
+    
+    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 2. </a> Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound.</p>
+    
+
+
+<p>Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface. If the implicit function overestimates the distance (Fig 3. center), nothing can be said about the validity of the result nor the convergence. If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.</p>
+
+    <img class="figure" 
+    src="/img/1lipSDF/queries.jpeg" 
+     alt="Projection query on an implicit surface"  
+     style="width:600px;"  
+    />
+    
+    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 3. </a> Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query.</p>
+    
+
+
+<p>In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be <strong>1-Lipschitz</strong>, that is:</p>
+<p>$$||f_\theta(a) - f_\theta(b)|| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$</p>
+<h2 id="our-method">Our method</h2>
+<p>Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied <em>by construction</em>. On top of this architecture, we minimize a loss which does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:</p>
+
+    <img class="figure" 
+    src="/img/1lipSDF/botijo_pipeline.jpeg" 
+     alt="Overview of our method"  
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 4. </a> Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object.</p>
+    
+
+
+<h4 id="step-1-sampling">Step 1: Sampling</h4>
+<p>Our method takes as input any oriented geometry $\Omega$. This includes point cloud with normals, triangle soups and surface meshes. The first step is to extract a dataset from the input geometry. We define a domain $D \subset \mathbb{R}^n$ as a loose axis-aligned bounding box of $\Omega$ and sample it uniformly.</p>
+<h4 id="step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</h4>
+<p>The second step is to compute labels $y(x) \in \{-1,1\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
+
+    <img class="figure" 
+    src="/img/1lipSDF/gargoyle.jpeg" 
+     alt="Field of generalized winding number computed on two representations of a gargoyle model. Top row: clean manifold surface mesh. Bottom row: point cloud."  
+     style="width:600px;"  
+    />
+    
+    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 5. </a> The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition.</p>
+    
+
+
+<p>Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.</p>
+<h4 id="step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</h4>
+<p>Once the labels $y$ have been computed, we define some $1$-Lipschitz architecture to approximate the SDF. $1$-Lipschitz neural networks have been extensively studied in theoretical deep learning for their robustness to adversarial attacks and overfitting. Several architectures that are Lipschitz by construction were designed throughout the years. We use the architecture proposed by <a href="https://arxiv.org/abs/2303.03169">Araujo et al.</a>, although any Lipschitz architecture can be used.</p>
+<p>On top of the Lipschitz network, we propose to minimize the <em>hinge-Kantorovitch-Rubinstein</em> (hKR) loss. This binary classification loss was first proposed by <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html">Serrurier et al.</a>. For binary labels $y \in \{-1,1\}$, hyperparameters $\lambda&gt;0$ and $m&gt;0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:</p>
+<p>$$\mathcal{L}_{hKR} = \mathcal{L}_{KR} + \lambda \mathcal{L}_{hinge}^m$$</p>
+<p>defined as:</p>
+<p>$$\mathcal{L}_{KR}(f_\theta,y) = \int_D -yf_\theta(x) \, \rho(x) dx$$
+$$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\,\rho(x)dx.$$</p>
+<p>We show in the paper that the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.</p>
+<h2 id="gallery-of-results">Gallery of results</h2>
+
+    <img class="figure" 
+    src="/img/1lipSDF/gallery.jpeg" 
+     alt="Various geometrical objects reconstructed from the zero level set of a trained Lipschitz network"  
+     style="width:100%;"  
+    />
+    
+    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
+    
+
+
+<h2 id="bibtex">BibTeX</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bibtex" data-lang="bibtex"><span style="color:#a6e22e">@inproceedings</span>{coiffier20241,
+  <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">{1-Lipschitz Neural Distance Fields}</span>,
+  <span style="color:#a6e22e">author</span>=<span style="color:#e6db74">{Coiffier, Guillaume and B{\&#39;e}thune, Louis}</span>,
+  <span style="color:#a6e22e">booktitle</span>=<span style="color:#e6db74">{COMPUTER GRAPHICS forum}</span>,
+  <span style="color:#a6e22e">volume</span>=<span style="color:#e6db74">{43}</span>,
+  <span style="color:#a6e22e">number</span>=<span style="color:#e6db74">{5}</span>,
+  <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
+}
+</code></pre></div>
             </div>
         
         </article>
@@ -223,7 +350,7 @@
 
 
 
-<script type="text/javascript" src="/bundle.min.644292943ae47eef02fcd64b11757aeb8caeeaebf473a823b62099edccac808e8d82689359f285e5d95994e5ad5ae3b9c1ccc281eb1828e67d0ba6630f95b832.js" integrity="sha512-ZEKSlDrkfu8C/NZLEXV664yu6uv0c6gjtiCZ7cysgI6NgmiTWfKF5dlZlOWtWuO5wczCgesYKOZ9C6ZjD5W4Mg=="></script>
+<script type="text/javascript" src="/bundle.min.b66ca78575c5a257714b9b805cec38c36e873ee6a439d4fafcfcdbdcef6c61f850c1763deac2a3b1612865d9457c06812251cbd66b803603ec4a126d20bf0c25.js" integrity="sha512-tmynhXXFoldxS5uAXOw4w26HPuakOdT6/Pzb3O9sYfhQwXY96sKjsWEoZdlFfAaBIlHL1muANgPsShJtIL8MJQ=="></script>
 
 
 

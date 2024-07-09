@@ -1,6 +1,11 @@
 {{ define "main" }}
 
 <link rel="stylesheet" href="{{ .Site.Params.publication_css | absURL }}">
+<link rel="stylesheet" href="{{ .Site.Params.figure_css | absURL }}">
+
+{{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+{{ end }}
 
 <main class="post">
         <div class="post-info">

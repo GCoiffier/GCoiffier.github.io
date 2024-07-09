@@ -12,6 +12,18 @@ enableEmoji = true
 home_css = "css/home.css"
 publication_css = "css/publication.css"
 blog_css = "css/blog.css"
+figure_css = "css/figure.css"
+math = false # enable math by adding math=true in frontmatter
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)', ['$', '$']]]
+
 
 [[params.social]]
   name = "github"
