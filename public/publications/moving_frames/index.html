@@ -207,8 +207,28 @@
         
         
         <hr />
-            <div class="paper-content">
-                <h2 id="quadmeshing-with-seamless-parametrization">Quadmeshing with Seamless Parametrization</h2>
+            <div class="paper-toc">
+                <nav id="TableOfContents">
+  <ol>
+    <li><a href="#quadmeshing-with-seamless-parametrization">Quadmeshing with Seamless Parametrization</a></li>
+    <li><a href="#the-method-of-moving-frames">The Method of Moving Frames</a>
+      <ol>
+        <li><a href="#face-based-vs-vertex-based-discretization">Face-based vs Vertex-based Discretization</a></li>
+        <li><a href="#the-structure-equations">The Structure Equations</a></li>
+        <li><a href="#cayley-transform">Cayley Transform</a></li>
+        <li><a href="#parametrization-reconstruction">Parametrization Reconstruction</a></li>
+        <li><a href="#distortion-minimization">Distortion minimization</a></li>
+      </ol>
+    </li>
+    <li><a href="#gallery-of-results">Gallery of results</a></li>
+    <li><a href="#bibtex">BibTeX</a></li>
+  </ol>
+</nav>
+            </div>
+        <hr />
+            
+        <div class="paper-content">
+            <h2 id="quadmeshing-with-seamless-parametrization">Quadmeshing with Seamless Parametrization</h2>
 <p>Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout. For this, the parametrization needs to have very specific properties, namely be an <em>(integer) seamless parametrization</em>, or integer grid map.</p>
 
     <img class="figure" 
@@ -382,7 +402,7 @@ $$</p>
 	numpages = {18}
 }
 </code></pre></div>
-            </div>
+        </div>
         
         </article>
 

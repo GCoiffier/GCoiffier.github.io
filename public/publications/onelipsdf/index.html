@@ -211,8 +211,27 @@
         
         
         <hr />
-            <div class="paper-content">
-                <h2 id="signed-distance-function">Signed Distance Function</h2>
+            <div class="paper-toc">
+                <nav id="TableOfContents">
+  <ol>
+    <li><a href="#signed-distance-function">Signed Distance Function</a></li>
+    <li><a href="#neural-distance-fields">Neural Distance Fields</a></li>
+    <li><a href="#our-method">Our method</a>
+      <ol>
+        <li><a href="#step-1-sampling">Step 1: Sampling</a></li>
+        <li><a href="#step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</a></li>
+        <li><a href="#step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</a></li>
+      </ol>
+    </li>
+    <li><a href="#gallery-of-results">Gallery of results</a></li>
+    <li><a href="#bibtex">BibTeX</a></li>
+  </ol>
+</nav>
+            </div>
+        <hr />
+            
+        <div class="paper-content">
+            <h2 id="signed-distance-function">Signed Distance Function</h2>
 <p>This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the <em>Signed Distance Function</em> (SDF) of $\Omega$, which is defined as:</p>
 <p>$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$</p>
 <p>where $\partial \Omega$ is the boundary of $\Omega$.</p>
@@ -279,9 +298,9 @@
     
 
 
-<h4 id="step-1-sampling">Step 1: Sampling</h4>
+<h3 id="step-1-sampling">Step 1: Sampling</h3>
 <p>Our method takes as input any oriented geometry $\Omega$. This includes point cloud with normals, triangle soups and surface meshes. The first step is to extract a dataset from the input geometry. We define a domain $D \subset \mathbb{R}^n$ as a loose axis-aligned bounding box of $\Omega$ and sample it uniformly.</p>
-<h4 id="step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</h4>
+<h3 id="step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</h3>
 <p>The second step is to compute labels $y(x) \in \{-1,1\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
 
     <img class="figure" 
@@ -295,7 +314,7 @@
 
 
 <p>Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.</p>
-<h4 id="step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</h4>
+<h3 id="step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</h3>
 <p>Once the labels $y$ have been computed, we define some $1$-Lipschitz architecture to approximate the SDF. $1$-Lipschitz neural networks have been extensively studied in theoretical deep learning for their robustness to adversarial attacks and overfitting. Several architectures that are Lipschitz by construction were designed throughout the years. We use the architecture proposed by <a href="https://arxiv.org/abs/2303.03169">Araujo et al.</a>, although any Lipschitz architecture can be used.</p>
 <p>On top of the Lipschitz network, we propose to minimize the <em>hinge-Kantorovitch-Rubinstein</em> (hKR) loss. This binary classification loss was first proposed by <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html">Serrurier et al.</a>. For binary labels $y \in \{-1,1\}$, hyperparameters $\lambda&gt;0$ and $m&gt;0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:</p>
 <p>$$\mathcal{L}_{hKR} = \mathcal{L}_{KR} + \lambda \mathcal{L}_{hinge}^m$$</p>
@@ -336,7 +355,7 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
   <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
 }
 </code></pre></div>
-            </div>
+        </div>
         
         </article>
 

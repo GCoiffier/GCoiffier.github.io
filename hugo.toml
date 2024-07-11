@@ -23,6 +23,10 @@ math = false # enable math by adding math=true in frontmatter
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)', ['$', '$']]]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = true
+    startLevel = 2
 
 
 [[params.social]]

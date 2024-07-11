@@ -83,11 +83,11 @@ style="width:100%;"
 >}}
 
 
-#### Step 1: Sampling
+### Step 1: Sampling
 
 Our method takes as input any oriented geometry $\Omega$. This includes point cloud with normals, triangle soups and surface meshes. The first step is to extract a dataset from the input geometry. We define a domain $D \subset \mathbb{R}^n$ as a loose axis-aligned bounding box of $\Omega$ and sample it uniformly.
 
-#### Step 2: Separating the interior and the exterior
+### Step 2: Separating the interior and the exterior
 
 The second step is to compute labels $y(x) \in \\{-1,1\\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the _Generalized Winding Number_ as proposed by [Baril et al.](https://www.dgp.toronto.edu/projects/fast-winding-numbers/) and implemented in [libigl](https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes). Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface "winds around" $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.
 
@@ -100,7 +100,7 @@ style="width:600px;"
 
 Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.
 
-#### Step 3: Training a 1-Lipschitz network
+### Step 3: Training a 1-Lipschitz network
 
 Once the labels $y$ have been computed, we define some $1$-Lipschitz architecture to approximate the SDF. $1$-Lipschitz neural networks have been extensively studied in theoretical deep learning for their robustness to adversarial attacks and overfitting. Several architectures that are Lipschitz by construction were designed throughout the years. We use the architecture proposed by [Araujo et al.](https://arxiv.org/abs/2303.03169), although any Lipschitz architecture can be used.
 

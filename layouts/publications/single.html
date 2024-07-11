@@ -105,9 +105,14 @@
         {{ end }}
         
         <hr />
-            <div class="paper-content">
-                {{ .Content }}
+            <div class="paper-toc">
+                {{ .TableOfContents }}
             </div>
+        <hr />
+            
+        <div class="paper-content">
+            {{ .Content }}
+        </div>
         
         </article>
 
