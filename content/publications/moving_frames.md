@@ -29,13 +29,13 @@ caption="The parametrization-based approach enables the computation of a high-qu
 style="width:100%;" 
 >}}
 
-Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 1a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.
+Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 2a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.
 
 A _seamless parametrization_ is a parametrization with two additionnal properties:
-- Across a discontinuity of $\phi$, two versions of the same edge should match up to some rotation of angle $k\pi/2$ and some arbitrary translation (Fig. 1b)
-- Any boundary curve should be axis-aligned in parameter space (Fig. 1c)
+- Across a discontinuity of $\phi$, two versions of the same edge should match up to some rotation of angle $k\pi/2$ and some arbitrary translation (Fig. 2b)
+- Any boundary curve should be axis-aligned in parameter space (Fig. 2c)
 
-To get an _integer seamless parametrization_, we also require that the translations across discontinuities have integer coordinates (Fig. 1d).
+To get an _integer grid map_, that is a seamless parametrization aligned with the integer grid, we require that the translations across discontinuities have integer coordinates (Fig. 2d).
 
 {{< figure src="/img/moving_frames/param_def.jpeg" 
 alt="" 
@@ -44,7 +44,7 @@ caption="The different properties of a seamless parametrization. (a) Piecewise-l
 style="width:100%;" 
 >}}
 
-When working with a seamless parametrization, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called _cones_ or _singularities_. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.
+When working with a seamless map, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called _cones_ or _singularities_. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.
 
 Computing an integer grid map is a challenging problem to formulate and solve in one go. This is why most state of the art method split the problem into several steps:
 1) Compute the position of the cones;
@@ -75,11 +75,11 @@ In [our implementation](https://github.com/GCoiffier/moving_frames_parametrizati
 
 ### The Structure Equations
 
-Let $M=(V,E,F)$ be a manifold surface mesh. To express Cartan's structure equations on $M$, we need to define the following variables:
+Let $M=(V,E,T)$ be a manifold triangle mesh. To express Cartan's structure equations on $M$, we need to define the following variables:
 
-- A Jacobian matrix $J_t$ per triangle $t$, which will represent our parametrization $\phi$ as local linear deformations
-- A $1$-form $\omega \in \mathbb{R}$ per edge
-- A frame per triangle $v_t \in \mathbb{C}$ that integrates the symmetries of the square to allow singularities to appear. In practice, the four directions of the frame are taken as $4$-th roots of $v_t$.
+- A Jacobian matrix $J_t$ per triangle $t \in T$, which will represent our parametrization $\phi$ as local linear deformations
+- A $1$-form $\omega \in \mathbb{R}$ per edge 
+- A frame per triangle $v_t \in \mathbb{C}$ per triangle $t \in T$ that satisfies the symetries of the square. We use the classical [power vector representation](https://www.graphics.rwth-aachen.de/media/papers/315/DirectionalFieldsSTAR-2016.pdf)
 
 {{< figure src="/img/moving_frames/notations.jpeg" 
 alt="" 
@@ -96,7 +96,7 @@ $$\left\\{\begin{align}
 \det{J} &> 0 &\text{   (Local injectivity)}
 \end{align}\right.$$
 
-where $r_{ij}$ is the parallel transport between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).
+where $r_{ij}$ is the [parallel transport](http://wordpress.discretization.de/geometryprocessingandapplicationsws19/connections-and-parallel-transport/) between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).
 
 ### Cayley Transform
 

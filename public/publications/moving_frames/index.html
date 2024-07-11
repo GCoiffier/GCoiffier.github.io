@@ -38,7 +38,7 @@
 <meta itemprop="name" content="The Method of Moving Frames for Surface Parametrization">
 <meta itemprop="description" content="Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout."><meta itemprop="datePublished" content="2023-09-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-09-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1444">
+<meta itemprop="wordCount" content="1447">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Method of Moving Frames for Surface Parametrization"/>
@@ -221,13 +221,13 @@
     
 
 
-<p>Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 1a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.</p>
+<p>Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 2a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.</p>
 <p>A <em>seamless parametrization</em> is a parametrization with two additionnal properties:</p>
 <ul>
-<li>Across a discontinuity of $\phi$, two versions of the same edge should match up to some rotation of angle $k\pi/2$ and some arbitrary translation (Fig. 1b)</li>
-<li>Any boundary curve should be axis-aligned in parameter space (Fig. 1c)</li>
+<li>Across a discontinuity of $\phi$, two versions of the same edge should match up to some rotation of angle $k\pi/2$ and some arbitrary translation (Fig. 2b)</li>
+<li>Any boundary curve should be axis-aligned in parameter space (Fig. 2c)</li>
 </ul>
-<p>To get an <em>integer seamless parametrization</em>, we also require that the translations across discontinuities have integer coordinates (Fig. 1d).</p>
+<p>To get an <em>integer grid map</em>, that is a seamless parametrization aligned with the integer grid, we require that the translations across discontinuities have integer coordinates (Fig. 2d).</p>
 
     <img class="figure" 
     src="/img/moving_frames/param_def.jpeg" 
@@ -239,7 +239,7 @@
     
 
 
-<p>When working with a seamless parametrization, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called <em>cones</em> or <em>singularities</em>. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.</p>
+<p>When working with a seamless map, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called <em>cones</em> or <em>singularities</em>. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.</p>
 <p>Computing an integer grid map is a challenging problem to formulate and solve in one go. This is why most state of the art method split the problem into several steps:</p>
 <ol>
 <li>Compute the position of the cones;</li>
@@ -268,11 +268,11 @@
 </ul>
 <p>In <a href="https://github.com/GCoiffier/moving_frames_parametrization">our implementation</a>, both versions are available.</p>
 <h3 id="the-structure-equations">The Structure Equations</h3>
-<p>Let $M=(V,E,F)$ be a manifold surface mesh. To express Cartan&rsquo;s structure equations on $M$, we need to define the following variables:</p>
+<p>Let $M=(V,E,T)$ be a manifold triangle mesh. To express Cartan&rsquo;s structure equations on $M$, we need to define the following variables:</p>
 <ul>
-<li>A Jacobian matrix $J_t$ per triangle $t$, which will represent our parametrization $\phi$ as local linear deformations</li>
+<li>A Jacobian matrix $J_t$ per triangle $t \in T$, which will represent our parametrization $\phi$ as local linear deformations</li>
 <li>A $1$-form $\omega \in \mathbb{R}$ per edge</li>
-<li>A frame per triangle $v_t \in \mathbb{C}$ that integrates the symmetries of the square to allow singularities to appear. In practice, the four directions of the frame are taken as $4$-th roots of $v_t$.</li>
+<li>A frame per triangle $v_t \in \mathbb{C}$ per triangle $t \in T$ that satisfies the symetries of the square. We use the classical <a href="https://www.graphics.rwth-aachen.de/media/papers/315/DirectionalFieldsSTAR-2016.pdf">power vector representation</a></li>
 </ul>
 
     <img class="figure" 
@@ -291,7 +291,7 @@
 \exp(\imath \omega_{ij})^4 r_{ij}^4 v_i &amp;= v_j &amp;\text{  (Frames Regularity)} \\
 \det{J} &amp;&gt; 0 &amp;\text{   (Local injectivity)}
 \end{align}\right.$$</p>
-<p>where $r_{ij}$ is the parallel transport between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).</p>
+<p>where $r_{ij}$ is the <a href="http://wordpress.discretization.de/geometryprocessingandapplicationsws19/connections-and-parallel-transport/">parallel transport</a> between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).</p>
 <h3 id="cayley-transform">Cayley Transform</h3>
 <p>To avoid optimizing through the exponential in the above system of equations, we make a change of variables. Instead of working with an angle $\omega$, we work with $\hat{\omega} = \tan{\omega/2}$ and apply a <a href="https://en.wikipedia.org/wiki/Cayley_transform#Complex_homography"><em>Cayley Transform</em></a>:</p>
 <p>$$\exp \left( \imath \omega \right) = \frac{1 - \imath \hat{\omega}/2 }{1 + \imath \hat{\omega}/2}$$</p>

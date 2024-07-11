@@ -265,7 +265,7 @@
 
 
 <p>In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be <strong>1-Lipschitz</strong>, that is:</p>
-<p>$$||f_\theta(a) - f_\theta(b)|| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$</p>
+<p>$$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$</p>
 <h2 id="our-method">Our method</h2>
 <p>Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied <em>by construction</em>. On top of this architecture, we minimize a loss which does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:</p>
 

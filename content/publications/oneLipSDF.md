@@ -68,7 +68,7 @@ style="width:600px;"
 
 In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be **1-Lipschitz**, that is:
 
-$$||f_\theta(a) - f_\theta(b)|| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$
+$$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$
 
 
 ## Our method
