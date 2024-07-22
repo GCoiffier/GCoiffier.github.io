@@ -16,6 +16,7 @@ code = "https://github.com/GCoiffier/moving_frames_parametrization"
 supplemental = "https://homepages.loria.fr/ECorman/Papers/cartan_supp.pdf"
 
 math=true
+toc=true
 +++
 
 ## Quadmeshing with Seamless Parametrization

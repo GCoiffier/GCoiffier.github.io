@@ -32,6 +32,13 @@
                 </figure>
             {{ end }}
             
+            {{ if .Params.toc}}
+            <div class="paper-toc">
+                {{ .TableOfContents }}
+            </div>
+            <hr />
+            {{ end }}
+
             <div class="paper-content">
                 {{ .Content }}
             </div>

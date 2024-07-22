@@ -93,7 +93,8 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/blog/frame_fields_polyscope/</guid>
-      <description>test \(z \in \mathbb{C}\)</description>
+      <description>This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available on github if you want to try it out.
+What is frame field ? Applications of frame fields More recently, frame fields have been developed in the context of quad-remeshing. The idea is that they &amp;ldquo;abstract away&amp;rdquo; the combinatorics of a quadmesh and define the flow lines of the future edges.</description>
     </item>
     
     <item>
