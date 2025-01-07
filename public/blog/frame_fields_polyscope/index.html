@@ -38,7 +38,7 @@
 <meta itemprop="name" content="Visualizing Frame Fields">
 <meta itemprop="description" content="A demo of the frame fields algorithms implemented in mouette using Polyscope"><meta itemprop="datePublished" content="2024-06-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-06-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="198">
+<meta itemprop="wordCount" content="35">
 <meta itemprop="keywords" content="code," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Visualizing Frame Fields"/>
@@ -123,18 +123,6 @@
 <link rel="stylesheet" href="https://GCoiffier.github.io/css/figure.css">
 
 
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-<script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)'], ['$','$']]       
-    }
-  };
-</script>
-
-
-
 
 
 <main class="post">
@@ -149,33 +137,11 @@
             
             
             
-            <div class="paper-toc">
-                <nav id="TableOfContents">
-  <ol>
-    <li><a href="#what-is-frame-field-">What is frame field ?</a></li>
-    <li><a href="#applications-of-frame-fields">Applications of frame fields</a></li>
-    <li><a href="#computing-a-smooth-frame-field">Computing a smooth frame field</a></li>
-    <li><a href="#singularities-of-a-frame-field">Singularities of a frame field</a></li>
-    <li><a href="#the-demo">The demo</a></li>
-    <li><a href="#see-also">See also</a></li>
-  </ol>
-</nav>
-            </div>
-            <hr />
-            
 
             <div class="paper-content">
-                <p>This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available <a href="">on github</a> if you want to try it out.</p>
-<h2 id="what-is-frame-field-">What is frame field ?</h2>
-<h2 id="applications-of-frame-fields">Applications of frame fields</h2>
-<p>More recently, frame fields have been developed in the context of quad-remeshing. The idea is that they &ldquo;abstract away&rdquo; the combinatorics of a quadmesh and define the flow lines of the future edges. Also, their singularities correspond to the irregular vertices in the quadmesh (more on that later).</p>
-<h2 id="computing-a-smooth-frame-field">Computing a smooth frame field</h2>
-<p>$$\min \sum_{a \sim b} w_{ab} ||v_b - \exp(\imath r_{ab})\, v_a ||^2 \quad \quad (1)$$
-subject to constraints that $v$ should be fixed on the boundary and one of its branch should be tangent. Here, $w_{ab}&gt;0$ are weight terms and $r_{ab} \in (-\pi ; \pi)$ is the angle of the parallel transport between $a$ and $b$. Applying this correction is essential to take the natural curvature of the surface into account.</p>
-<h2 id="singularities-of-a-frame-field">Singularities of a frame field</h2>
-<h2 id="the-demo">The demo</h2>
-<p>The demo displays the algorithms we implemented in <a href="">mouette</a>.</p>
-<p>The demo uses the <a href="">Polyscope</a> library to display results from</p>
+                <p>This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available <a href="https://github.com/GCoiffier/Frame-Fields-Demo">on github</a> if you want to try it out.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     <img class="figure" 
     src="/img/FF_polyscope/bunny.jpeg" 
@@ -198,11 +164,10 @@ subject to constraints that $v$ should be fixed on the boundary and one of its b
     
 
 
-<h2 id="see-also">See also</h2>
-<ul>
-<li>Survey</li>
-<li>Directional Library</li>
-</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+</blockquote>
 
             </div>
         
