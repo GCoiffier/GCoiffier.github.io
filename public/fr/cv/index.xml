@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language><atom:link href="https://GCoiffier.github.io/fr/cv/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Informations générales</title>
+      <link>https://GCoiffier.github.io/fr/cv/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/fr/cv/info/</guid>
+      <description>Depuis début 2024, je suis en post-doctorat à l&amp;rsquo;Université Catholique de Louvain (Belgique), où je travaille sur des déformations injectives de maillages dans le contexte du projet X-mesh, mené par Jean-François Remacle et Nicolas Moës.
+J&amp;rsquo;ai effectué ma thèse au LORIA, à l&amp;rsquo;Université de Lorraine, sous la direction de Etienne Corman et Dmitry Sokolov. Elle a été soutenue le 6 décembre 2023.
+Thématiques de recherche  Traitement numérique de la géométrie Maillage Paramétrisation de maillage Apprentissage automatique et représentations neuronales implicites de la géométrie  Contact  Email: guillaume.</description>
+    </item>
+    
+    <item>
       <title>Activités de Recherche</title>
       <link>https://GCoiffier.github.io/fr/cv/positions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -36,15 +47,6 @@ Sous la supervision de Dmitry Sokolov et Etienne Corman
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>https://GCoiffier.github.io/fr/cv/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://GCoiffier.github.io/fr/cv/publications/</guid>
-      <description>Voir la liste des publications</description>
-    </item>
-    
-    <item>
       <title>Conférences et colloques</title>
       <link>https://GCoiffier.github.io/fr/cv/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -54,6 +56,15 @@ Sous la supervision de Dmitry Sokolov et Etienne Corman
   1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing 2024, [Video]
   3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks, Petroleum Geostatistics 2019 [Abstract]
   Conférences nationales   Robust Neural Distance Fields using 1-Lipschitz Neural Networks, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, Marseille, 27 mars 2024 [Slides]</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://GCoiffier.github.io/fr/cv/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/fr/cv/publications/</guid>
+      <description>Voir la liste des publications ou Google Scholar</description>
     </item>
     
     <item>

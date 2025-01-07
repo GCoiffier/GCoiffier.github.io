@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://GCoiffier.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>https://GCoiffier.github.io/cv/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/info/</guid>
+      <description>Since 2024, I am a post-doc at the Catholic University of Louvain in Louvain-la-Neuve (Belgium), where I work on injective deformation of meshes in the context of the X-mesh project, lead by Jean-François Remacle and Nicolas Moës.
+I obtained a PhD from the University of Lorraine under the supervision of Etienne Corman and Dmitry Sokolov. I defended my PhD in December 2023.
+Research Interests  Geometry Processing Meshing Mesh parametrization Deep learning and neural implicit representations  Contact infos  Email: guillaume.</description>
+    </item>
+    
+    <item>
       <title>Current and past positions</title>
       <link>https://GCoiffier.github.io/cv/positions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -41,7 +52,7 @@ Thesis defended on December 6th, 2023
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/publications/</guid>
-      <description>See the list of publications</description>
+      <description>See the list of publications or Google Scholar</description>
     </item>
     
     <item>

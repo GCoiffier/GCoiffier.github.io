@@ -1,6 +1,6 @@
 +++
 title="Education"
-weight=2
+weight=3
 +++
 
 **[2020-2023]** PhD, [Global Parametrization Algorithms for Quadmeshing]({{<ref "/publications/phd_thesis">}} "phd") -- LORIA, Université de Lorraine, Nancy, France -- Under the supervision of Dmitry Sokolov and Etienne Corman
