@@ -4,13 +4,13 @@ description = "A demo of the frame fields algorithms implemented in mouette usin
 thumbnail = "img/FF_polyscope/cad.jpeg"
 tags = ["code"]
 date="2024-06-12"
-math=true
-toc=true
+# math=true
+# toc=true
 +++
 
-This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available [on github]() if you want to try it out.
+This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available [on github](https://github.com/GCoiffier/Frame-Fields-Demo) if you want to try it out.
 
-## What is frame field ?
+<!-- ## What is frame field ?
 
 
 ## Applications of frame fields
@@ -28,7 +28,7 @@ subject to constraints that $v$ should be fixed on the boundary and one of its b
 
 The demo displays the algorithms we implemented in [mouette]().
 
-The demo uses the [Polyscope]() library to display results from 
+The demo uses the [Polyscope]() library to display results from  -->
 
 {{< figure src="/img/FF_polyscope/bunny.jpeg" 
 alt="" 
@@ -43,7 +43,7 @@ caption="CAD model"
 style="width:80%;" 
 >}}
 
-## See also
+<!-- ## See also
 
 - Survey
-- Directional Library
+- Directional Library -->
