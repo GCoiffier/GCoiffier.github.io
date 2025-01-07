@@ -3,6 +3,9 @@ title="Enseignement"
 weight=5
 +++
 
+**[2024-2025]** Professeur assistant, École Polytechnique de Louvain
+- [Computational Geometry (LMECA2170)](https://perso.uclouvain.be/vincent.legat/zouLab/meca2170.php?action=doc) [[Slides]](https://perso.uclouvain.be/vincent.legat/documents/meca2170/annotated-2425-slides/meca2170-lecture7-2425-pointCloudProcessing.pdf)
+
 **[2022-2023]** Chargé de TD, École des Mines de Nancy
 - Programmation et Structures de Données
 - Recherche Opérationnelle

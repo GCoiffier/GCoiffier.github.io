@@ -10,7 +10,7 @@ cover = "/img/1lipSDF/cover.jpeg"
 
 abstract = "Neural implicit surfaces are a promising tool for geometry processing that represent a solid object as the zero level set of a neural network. Usually trained to approximate a signed distance function of the considered object, these methods exhibit great visual fidelity and quality near the surface, yet their properties tend to degrade with distance, making geometrical queries hard to perform without the help of complex range analysis techniques. Based on recent advancements in Lipschitz neural networks, we introduce a new method for approximating the signed distance function of a given object. As our neural function is made 1-Lipschitz by construction, it cannot overestimate the distance, which guarantees robustness even far from the surface. Moreover, the 1-Lipschitz constraint allows us to use a different loss function, called the hinge-Kantorovitch-Rubinstein loss, which pushes the gradient as close to unit-norm as possible, thus reducing computation costs in iterative queries. As this loss function only needs a rough estimate of occupancy to be optimized, this means that the true distance function need not to be known. We are therefore able to compute neural implicit representations of even bad quality geometry such as noisy point clouds or triangle soups. We demonstrate that our methods is able to approximate the distance function of any closed or open surfaces or curves in the plane or in space, while still allowing sphere tracing or closest point projections to be performed robustly."
 
-doi = "https://diglib.eg.org/server/api/core/bitstreams/9ea58544-d967-4bbd-bc7c-2e94fbbc7b27/content"
+doi = "http://doi.org/10.1111/cgf.15128"
 pdf = "/pdf/1lip.pdf"
 supplemental = "/pdf/1lip_supplemental.pdf"
 code = "https://github.com/GCoiffier/1-Lipschitz-Neural-Distance-Fields"
@@ -58,7 +58,7 @@ caption="Plot of a the gradient norm of neural distance fields on a simple 2D do
 style="width:600px;" 
 >}}
 
-Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.
+Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. right), iterating the projection process will always yield the correct result at the cost of more computation time.
 
 {{< figure src="/img/1lipSDF/queries.jpeg" 
 alt="Projection query on an implicit surface"
@@ -74,7 +74,7 @@ $$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}
 
 ## Our method
 
-Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied _by construction_. On top of this architecture, we minimize a loss which does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:
+Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied _by construction_. On top of this architecture, we minimize a loss that does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:
 
 {{< figure src="/img/1lipSDF/botijo_pipeline.jpeg" 
 alt="Overview of our method"  

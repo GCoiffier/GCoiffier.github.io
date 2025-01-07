@@ -1,22 +1,34 @@
 +++
-title="Présentations et conférences"
+title="Conférences et colloques"
 weight=4
 +++
 
-[**SIGGRAPH 2024**](https://s2024.conference-program.org/) : _The Method of Moving Frames for Surface Global Parametrization_
+## Conférences internationales 
 
-[**SGP 2024**](https://sgp2024.github.io/program/#technical-papers) : _1-Lipschitz Neural Distance Fields_
+- _The Method of Moving Frames for Surface Global Parametrization_, **SIGGRAPH 2024**
 
-[**R-GTMG 2024**](https://r-gtmg2024.sciencesconf.org/) : _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_ [[Slides]](/pdf/1lip_slides.pdf)  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :trophy: *Prix de la meilleure présentation*
+- _1-Lipschitz Neural Distance Fields_, **Symposium on Geometry Processing 2024**, [[Video]](https://youtu.be/3e5lt7UXjeY)
 
-[**JFIG 2023**](https://jfig2023.lirmm.fr/program-at-a-glance/) : _The Method of Moving Frames for Surface Global Parametrization_ [[Slides]](https://seafile.lirmm.fr/d/45c93e8b628d4386ae66/files/?p=%2FSession_5_Surfaces_et_Analyse%2F3_JFIG2023_paper_1_presentation.pdf)
+- _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_, **Petroleum Geostatistics 2019** [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)
 
-[**Frames 2023**](https://frames2023.sciencesconf.org/) : _Towards grid-preserving surface parametrization in a single optimization_  
 
-[**Frames 2021**](https://www.algohex.eu/frames2021/) : _Computing Valid Global Seamless Parametrizations in 2D and 3D_  
+## Conférences nationales
 
-[**JFIG 2020**](https://jfig2020.sciencesconf.org/) : _Ajustement de surfaces paramétriques sur nuages de points_ [[Video]](https://www.youtube.com/watch?v=XBqRO-0Fo4I&t=674s)     
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :trophy: *2e prix du meilleur article*  
+- _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_, **Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique**, Marseille, 27 mars 2024 
+[[Slides]](/pdf/1lip_slides.pdf)  
 
-**Petroleum Geostatistics 2019** : _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_ [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)
+- _The Method of Moving Frames for Surface Global Parametrization_, **Journées Françaises de l'Informatique Graphique**, Montpellier, 10 novembre 2023 [[Slides]](https://seafile.lirmm.fr/d/45c93e8b628d4386ae66/files/?p=%2FSession_5_Surfaces_et_Analyse%2F3_JFIG2023_paper_1_presentation.pdf)
+
+- _Ajustement de surfaces paramétriques sur nuages de points_, **Journées Françaises de l'Informatique Graphique**, Nancy (en ligne), 25 novembre 2020 [[Video]](https://www.youtube.com/watch?v=XBqRO-0Fo4I&t=674s)     
+
+
+## Exposés et Séminaires
+- _Améliorer les représentations géométriques à budget constant_, exposé à l’Inria Grenoble, 27 novembre 2024
+- _Améliorer les représentations géométriques à budget constant_, exposé au LIRIS, Lyon, 8 novembre 2024
+- _Parametrization algorithms for quad-remeshing_, exposé au XLIM, Limoges, 28 février 2024
+- _Parametrization algorithms for quad-remeshing_, exposé au LIS, Marseille, 16 février 2024
+- _Parametrization algorithms for quad-remeshing_, exposé au LIB, Dijon, 8 février 2024
+- _Parametrization algorithms for quad-remeshing_, exposé au MEMA, Université Catholique de Louvain, 16 novembre 2023
+- _Paramétrisation globale et méthodes des repères mobiles de Cartan_, Journée des jeunes chercheurs en géométrie, Paris, 27 octobre 2023
+- _Towards Global Parametrization in a single optimization_, FRAMES Workshop, Nancy, 24 aout 2023
+- _Computing Valid Global Seamless Parametrizations in 2D and 3D_, FRAMES Workshop, Bern (en ligne), 6 décembre 2021

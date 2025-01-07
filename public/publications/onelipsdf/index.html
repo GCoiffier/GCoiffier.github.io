@@ -90,7 +90,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li>
+    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li><li><a href="/blog">Misc</a></li>
         <div class="submenu">
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">en</a>
@@ -179,7 +179,7 @@
                 
                  
                 <a style="padding:10px;"> 
-                    <a class="paper-button" href=https://diglib.eg.org/server/api/core/bitstreams/9ea58544-d967-4bbd-bc7c-2e94fbbc7b27/content> doi </a> 
+                    <a class="paper-button" href=http://doi.org/10.1111/cgf.15128> doi </a> 
                 </a>
                 
                 
@@ -278,7 +278,7 @@
     
 
 
-<p>Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. left), iterating the projection process will always yield the correct result at the cost of more computation time.</p>
+<p>Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. right), iterating the projection process will always yield the correct result at the cost of more computation time.</p>
 
     <img class="figure" 
     src="/img/1lipSDF/queries.jpeg" 
@@ -293,7 +293,7 @@
 <p>In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be <strong>1-Lipschitz</strong>, that is:</p>
 <p>$$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$</p>
 <h2 id="our-method">Our method</h2>
-<p>Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied <em>by construction</em>. On top of this architecture, we minimize a loss which does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:</p>
+<p>Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied <em>by construction</em>. On top of this architecture, we minimize a loss that does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:</p>
 
     <img class="figure" 
     src="/img/1lipSDF/botijo_pipeline.jpeg" 

@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://GCoiffier.github.io/cv/positions/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://GCoiffier.github.io/fr/cv/positions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://GCoiffier.github.io/cv/positions/"
+                />
+  </url><url>
     <loc>https://GCoiffier.github.io/cv/education/</loc>
     <xhtml:link
                 rel="alternate"
@@ -12,18 +24,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://GCoiffier.github.io/cv/education/"
-                />
-  </url><url>
-    <loc>https://GCoiffier.github.io/cv/internships/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://GCoiffier.github.io/fr/cv/internships/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://GCoiffier.github.io/cv/internships/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/cv/publications/</loc>

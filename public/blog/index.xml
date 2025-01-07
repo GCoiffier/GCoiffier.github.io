@@ -23,8 +23,11 @@ What is frame field ? Applications of frame fields More recently, frame fields h
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/blog/mouette/</guid>
-      <description>https://github.com/GCoiffier/mouette
-https://gcoiffier.github.io/mouette/</description>
+      <description>Mouette is my personal python library for handling point clouds, polylines, surface and volume meshes. It also contains various geometry processing algorithm I encountered in my work, like shortest-paths, old-school parametrization or frame fields.
+Mouette (French for seagull) stands for Maillages, OUtils Et Traitement auTomatique de la géométriE (French for &amp;ldquo;Meshes, Tools and Geometry Processing&amp;rdquo;).
+Source code: https://github.com/GCoiffier/mouette
+Installation Using pip: pip install mouette
+Overview Mouette allows to easily load data from various file format and access geometrical primitives</description>
     </item>
     
   </channel>

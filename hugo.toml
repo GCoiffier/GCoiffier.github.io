@@ -13,17 +13,19 @@ home_css = "css/home.css"
 publication_css = "css/publication.css"
 blog_css = "css/blog.css"
 figure_css = "css/figure.css"
+cv_css = "css/cv.css"
 math = false # enable math by adding math=true in frontmatter
 toc = false # enable table of content at the beginning of a post by adding toc=true in frontmatter
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)', ['$', '$']]]
+    table = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)', ['$', '$']]]
   [markup.tableOfContents]
     endLevel = 3
     ordered = true
@@ -76,8 +78,8 @@ name = "Publications"
 url = "/publications"
 weight = 20
 
-# [[menu.main]]
-# identifier = "blog"
-# name = "Blog"
-# url = "/blog"
-# weight = 30
+[[menu.main]]
+identifier = "blog"
+name = "Misc"
+url = "/blog"
+weight = 30

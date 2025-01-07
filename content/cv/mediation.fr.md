@@ -3,11 +3,11 @@ title="Médiation Scientifique"
 weight=6
 +++
 
-- **Fête de la Science 2023** : _Géométrie Numérique : Lapins, Cartes et Coutures_, Conférence grand public, Lycée Louis Vincent, Metz [[video]]({{<ref "/blog/fds_2023_louis_vincent">}})
+- **Fête de la Science 2023** : _Géométrie Numérique : Lapins, Cartes et Coutures_, Conférence grand public, Lycée Louis Vincent, Metz [[Video]]({{<ref "/blog/fds_2023_louis_vincent">}})
 
 - **Fête de la Science 2023** : _Face à Face_ - rencontre avec des collégiens de Bouligny et Vandoeuvre-les- Nancy  
 
-- **Ma Thèse en 180 secondes** : Finale 2022 de l'Université de Lorraine [[video]]({{<ref "/blog/mt180">}})  
+- **Ma Thèse en 180 secondes** : Finale 2022 de l'Université de Lorraine [[Video]]({{<ref "/blog/mt180">}})  
 
 - **Nuit des Chercheurs 2022**
 

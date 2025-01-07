@@ -38,7 +38,7 @@
 <meta itemprop="name" content="Mouette: the python library">
 <meta itemprop="description" content="mouette is my python code for handling meshes and implements the geometry processing algorithms I stumbled upon during my research"><meta itemprop="datePublished" content="2023-01-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-01-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2">
+<meta itemprop="wordCount" content="207">
 <meta itemprop="keywords" content="code," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mouette: the python library"/>
@@ -90,7 +90,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li>
+    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li><li><a href="/blog">Misc</a></li>
         <div class="submenu">
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">en</a>
@@ -139,8 +139,40 @@
             
 
             <div class="paper-content">
-                <p><a href="https://github.com/GCoiffier/mouette">https://github.com/GCoiffier/mouette</a></p>
-<p><a href="https://gcoiffier.github.io/mouette/">https://gcoiffier.github.io/mouette/</a></p>
+                <p>Mouette is my personal  python library for handling point clouds, polylines, surface and volume meshes. It also contains various geometry processing algorithm I encountered in my work, like shortest-paths, old-school parametrization or frame fields.</p>
+<p>Mouette (French for seagull) stands for <em>Maillages, OUtils Et Traitement auTomatique de la géométriE</em> (French for &ldquo;Meshes, Tools and Geometry Processing&rdquo;).</p>
+<p>Source code: <a href="https://github.com/GCoiffier/mouette">https://github.com/GCoiffier/mouette</a></p>
+<h2 id="installation">Installation</h2>
+<p>Using pip:
+<code>pip install mouette</code></p>
+<h2 id="overview">Overview</h2>
+<p>Mouette allows to easily load data from various file format and access geometrical primitives</p>
+<h4 id="import-and-export-made-simple">Import and Export made simple</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> mouette <span style="color:#66d9ef">as</span> M
+
+mesh <span style="color:#f92672">=</span> M<span style="color:#f92672">.</span>mesh<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;path/to/my/mesh/mesh.obj&#34;</span>)
+print(mesh<span style="color:#f92672">.</span>vertices[<span style="color:#ae81ff">0</span>])
+print(mesh<span style="color:#f92672">.</span>faces[<span style="color:#ae81ff">2</span>])
+M<span style="color:#f92672">.</span>mesh<span style="color:#f92672">.</span>save(mesh,<span style="color:#e6db74">&#34;path/to/export/mesh.obj&#34;</span>)
+</code></pre></div><h4 id="define-quantities-over-meshes-and-work-with-it">Define quantities over meshes and work with it</h4>
+<p>It is possible to define any quantity on mesh elements</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">my_v_attribute <span style="color:#f92672">=</span> mesh<span style="color:#f92672">.</span>vertices<span style="color:#f92672">.</span>create_attribute(<span style="color:#e6db74">&#34;my_attribute&#34;</span>, float) <span style="color:#75715e"># an attribute storing one floating-point number per vertex</span>
+my_v_attribute[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.</span>
+
+my_f_attribute <span style="color:#f92672">=</span> mesh<span style="color:#f92672">.</span>faces<span style="color:#f92672">.</span>create_attribute(<span style="color:#e6db74">&#34;my_attribute&#34;</span>, <span style="color:#ae81ff">2</span>, int) <span style="color:#75715e"># an attribute storing two integers per face</span>
+m_f_attribute[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>]
+</code></pre></div><p>Attributes can store booleans, integers, floating-point numbers, complex numbers and strings, using the provided python types <code>bool</code>, <code>int</code>, <code>float</code>, <code>complex</code> and <code>str</code>.</p>
+<h4 id="call-geometry-processing-algorithms">Call Geometry Processing Algorithms</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+ff <span style="color:#f92672">=</span> framefield<span style="color:#f92672">.</span>SurfaceFrameField(mesh, <span style="color:#e6db74">&#34;vertices&#34;</span>, order<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+ff<span style="color:#f92672">.</span>run()
+ffmesh <span style="color:#f92672">=</span> ff<span style="color:#f92672">.</span>export_as_mesh()
+M<span style="color:#f92672">.</span>mesh<span style="color:#f92672">.</span>save(ffmesh, <span style="color:#e6db74">&#34;framefield.mesh&#34;</span>)
+</code></pre></div><p>See other examples in <a href="https://github.com/GCoiffier/mouette/tree/main/examples">this folder</a></p>
+<h4 id="and-much-more">And much more</h4>
+<p>See full documentation at <a href="https://gcoiffier.github.io/mouette/">https://gcoiffier.github.io/mouette/</a> (still a Work in Progress)</p>
+<h3 id="run-tests">Run tests</h3>
+<p><code>python -m pytest tests/</code></p>
 
             </div>
         

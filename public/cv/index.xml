@@ -7,28 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://GCoiffier.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Current and past positions</title>
+      <link>https://GCoiffier.github.io/cv/positions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/positions/</guid>
+      <description>[Since Jan. 2024] Post-doc / Research Assistant
+Université Catholique de Louvain, Louvain-la-Neuve, Belgium
+Meshing sharp physical interfaces in finite element simulation
+Member of the X-mesh team lead by Jean-François Remacle and Nicolas Moës
+  [Sep. 2020 - Dec. 2023] PhD Student
+LORIA, University of Lorraine, Nancy, France
+Global parametrization algorithmes for quadmeshing
+Supervisors: Dmitry Sokolov and Etienne Corman
+Thesis defended on December 6th, 2023
+  [Jan. 2020 - June 2020] Research internship</description>
+    </item>
+    
+    <item>
       <title>Education</title>
       <link>https://GCoiffier.github.io/cv/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/education/</guid>
-      <description>[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France
+      <description>[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman
 [2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France
-[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman</description>
-    </item>
-    
-    <item>
-      <title>Research Internships</title>
-      <link>https://GCoiffier.github.io/cv/internships/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://GCoiffier.github.io/cv/internships/</guid>
-      <description>[02/2020 - 08/2020] &amp;ndash; Automatic Architecture Search for Deep Neural Networks
-With Vincent Gripon &amp;ndash; IMT Atlantique, Brest, France
-[10/2019 - 02/2020] &amp;ndash; Constrained mesh fitting on 3D point clouds
-With Dmitry Sokolov and Nicolas Ray &amp;ndash; LORIA, Université de Lorraine, Nancy, France
-[01/2019 - 06/2019] &amp;ndash; Deep neural network simplification using pattern mining approaches
-With Marc Plantevit, Stefan Duffner and Céline Robardet &amp;ndash; LIRIS, INSA de Lyon, Lyon, France</description>
+[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France</description>
     </item>
     
     <item>
@@ -61,9 +65,10 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/teaching/</guid>
-      <description>[2022-2023] Assistant Professor, École des Mines de Nancy
+      <description>[2024-2025] Assistant Professor, École Polytechnique de Louvain
+ Computational Geometry (LMECA2170) [Slides]  [2022-2023] Assistant Professor, École des Mines de Nancy
  Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Assistant Professor, Faculty of Sciences and Technology, Nancy, France
- Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France</description>
+ Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!</description>
     </item>
     
     <item>
@@ -72,8 +77,9 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/awards/</guid>
-      <description>  Symposium on Geometry Processing 2024: Best Paper Award for 1-Lipschitz Neural Distance Fields
-  Ma thèse en 180 secondes: French-speaking contest of popular science. Université de Lorraine&amp;rsquo;s 2nd price
+      <description>  Best paper award for 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024
+  Université de Lorraine&amp;rsquo;s 2nd price in Ma thèse en 180 secondes, a French-speaking contest of popular science.
+  2nd best paper for Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2021
   </description>
     </item>
     
