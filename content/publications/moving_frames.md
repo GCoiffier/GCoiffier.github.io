@@ -1,7 +1,7 @@
 +++
 title = "The Method of Moving Frames for Surface Parametrization"
 date="2023-09-20"
-published_where="Transaction on Graphics"
+published_where="ACM Transactions on Graphics"
 published_date="20 September 2023"
 authors = "Guillaume Coiffier, Etienne Corman"
 

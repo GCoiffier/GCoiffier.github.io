@@ -1,7 +1,7 @@
 +++
 title = "1-Lipschitz Neural Distance Fields"
 date="2024-06-20"
-published_where="Symposium on Geometry Processing 2024"
+published_where="Symposium on Geometry Processing (Computer Graphics Forum)"
 published_date="24 June 2024"
 authors = "Guillaume Coiffier, Louis Béthune"
 
