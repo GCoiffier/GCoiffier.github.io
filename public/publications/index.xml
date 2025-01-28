@@ -6,7 +6,18 @@
     <description>Recent content in List of Publications on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast practical untangling of simplicial P2 and P3 curvilinear meshes</title>
+      <link>https://GCoiffier.github.io/publications/untangle_pn/</link>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/untangle_pn/</guid>
+      <description>[1] A. Johnen, J.-F. Remacle, and C. Geuzaine, Geometrical validity of curvilinear finite elements, Journal of Computational Physics, 233 (2013), pp. 359–372.
+[2] P.-L. George, H. Borouchaki, and P. Laug, Construction de maillages de degré 2 - Partie 1: Triangle P2, PhD thesis, INRIA, 2011.
+[3] V. Garanzha, I. Kaporin, L. Kudryavtseva, F. Protais, N. Ray, and D. Sokolov, Foldover-free maps in 50 lines of code, ACM Transactions on Graphics (TOG), 40 (2021), pp.</description>
+    </item>
+    
     <item>
       <title>1-Lipschitz Neural Distance Fields</title>
       <link>https://GCoiffier.github.io/publications/onelipsdf/</link>

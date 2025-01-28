@@ -87,7 +87,7 @@
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/</loc>
-    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -100,11 +100,11 @@
                 href="https://GCoiffier.github.io/"
                 />
   </url><url>
-    <loc>https://GCoiffier.github.io/publications/onelipsdf/</loc>
-    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
+    <loc>https://GCoiffier.github.io/publications/untangle_pn/</loc>
+    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://GCoiffier.github.io/publications/</loc>
-    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -115,6 +115,9 @@
                 hreflang="en"
                 href="https://GCoiffier.github.io/publications/"
                 />
+  </url><url>
+    <loc>https://GCoiffier.github.io/publications/onelipsdf/</loc>
+    <lastmod>2024-06-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://GCoiffier.github.io/tags/code/</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="[1] A. Johnen, J.-F. Remacle, and C. Geuzaine, Geometrical validity of curvilinear finite elements, Journal of Computational Physics, 233 (2013), pp. 359–372.
+[2] P.-L. George, H. Borouchaki, and P. Laug, Construction de maillages de degré 2 - Partie 1: Triangle P2, PhD thesis, INRIA, 2011.
+[3] V. Garanzha, I. Kaporin, L. Kudryavtseva, F. Protais, N. Ray, and D. Sokolov, Foldover-free maps in 50 lines of code, ACM Transactions on Graphics (TOG), 40 (2021), pp." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://GCoiffier.github.io/publications/untangle_pn/" />
+
+
+    <title>
+        
+            Fast practical untangling of simplicial P2 and P3 curvilinear meshes :: Guillaume Coiffier - Personal Website 
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.7d1b805f582bb3c46d1c96e1c8a3b521f3feb98bd039f0c42cfa9690a13e47c6.css" integrity="sha256-fRuAX1grs8RtHJbhyKO1IfP&#43;uYvQOfDELPqWkKE&#43;R8Y=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Fast practical untangling of simplicial P2 and P3 curvilinear meshes">
+<meta itemprop="description" content="[1] A. Johnen, J.-F. Remacle, and C. Geuzaine, Geometrical validity of curvilinear finite elements, Journal of Computational Physics, 233 (2013), pp. 359–372.
+[2] P.-L. George, H. Borouchaki, and P. Laug, Construction de maillages de degré 2 - Partie 1: Triangle P2, PhD thesis, INRIA, 2011.
+[3] V. Garanzha, I. Kaporin, L. Kudryavtseva, F. Protais, N. Ray, and D. Sokolov, Foldover-free maps in 50 lines of code, ACM Transactions on Graphics (TOG), 40 (2021), pp."><meta itemprop="datePublished" content="2025-01-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2025-01-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="75">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fast practical untangling of simplicial P2 and P3 curvilinear meshes"/>
+<meta name="twitter:description" content="[1] A. Johnen, J.-F. Remacle, and C. Geuzaine, Geometrical validity of curvilinear finite elements, Journal of Computational Physics, 233 (2013), pp. 359–372.
+[2] P.-L. George, H. Borouchaki, and P. Laug, Construction de maillages de degré 2 - Partie 1: Triangle P2, PhD thesis, INRIA, 2011.
+[3] V. Garanzha, I. Kaporin, L. Kudryavtseva, F. Protais, N. Ray, and D. Sokolov, Foldover-free maps in 50 lines of code, ACM Transactions on Graphics (TOG), 40 (2021), pp."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-01-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li><li><a href="/blog">Misc</a></li>
+        <div class="submenu">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">en</a>
+                <div class="dropdown-content">
+                    
+                        
+                    
+                </div>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+
+<link rel="stylesheet" href="https://GCoiffier.github.io/css/publication.css">
+<link rel="stylesheet" href="https://GCoiffier.github.io/css/figure.css">
+
+
+
+<main class="post">
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h1 class="paper-title"> Fast practical untangling of simplicial P2 and P3 curvilinear meshes </h1>
+
+            <div class="paper-author">
+                Guillaume Coiffier, Amaury Johnen, Jean-François Remacle
+			</div>
+
+            <div class="published">
+                 <a class="paper-published"> International Meshing Rountable</a>,
+                 <a> 28 January 2025</a> 
+            </div>
+            
+            
+
+            
+                <figure class="paper-cover">
+                    <img src="https://GCoiffier.github.io/img/untangle_pn/cover.png" alt="Fast practical untangling of simplicial P2 and P3 curvilinear meshes" />
+                
+                    
+                </figure>
+            
+            
+            <div class="paper-links">
+                
+
+                 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href=/pdf/article_pn_compressed.pdf> pdf </a>
+                </a> 
+                
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+
+                
+            </div>
+			
+        
+        <hr />
+        
+        <div class="paper-abstract">
+            The aim of this article is to couple the ideas proposed by [1,2] and [3] to unfold/untangle high-order meshes.  What is proposed here is to systematically reduce the untangling of any high-order elements to the problem of untangling simplices (triangles in 2D and tetrahedra in 3D). First, we present a general way of expressing the validity of a high-order element by calculating linear combinations of areas of well-chosen simplices. We then show how to adapt [3] to these linear combinations of simplices. Examples of 2D boundary layer untangling are presented with P2 and P3 elements. The algorithm is then adapted to P2 tetrahedra.
+        </div>
+        
+        
+        <hr />
+        
+            
+        <div class="paper-content">
+            <p>[1] A. Johnen, J.-F. Remacle, and C. Geuzaine, <em>Geometrical validity of curvilinear finite elements</em>, Journal of Computational Physics, 233 (2013), pp. 359–372.</p>
+<p>[2] P.-L. George, H. Borouchaki, and P. Laug, <em>Construction de maillages de degré 2 - Partie 1: Triangle P2</em>, PhD thesis, INRIA, 2011.</p>
+<p>[3] V. Garanzha, I. Kaporin, L. Kudryavtseva, F. Protais, N. Ray, and D. Sokolov, <em>Foldover-free maps in 50 lines of code</em>, ACM Transactions on Graphics (TOG), 40 (2021), pp. 1–16.</p>
+
+        </div>
+        
+        </article>
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.b66ca78575c5a257714b9b805cec38c36e873ee6a439d4fafcfcdbdcef6c61f850c1763deac2a3b1612865d9457c06812251cbd66b803603ec4a126d20bf0c25.js" integrity="sha512-tmynhXXFoldxS5uAXOw4w26HPuakOdT6/Pzb3O9sYfhQwXY96sKjsWEoZdlFfAaBIlHL1muANgPsShJtIL8MJQ=="></script>
+
+
+
+    </body>
+</html>
