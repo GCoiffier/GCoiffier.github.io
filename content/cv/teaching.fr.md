@@ -17,4 +17,4 @@ weight=5
 - L2 : Automates et Langages
 - L3 : Optimisation, Recherche Opérationnelle
 
-**[2018-2021]** Animateur stage [_Girls Can Code!_](https://girlscancode.fr/) Lyon
+**[2018-2021]** Animateur du stage d'initiation à l'informatique [_Girls Can Code!_](https://girlscancode.fr/), Lyon

@@ -47,6 +47,19 @@ Thesis defended on December 6th, 2023
     </item>
     
     <item>
+      <title>Conferences, Seminars and Workshops</title>
+      <link>https://GCoiffier.github.io/cv/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/talks/</guid>
+      <description>International conferences   The Method of Moving Frames for Surface Global Parametrization SIGGRAPH 2024
+  1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing 2024 [Video]
+:trophy: Best Paper Award
+  3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks, Petroleum Geostatistics 2019 [Abstract]
+  National (French) conferences and workshops   Robust Neural Distance Fields using 1-Lipschitz Neural Networks, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, Marseille, 27 mars 2024 [Slides]</description>
+    </item>
+    
+    <item>
       <title>Publications</title>
       <link>https://GCoiffier.github.io/cv/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -56,30 +69,25 @@ Thesis defended on December 6th, 2023
     </item>
     
     <item>
-      <title>Talks</title>
-      <link>https://GCoiffier.github.io/cv/talks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://GCoiffier.github.io/cv/talks/</guid>
-      <description>SIGGRAPH 2024 : The Method of Moving Frames for Surface Global Parametrization
-SGP 2024 : 1-Lipschitz Neural Distance Fields
-R-GTMG 2024 : Robust Neural Distance Fields using 1-Lipschitz Neural Networks [Slides]
-:trophy: Best Presentation Award
-JFIG 2023 : The Method of Moving Frames for Surface Global Parametrization [Slides]
-Frames 2023 : Towards grid-preserving surface parametrization in a single optimization
-Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</description>
-    </item>
-    
-    <item>
       <title>Teaching</title>
       <link>https://GCoiffier.github.io/cv/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/cv/teaching/</guid>
-      <description>[2024-2025] Assistant Professor, École Polytechnique de Louvain
- Computational Geometry (LMECA2170) [Slides]  [2022-2023] Assistant Professor, École des Mines de Nancy
- Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Assistant Professor, Faculty of Sciences and Technology, Nancy, France
- Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!</description>
+      <description>[2024-2025] Lecturer, École Polytechnique de Louvain
+ Computational Geometry (LMECA2170) [Slides]  [2022-2023] Teaching Assistant, École des Mines de Nancy
+ Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Teaching Assistant, Faculty of Sciences and Technology, Nancy, France
+ Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France</description>
+    </item>
+    
+    <item>
+      <title>Popular Science</title>
+      <link>https://GCoiffier.github.io/cv/mediation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/cv/mediation/</guid>
+      <description>I take part in Inria&amp;rsquo;s program Chiche! whose goal is to make each French high school student meet a computer scientist. With this program, I&amp;rsquo;ve met a dozen of classes in high schools of eastern France between 2021 and 2023.
+  In 2022, I participated in the international French-speaking contest of popular science Ma thèse en 180 secondes, where I got the second best prize of the University of Lorraine for my talk.</description>
     </item>
     
     <item>
@@ -89,7 +97,6 @@ Frames 2021 : Computing Valid Global Seamless Parametrizations in 2D and 3D</des
       
       <guid>https://GCoiffier.github.io/cv/awards/</guid>
       <description>  Best paper award for 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024
-  Université de Lorraine&amp;rsquo;s 2nd price in Ma thèse en 180 secondes, a French-speaking contest of popular science.
   2nd best paper for Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2021
   </description>
     </item>

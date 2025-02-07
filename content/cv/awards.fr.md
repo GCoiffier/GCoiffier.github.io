@@ -3,7 +3,7 @@ title="Prix et distinctions"
 weight=7
 +++
 
-- **Prix du meilleur article** pour [_1-Lipschitz Neural Distance Fields_](/publications/onelipsdf), Symposium on Geometry Processing, 2024
+- **Prix du meilleur article** pour [_1-Lipschitz Neural Distance Fields_](/publications/onelipsdf), [Symposium on Geometry Processing](https://sgp2024.github.io/awards/), 2024
 
 - **Prix de la meilleure présentation** pour [_1-Lipschitz Neural Distance Fields_](/publications/onelipsdf), Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, 2024
 

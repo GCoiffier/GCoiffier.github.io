@@ -7,7 +7,9 @@ weight=4
 
 - _The Method of Moving Frames for Surface Global Parametrization_, **SIGGRAPH 2024**
 
-- _1-Lipschitz Neural Distance Fields_, **Symposium on Geometry Processing 2024**, [[Video]](https://youtu.be/3e5lt7UXjeY)
+- _1-Lipschitz Neural Distance Fields_, **Symposium on Geometry Processing 2024** [[Video]](https://youtu.be/3e5lt7UXjeY)  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :trophy: *Best Paper Award*
+
 
 - _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_, **Petroleum Geostatistics 2019** [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)
 

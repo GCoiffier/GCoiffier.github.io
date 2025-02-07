@@ -75,6 +75,16 @@
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/mediation/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://GCoiffier.github.io/cv/mediation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://GCoiffier.github.io/fr/cv/mediation/"
+                />
   </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/awards/</loc>
     <xhtml:link
