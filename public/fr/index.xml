@@ -19,45 +19,34 @@ Thématiques de recherche  Traitement numérique de la géométrie Maillage Para
     </item>
     
     <item>
-      <title>Activités de Recherche</title>
-      <link>https://GCoiffier.github.io/fr/cv/positions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://GCoiffier.github.io/fr/cv/positions/</guid>
-      <description>[Depuis Jan. 2024] Post-doctorat - Assistant de recherche  Université Catholique de Louvain, Louvain-la-Neuve, Belgique
-Maillage d&amp;rsquo;interfaces dans des simulations par éléments finis.
-Membre de l&amp;rsquo;équipe projet X-mesh, menée par Jean-François Remacle et Nicolas Moës.
-[Sep. 2020 - Dec. 2023] Doctorat  LORIA, Université de Lorraine, Nancy, France
-Algorithmes de Paramétrisation Globale pour Maillages Quadrilatéraux
-Encadrée par Dmitry Sokolov et Etienne Corman
-Thèse soutenue le 6 décembre 2023
-[Jan. 2020 - Juin 2020] Stage de recherche  IMT Atlantique, Brest, France</description>
-    </item>
-    
-    <item>
       <title>Formation</title>
       <link>https://GCoiffier.github.io/fr/cv/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/fr/cv/education/</guid>
-      <description>[2020-2023] Doctorat Algorithmes de paramétrisation globale pour maillages quadrilatéraux
+      <description>[2020-2023] Doctorat  Algorithmes de paramétrisation globale pour maillages quadrilatéraux
 LORIA, Université de Lorraine, Nancy, France
 Sous la supervision de Dmitry Sokolov et Etienne Corman
-[2016-2020] Diplôme de l&amp;rsquo;École Normale Supérieure de Lyon  [2016-2019] License puis Master en Informatique Fondamentale École Normale Supérieure de Lyon, Lyon, France
-[2013-2016] Classes Préparatoires aux Grandes Ecoles, MPSI puis MP Lycée Henri Wallon, Valenciennes, France</description>
+Thèse soutenue le 6 décembre 2023
+[2016-2020] Diplôme de l&amp;rsquo;École Normale Supérieure de Lyon  École Normale Supérieure de Lyon, France
+[2016-2019] License puis Master en Informatique Fondamentale  École Normale Supérieure de Lyon, France
+[2013-2016] Classes Préparatoires aux Grandes Ecoles, MPSI puis MP  Lycée Henri Wallon, Valenciennes, France</description>
     </item>
     
     <item>
-      <title>Conférences et colloques</title>
-      <link>https://GCoiffier.github.io/fr/cv/talks/</link>
+      <title>Parcours Académique</title>
+      <link>https://GCoiffier.github.io/fr/cv/positions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://GCoiffier.github.io/fr/cv/talks/</guid>
-      <description>Conférences internationales   The Method of Moving Frames for Surface Global Parametrization, SIGGRAPH 2024
-  1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing 2024 [Video]
-:trophy: Best Paper Award
-  3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks, Petroleum Geostatistics 2019 [Abstract]
-  Conférences nationales   Robust Neural Distance Fields using 1-Lipschitz Neural Networks, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, Marseille, 27 mars 2024 [Slides]</description>
+      <guid>https://GCoiffier.github.io/fr/cv/positions/</guid>
+      <description>[Depuis Jan. 2024] Post-doctorat - Assistant de recherche  Maillage d&amp;rsquo;interfaces dans des simulations par éléments finis.
+Université Catholique de Louvain, Louvain-la-Neuve, Belgique
+Membre de l&amp;rsquo;équipe projet X-mesh, menée par Jean-François Remacle et Nicolas Moës.
+[Sep. 2020 - Dec. 2023] Doctorat  Algorithmes de paramétrisation globale pour maillages quadrilatéraux
+LORIA, Université de Lorraine, Nancy, France
+Encadrée par Dmitry Sokolov et Etienne Corman
+Thèse soutenue le 6 décembre 2023
+[Jan. 2020 - Juin 2020] Stage de recherche  Recherche automatique d&amp;rsquo;architectures de réseaux de neurones profonds</description>
     </item>
     
     <item>
@@ -70,15 +59,32 @@ Sous la supervision de Dmitry Sokolov et Etienne Corman
     </item>
     
     <item>
+      <title>Conférences et colloques</title>
+      <link>https://GCoiffier.github.io/fr/cv/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/fr/cv/talks/</guid>
+      <description>Conférences internationales   The Method of Moving Frames for Surface Global Parametrization
+SIGGRAPH 2024
+  1-Lipschitz Neural Distance Fields
+Symposium on Geometry Processing 2024 [Video]
+:trophy: Best Paper Award
+  3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks
+Petroleum Geostatistics 2019 [Abstract]
+  Conférences nationales   Robust Neural Distance Fields using 1-Lipschitz Neural Networks
+Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique</description>
+    </item>
+    
+    <item>
       <title>Enseignement</title>
       <link>https://GCoiffier.github.io/fr/cv/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://GCoiffier.github.io/fr/cv/teaching/</guid>
-      <description>[2024-2025] Professeur assistant, École Polytechnique de Louvain
- Computational Geometry (LMECA2170) [Slides]  [2022-2023] Chargé de TD, École des Mines de Nancy
- Programmation et Structures de Données Recherche Opérationnelle Algorithmes et Complexité  [2020-2022] Chargé de TD en License, Faculté des Sciences et Technologies de Nancy
- L1 : Algorithmique et programmation en python L1 : Projet de Code : jeu vidéo en C L2 : Automates et Langages L3 : Optimisation, Recherche Opérationnelle  [2018-2021] Animateur du stage d&amp;rsquo;initiation à l&amp;rsquo;informatique Girls Can Code!</description>
+      <description>[2024-2025] Professeur assistant  École Polytechnique de Louvain
+ Computational Geometry (LMECA2170) [Slides]  [2022-2023] Chargé de TD  École des Mines de Nancy
+ Programmation et Structures de Données (1A) Recherche Opérationnelle (1A) Algorithmes et Complexité (1A)  [2020-2022] Chargé de TD  Faculté des Sciences et Technologies de Nancy
+ Algorithmique et programmation en python (L1) Projet de code : jeu vidéo en C (L1) Automates et Langages (L2) Optimisation, recherche opérationnelle (L3)  [2018-2021] Animateur du stage d&amp;rsquo;initiation à l&amp;rsquo;informatique Girls Can Code!</description>
     </item>
     
     <item>
@@ -88,7 +94,7 @@ Sous la supervision de Dmitry Sokolov et Etienne Corman
       
       <guid>https://GCoiffier.github.io/fr/cv/mediation/</guid>
       <description>Fête de la Science 2023 : Géométrie Numérique : Lapins, Cartes et Coutures, Conférence grand public, Lycée Louis Vincent, Metz [Video]
-  Fête de la Science 2023 : Face à Face - rencontre avec des collégiens de Bouligny et Vandoeuvre-les- Nancy
+  Fête de la Science 2023 : Face à Face - rencontre avec des collégiens de Bouligny et Vandoeuvre-les-Nancy
   Ma Thèse en 180 secondes : Finale 2022 de l&amp;rsquo;Université de Lorraine [Video]
   Nuit des Chercheurs 2022
   Chiche! : Interventions en classe de seconde dans le cadre du programme 1 scientifique, 1 classe : chiche !</description>

@@ -14,18 +14,6 @@
                 href="https://GCoiffier.github.io/fr/cv/info/"
                 />
   </url><url>
-    <loc>https://GCoiffier.github.io/fr/cv/positions/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://GCoiffier.github.io/cv/positions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://GCoiffier.github.io/fr/cv/positions/"
-                />
-  </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/education/</loc>
     <xhtml:link
                 rel="alternate"
@@ -38,16 +26,16 @@
                 href="https://GCoiffier.github.io/fr/cv/education/"
                 />
   </url><url>
-    <loc>https://GCoiffier.github.io/fr/cv/talks/</loc>
+    <loc>https://GCoiffier.github.io/fr/cv/positions/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://GCoiffier.github.io/cv/talks/"
+                href="https://GCoiffier.github.io/cv/positions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://GCoiffier.github.io/fr/cv/talks/"
+                href="https://GCoiffier.github.io/fr/cv/positions/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/publications/</loc>
@@ -60,6 +48,18 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://GCoiffier.github.io/fr/cv/publications/"
+                />
+  </url><url>
+    <loc>https://GCoiffier.github.io/fr/cv/talks/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://GCoiffier.github.io/cv/talks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://GCoiffier.github.io/fr/cv/talks/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/teaching/</loc>
