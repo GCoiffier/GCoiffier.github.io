@@ -16,6 +16,7 @@ supplemental = "/pdf/1lip_supplemental.pdf"
 code = "https://github.com/GCoiffier/1-Lipschitz-Neural-Distance-Fields"
 award = "Best Paper Award"
 slides = "/pdf/1lip_slides.pdf"
+poster = "/pdf/poster_1lip.pdf"
 
 math=true
 toc=true
@@ -33,7 +34,7 @@ where $\partial \Omega$ is the boundary of $\Omega$.
 alt="Definition of an implicit surface" 
 num="1"
 caption="An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface." 
-style="width:600px;" 
+style="width:100%; max-width:600px;" 
 >}}
 
 An important property of SDFs is that they satisfy an _Eikonal equation_:
@@ -55,7 +56,7 @@ The problem with SDFs is that they are difficult to compute. For simple shapes, 
 {{< figure src="/img/1lipSDF/grad.jpeg"
 num=2
 caption="Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound." 
-style="width:600px;" 
+style="width:100%; max-width:600px;"
 >}}
 
 Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. right), iterating the projection process will always yield the correct result at the cost of more computation time.
@@ -64,7 +65,7 @@ Why is this second point a problem? If the gradient exceeds unit norm, there is 
 alt="Projection query on an implicit surface"
 num=3
 caption="Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query." 
-style="width:600px;" 
+style="width:100%; max-width:600px;" 
 >}}
 
 In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be **1-Lipschitz**, that is:
@@ -80,7 +81,7 @@ Our method aims at building a neural distance field that is garanteed to preserv
 alt="Overview of our method"  
 num=4
 caption="Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object."
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 
@@ -96,7 +97,7 @@ The second step is to compute labels $y(x) \in \\{-1,1\\}$ for each sampled poin
 alt="Field of generalized winding number computed on two representations of a gargoyle model. Top row: clean manifold surface mesh. Bottom row: point cloud." 
 num=5
 caption="The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition." 
-style="width:600px;" 
+style="width:100%; max-width:600px;" 
 >}}
 
 Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.
@@ -122,13 +123,13 @@ We show in the paper that, under mild assumptions on $\rho$, the minimizer of th
 alt="Various geometrical objects reconstructed from the zero level set of a trained Lipschitz network" 
 num=6
 caption="Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 {{< figure src="/img/1lipSDF/elephant.jpeg" 
 num=7
 caption="Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 ## Talk video

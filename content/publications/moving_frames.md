@@ -27,7 +27,7 @@ Computing a high-quality quadmesh of a given object is a challenging task of geo
 alt="" 
 num="1"
 caption="The parametrization-based approach enables the computation of a high-quality quad mesh. The idea is to compute a flat represenation (parametrization) of the object, over which a grid is overlaid before being pulled back onto the surface. However, the parametrization needs to satisfy very specific constraints for a quad layout to be extracted." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 Let $M=(V,E,F)$ be a triangle mesh. A parametrization of $\phi$ is a mapping from $M$ to the plane $\mathbb{R}^2 \cong \mathbb{C}$. In practice, such mappings are represented by the coordinates in the place of each triangle corners, or, equivalently, as a linear transformation per triangle (Fig. 2a). In other word, having $\phi$ mapping a triangle on the surface to a triangle in parameter space is a commonly applied restriction.
@@ -42,7 +42,7 @@ To get an _integer grid map_, that is a seamless parametrization aligned with th
 alt="" 
 num="2"
 caption="The different properties of a seamless parametrization. (a) Piecewise-linear parametrization. (b) Rotationally seamless parametrization. (c) Boundary-adapted seamless parametrization. (d) Integer grid map (quantized seamless parametrization)" 
-style="width:100%;" 
+style="width:100%; max-width:600px;" 
 >}}
 
 When working with a seamless map, the exact location of the discontinuities (seams) of $\phi$ do not matter. What matters is where they end. Those ending points are called _cones_ or _singularities_. In short, these points are where the curvature of the original mesh is concentrated as multiples of $\pi/2$. They will correspond to irregular vertices in the final quad mesh.
@@ -56,7 +56,7 @@ Computing an integer grid map is a challenging problem to formulate and solve in
 alt="" 
 num="3"
 caption="The usual parametrization-based meshing pipeline. As the problem of computing an integer grid map is too challenging to be tackled directly, state of the art method split it into several steps. While mostly successful, this approach is not without downsides." 
-style="width:100%;" 
+style="width:100%; max-width:600px;" 
 >}}
 
 Although it provides good results most of the time, splitting the problem has also brought its own issues. Firstly, as problems are solved indepently, greedy choices are often made at some step that invalidates the result of the next step. For instance, not all cone distribution can yield a valid seamless parametrization. Moreover, the distribution of cones on the surface has a clear impact on the parametrization's distortion and the quality of elements in the final quadmesh. Determining the cones before computing the mapping prevents a method from taking advantage of this connection. This is why we propose an optimization that _simultaneously computes a cone distribution and a seamless parametrization_, thus merging the two first steps of the pipeline in a single one.
@@ -86,7 +86,7 @@ Let $M=(V,E,T)$ be a manifold triangle mesh. To express Cartan's structure equat
 alt="" 
 num="4"
 caption="Notations and variables of the parametrization problem" 
-style="width:500px;" 
+style="width:100%; max-width:600px;"
 >}}
 
 Given these variables, Cartan's structure equations can be expressed as follows:
@@ -127,7 +127,7 @@ After the optimization, we have a set of linear transformations $J_t$ per triang
 alt="Three meshes with displayed parametrization as a checker texture, optimized with different distortion criteria. Each mesh display a different distribution of singularities (shown as little red/blue spheres on the surface)." 
 num="5"
 caption="" 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 By doing so, singularities naturally appear as predicted by the $1$-form $\omega$. Note that the seamless parametrization does not come from the frame field variables in a classical integration procedure, but rather from the Jacobians.
@@ -149,7 +149,7 @@ as we can see on Fig. 6 (and on the representative image on top of the page), mi
 alt="Three meshes with displayed parametrization as a checker texture, optimized with different distortion criteria. Each mesh display a different distribution of singularity cones (shown as little red/blue spheres on the surface)." 
 num="6"
 caption="Optimization of the same model while minimizing different distortion criteria. The optimization yields different cone distributions whether we optimize for an angle-preserving (conformal) or area-preserving mapping." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 ## Gallery of results
@@ -158,14 +158,14 @@ style="width:100%;"
 alt="Many surface meshes in a mosaic with computed parametrization and cones displayed as a checker texture and little red/blue spheres." 
 num="7"
 caption="Gallery of results on a variety of models." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 {{< figure src="/img/moving_frames/gallery_quads.jpg" 
 alt="Many quadmeshes in a mosaic" 
 num="8"
 caption="Gallery of quadmeshes obtained using our parametrization algorithm." 
-style="width:100%;" 
+style="width:100%; max-width:600px;"
 >}}
 
 

@@ -2,6 +2,7 @@
     margin-top: 150px;
     max-width: 1200px;
     width: 100%;
+    display:block;
 }
 
 .home:after {
@@ -24,20 +25,41 @@
 }
 
 .home-portrait {
-    float:left;
-    width: 30%;
+    width: 100%;
+    text-align: center;
 }
 
 .home-me {
-    float: left;
     margin-top: 50px;
-    width: 70%;
+    width: 100%;
     vertical-align: middle;
+    text-wrap-style: pretty;
+}
+
+
+@media (min-width:1200px) {
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-title {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .home-me {
+        margin-top: 50px;
+        width: 70%;
+        min-width: 700px;
+        vertical-align: middle;
+    }
 }
 
 h1.home-title {
     font-size: xx-large;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .home-email {
@@ -67,4 +89,11 @@ h1.home-title {
 
 .home-section em {
     color: #b3b3bd;
+}
+
+.home-about {
+    max-width: 1200px;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-align: justify;
 }

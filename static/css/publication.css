@@ -45,8 +45,40 @@
 
 .paper-content {
   padding-top: 10px;
-  text-align: justify;
 }
+
+@media only screen and (max-width: 700px) {
+
+  .paper-title {
+    text-align:center;
+    font-size:x-large;
+  }
+
+  .paper-author {
+    font-size: medium;
+  }
+
+  .paper-published {
+    font-size: medium;
+    font-style: italic;
+  }
+
+  .paper-content {
+    font-size: 14px;
+  }
+  
+  .paper-abstract {
+    font-size: 14px;
+  }
+
+  .paper-toc {
+    font-size: 14px;
+  }
+}
+
+
+
+
 
 /* LIST */
 
@@ -62,37 +94,6 @@
 
 .paper-list-year {
   font-size: xxx-large;
-}
-
-li.paper-container {
-  border-radius: 10px;
-  clear: none; 
-  overflow: auto;
-}
-
-.paper-container:hover {
-  background-color: #46494c;
-  text-decoration: none;
-  transition-duration: 0.2s;
-}
-
-.paper-thumbnail {
-  float: left;
-  width: 150px;
-  height: 150px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  object-fit: cover;
-  perspective: 1px;
-  margin-right: 20px;
-  margin-left: 10px;
-}
-
-.paper-info{
-  text-align:left;
-  padding:20px 0;
-  text-decoration:none
 }
 
 .paper-list-title {
@@ -116,8 +117,80 @@ li.paper-container {
 
 .paper-list-buttons {
   margin-top: 10px;
-  display: block;
+  display:list-item;
 }
+
+
+@media only screen and (max-width: 900px) {
+  .paper-list-year { 
+    font-size: x-large; 
+  }
+
+  .paper-list-title {
+    font-size: medium;
+  }
+
+  .paper-list-author {
+    font-size: small;
+  }
+
+  .paper-list-published {
+    font-size: small;
+  }
+  
+  .paper-button {
+    font-size: 10px;
+  }
+
+  .paper-list-award {
+    font-size: small;
+  }
+}
+
+
+li.paper-container {
+  border-radius: 10px;
+  clear: none; 
+  overflow: auto;
+  display: flex;
+}
+
+.paper-container:hover {
+  background-color: #46494c;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+
+.paper-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.paper-thumbnail {
+  flex:none;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  perspective: 1px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.paper-info{
+  max-width: calc(100% - 170px);
+  text-align:left;
+  padding:20px 0;
+  text-decoration:none
+}
+
+
+
+
 
 /* BUTTON */
 
@@ -146,6 +219,7 @@ li.paper-container {
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
+  margin-bottom: 10px;
 }
 
 .paper-button:hover {

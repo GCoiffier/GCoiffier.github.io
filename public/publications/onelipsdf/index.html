@@ -183,6 +183,10 @@
                 </a>
                 
                 
+                 
+                <a style="padding:10px;"> 
+                    <a class="paper-button" href=/pdf/poster_1lip.pdf> poster </a>
+                </a> 
                 
 
                  
@@ -246,10 +250,10 @@
     <img class="figure" 
     src="/img/1lipSDF/implicit_def.jpeg" 
      alt="Definition of an implicit surface"  
-     style="width:600px;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 1. </a> An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 1. </a> An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface.</p>
     
 
 
@@ -271,10 +275,10 @@
     <img class="figure" 
     src="/img/1lipSDF/grad.jpeg" 
      
-     style="width:600px;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 2. </a> Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 2. </a> Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound.</p>
     
 
 
@@ -283,10 +287,10 @@
     <img class="figure" 
     src="/img/1lipSDF/queries.jpeg" 
      alt="Projection query on an implicit surface"  
-     style="width:600px;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 3. </a> Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 3. </a> Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query.</p>
     
 
 
@@ -298,10 +302,10 @@
     <img class="figure" 
     src="/img/1lipSDF/botijo_pipeline.jpeg" 
      alt="Overview of our method"  
-     style="width:100%;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 4. </a> Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 4. </a> Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object.</p>
     
 
 
@@ -313,10 +317,10 @@
     <img class="figure" 
     src="/img/1lipSDF/gargoyle.jpeg" 
      alt="Field of generalized winding number computed on two representations of a gargoyle model. Top row: clean manifold surface mesh. Bottom row: point cloud."  
-     style="width:600px;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:600px;" > <a style="font-weight: bold;">Figure 5. </a> The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 5. </a> The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition.</p>
     
 
 
@@ -334,10 +338,10 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
     <img class="figure" 
     src="/img/1lipSDF/gallery.jpeg" 
      alt="Various geometrical objects reconstructed from the zero level set of a trained Lipschitz network"  
-     style="width:100%;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
     
 
 
@@ -345,10 +349,10 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
     <img class="figure" 
     src="/img/1lipSDF/elephant.jpeg" 
      
-     style="width:100%;"  
+     style="width:100%; max-width:600px;"  
     />
     
-    <p class="figure-caption"  style="width:100%;" > <a style="font-weight: bold;">Figure 7. </a> Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model.</p>
+    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 7. </a> Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model.</p>
     
 
 
