@@ -6,17 +6,14 @@
     <description>Recent content in Liste des Publications on Guillaume Coiffier - Site Personnel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/fr/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://GCoiffier.github.io/fr/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manuscrit de thèse : Algorithmes de paramétrisation globale pour maillages quadrangulés</title>
       <link>https://GCoiffier.github.io/fr/publications/phd_thesis/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/publications/phd_thesis/</guid>
-      <description>Thèse encadrée par Dmitry Sokolov et Etienne Corman.
-Soutenue le 6 décembre 2023 à l&amp;rsquo;Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [Président] Mirela Ben-Chen, Technion Institut de Technologie d&amp;rsquo;Israel [Rapporteur] Marco Tarini, Université de Milan [Rapporteur] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Encadrant] Dmitry Sokolov, Université de Lorraine [Encadrant]  </description>
+      <description>Thèse encadrée par Dmitry Sokolov et Etienne Corman.&#xA;Soutenue le 6 décembre 2023 à l&amp;rsquo;Université de Lorraine.&#xA;Jury Xavier Goaoc, Université de Lorraine [Président] Mirela Ben-Chen, Technion Institut de Technologie d&amp;rsquo;Israel [Rapporteur] Marco Tarini, Université de Milan [Rapporteur] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Encadrant] Dmitry Sokolov, Université de Lorraine [Encadrant] </description>
     </item>
-    
   </channel>
 </rss>

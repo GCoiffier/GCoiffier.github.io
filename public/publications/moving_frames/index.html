@@ -40,8 +40,7 @@
 <meta itemprop="dateModified" content="2023-09-20T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1447">
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The Method of Moving Frames for Surface Parametrization"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Method of Moving Frames for Surface Parametrization"/>
 <meta name="twitter:description" content="Quadmeshing with Seamless Parametrization Computing a high-quality quadmesh of a given object is a challenging task of geometry processing, with applications in both computer graphics and numerical simulation. A promising approach to solve this problem is to rely on a parametrization, that is a flat representation of the considered object. The idea is to overlay a grid on this parametrization which will then be pulled back onto the surface to form the quad layout."/>
 
 
@@ -308,20 +307,20 @@
 
 
 <p>Given these variables, Cartan&rsquo;s structure equations can be expressed as follows:</p>
-<p>$$\left\{\begin{align}
-\exp(\imath \omega_{ij}) r_{ij} J_j e_{ji} &amp;= J_i e_{ij} &amp;\text{  (First Structure Equation)} \\
-\exp(\imath \omega_{ij})^4 r_{ij}^4 v_i &amp;= v_j &amp;\text{  (Frames Regularity)} \\
-\det{J} &amp;&gt; 0 &amp;\text{   (Local injectivity)}
-\end{align}\right.$$</p>
+$$\left\\{\begin{align}
+\exp(\imath \omega_{ij}) r_{ij} J_j e_{ji} &= J_i e_{ij} &\text{  (First Structure Equation)} \\\\
+\exp(\imath \omega_{ij})^4 r_{ij}^4 v_i &= v_j &\text{  (Frames Regularity)} \\\\
+\det{J} &> 0 &\text{   (Local injectivity)}
+\end{align}\right.$$
 <p>where $r_{ij}$ is the <a href="http://wordpress.discretization.de/geometryprocessingandapplicationsws19/connections-and-parallel-transport/">parallel transport</a> between triangles $i$ and $j$ (some precomputed fixed rotation to account for change of local bases).</p>
 <h3 id="cayley-transform">Cayley Transform</h3>
 <p>To avoid optimizing through the exponential in the above system of equations, we make a change of variables. Instead of working with an angle $\omega$, we work with $\hat{\omega} = \tan{\omega/2}$ and apply a <a href="https://en.wikipedia.org/wiki/Cayley_transform#Complex_homography"><em>Cayley Transform</em></a>:</p>
-<p>$$\exp \left( \imath \omega \right) = \frac{1 - \imath \hat{\omega}/2 }{1 + \imath \hat{\omega}/2}$$</p>
+$$\exp \left( \imath \omega \right) = \frac{1 - \imath \hat{\omega}/2 }{1 + \imath \hat{\omega}/2}$$
 <p>which means that the equations are transformed as:</p>
-<p>$$\left\{\begin{align}
-(1 - \imath \omega_{ij}/2) r_{ij} J_j e_{ji} &amp;= (1 + \imath \omega_{ij}/2) J_i e_{ij} &amp; \text{ (First Structure Equation - Cayley)} \\
-(1 - \imath \omega_{ij}/2)^4 r_{ij}^4 v_i &amp;= (1 + \imath \omega_{ij}/2)^4 v_i &amp; \text{ (Frames Regularity - Cayley)}
-\end{align}\right.$$</p>
+$$\left\\{\begin{align}
+(1 - \imath \omega_{ij}/2) r_{ij} J_j e_{ji} &= (1 + \imath \omega_{ij}/2) J_i e_{ij} & \text{ (First Structure Equation - Cayley)} \\\\
+(1 - \imath \omega_{ij}/2)^4 r_{ij}^4 v_i &= (1 + \imath \omega_{ij}/2)^4 v_i & \text{ (Frames Regularity - Cayley)}
+\end{align}\right.$$
 <p>This system of equation per pairs of triangles is then fed into a <a href="https://en.wikipedia.org/wiki/Levenberg%E2%80%93Marquardt_algorithm"><em>Levenberg-Marquardt</em></a> optimizer in order to find a solution in terms of $J,\omega$ and $v$.</p>
 <h3 id="parametrization-reconstruction">Parametrization Reconstruction</h3>
 <p>After the optimization, we have a set of linear transformations $J_t$ per triangle. If the structure equations are satisfied, the transformed triangles can be assembled back in a seamless parametrization following these steps:</p>
@@ -345,12 +344,12 @@
 <p>By doing so, singularities naturally appear as predicted by the $1$-form $\omega$. Note that the seamless parametrization does not come from the frame field variables in a classical integration procedure, but rather from the Jacobians.</p>
 <h3 id="distortion-minimization">Distortion minimization</h3>
 <p>As Jacobian matrices of the parametrization are available during optimization, one can try to minimize some distortion criterion alongside the structure equations to bias the optimization towards certain kinds of parametrizations. Basically any smooth function of the Jacobian matrices can be optimized in this manner. Some interesting functions are:</p>
-<p>$$\begin{align}
-\mathcal{D}_{\text{Conformal}}(J) &amp;= \sum_{t \in T} \left| J_t - \begin{pmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{pmatrix} J_t \right|^2 \\ \\
-\mathcal{D}_{\text{Isometric}}(J) &amp;= \sum_{t \in T} | J_t^T J_t - I_2 |^2 \\ \\
-\mathcal{D}_{\text{Area-preserving}}(J) &amp;= \sum_{t \in T} | \det(J_t) - 1 |^2 + \varepsilon \mathcal{D}_{\text{Conformal}}(J)
+$$\begin{align}
+\mathcal{D}\_{\text{Conformal}}(J) &= \sum_{t \in T} \left| J_t - \begin{pmatrix} 0 & -1 \\\\ 1 & 0 \end{pmatrix} J_t \right|^2 \\\\ \\\\
+\mathcal{D}\_{\text{Isometric}}(J) &= \sum_{t \in T} \| J_t^T J_t - I_2 \|^2 \\\\ \\\\
+\mathcal{D}\_{\text{Area-preserving}}(J) &= \sum_{t \in T} \| \det(J_t) - 1 \|^2 + \varepsilon \mathcal{D}_{\text{Conformal}}(J)
 \end{align}
-$$</p>
+$$
 <p>as we can see on Fig. 6 (and on the representative image on top of the page), minimizing those different criteria lead to a different placement of cones. In other words, we were able to influence the distribution of singularity cones in order to better minimize the distortion of the parametrization.</p>
 
     <img class="figure" 
@@ -387,23 +386,23 @@ $$</p>
 
 
 <h2 id="bibtex">BibTeX</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex">@article{coiffier2023movingframes,
-	author = {Coiffier, Guillaume and Corman, Etienne},
-	title = {The Method of Moving Frames for Surface Global Parametrization},
-	year = {2023},
-	issue_date = {October 2023},
-	publisher = {Association for Computing Machinery},
-	volume = {42},
-	number = {5},
-	issn = {0730-0301},
-	url = {https://doi.org/10.1145/3604282},
-	doi = {10.1145/3604282},
-	journal = {ACM Trans. Graph.},
-	month = {sep},
-	articleno = {166},
-	numpages = {18}
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>@article{coiffier2023movingframes,
+</span></span><span style="display:flex;"><span>	author = {Coiffier, Guillaume and Corman, Etienne},
+</span></span><span style="display:flex;"><span>	title = {The Method of Moving Frames for Surface Global Parametrization},
+</span></span><span style="display:flex;"><span>	year = {2023},
+</span></span><span style="display:flex;"><span>	issue_date = {October 2023},
+</span></span><span style="display:flex;"><span>	publisher = {Association for Computing Machinery},
+</span></span><span style="display:flex;"><span>	volume = {42},
+</span></span><span style="display:flex;"><span>	number = {5},
+</span></span><span style="display:flex;"><span>	issn = {0730-0301},
+</span></span><span style="display:flex;"><span>	url = {https://doi.org/10.1145/3604282},
+</span></span><span style="display:flex;"><span>	doi = {10.1145/3604282},
+</span></span><span style="display:flex;"><span>	journal = {ACM Trans. Graph.},
+</span></span><span style="display:flex;"><span>	month = {sep},
+</span></span><span style="display:flex;"><span>	articleno = {166},
+</span></span><span style="display:flex;"><span>	numpages = {18}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
         </div>
         
         </article>
@@ -429,7 +428,7 @@ $$</p>
 
 
 
-<script type="text/javascript" src="/bundle.min.b66ca78575c5a257714b9b805cec38c36e873ee6a439d4fafcfcdbdcef6c61f850c1763deac2a3b1612865d9457c06812251cbd66b803603ec4a126d20bf0c25.js" integrity="sha512-tmynhXXFoldxS5uAXOw4w26HPuakOdT6/Pzb3O9sYfhQwXY96sKjsWEoZdlFfAaBIlHL1muANgPsShJtIL8MJQ=="></script>
+<script type="text/javascript" src="/bundle.min.88376889638f370cae226506534088c51ec0669eb34c7ddfc6388d854e3891ff2b2acfb5a26766803d23ed5ef4986014021ce16919302f5a99951ab43b5ceb70.js" integrity="sha512-iDdoiWOPNwyuImUGU0CIxR7AZp6zTH3fxjiNhU44kf8rKs&#43;1omdmgD0j7V70mGAUAhzhaRkwL1qZlRq0O1zrcA=="></script>
 
 
 

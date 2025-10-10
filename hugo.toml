@@ -25,7 +25,7 @@ toc = false # enable table of content at the beginning of a post by adding toc=t
       enable = true
       [markup.goldmark.extensions.passthrough.delimiters]
         block = [['\[', '\]'], ['$$', '$$']]
-        inline = [['\(', '\)', ['$', '$']]]
+        inline = [['\(', '\)'], ['$', '$']]
   [markup.tableOfContents]
     endLevel = 3
     ordered = true

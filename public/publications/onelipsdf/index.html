@@ -40,8 +40,7 @@
 <meta itemprop="dateModified" content="2024-06-20T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1324">
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
 <meta name="twitter:description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"/>
 
 
@@ -244,7 +243,7 @@
         <div class="paper-content">
             <h2 id="signed-distance-function">Signed Distance Function</h2>
 <p>This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the <em>Signed Distance Function</em> (SDF) of $\Omega$, which is defined as:</p>
-<p>$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$</p>
+$$ S\_\Omega(x) = \left[\mathbb{1}\_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}\_{\Omega}(x) \right] \min\_{p \in \partial \Omega} ||x - p||$$
 <p>where $\partial \Omega$ is the boundary of $\Omega$.</p>
 
     <img class="figure" 
@@ -258,9 +257,9 @@
 
 
 <p>An important property of SDFs is that they satisfy an <em>Eikonal equation</em>:</p>
-<p>$$\left\{ \begin{array}{lll} ||\nabla S(x)|| &amp;= 1 \quad &amp;\forall x \in \mathbb{R}^n \\ S(x) &amp;= 0 \quad &amp;\forall x \in \partial \Omega \\ \nabla S(x) &amp;= n(x) \quad &amp;\forall x \in \partial \Omega \end{array} \right.$$</p>
+$$\left\\{ \begin{array}{lll} ||\nabla S(x)|| &= 1 \quad &\forall x \in \mathbb{R}^n \\\\ S(x) &= 0 \quad &\forall x \in \partial \Omega \\\\ \nabla S(x) &= n(x) \quad &\forall x \in \partial \Omega \end{array} \right.$$
 <p>Having access to the SDF of an object allows for easy geometrical queries and efficient rendering via <a href="https://iquilezles.org/articles/raymarchingdf/">ray marching</a>. For example, the projection onto the surface of $\Omega$ can be defined as:</p>
-<p>$$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$</p>
+$$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$
 <h2 id="neural-distance-fields">Neural Distance Fields</h2>
 <p>The problem with SDFs is that they are difficult to compute. For simple shapes, they may be computed in closed form (see <a href="https://iquilezles.org/articles/distfunctions/">this webpage</a> by Inigo Quilez that lists many of them), but they quickly become intractable when the objects grows in complexity. This is why there is an ongoing effort to compute good approximations of SDFs. In particular, the recent domain of <em>neural distance fields</em> proposes to use deep learning to solve this problem. The idea here is to define a neural network $f_\theta : \mathbb{R}^n \rightarrow \mathbb{R}$ that will approximate the SDF. However, this approach has two critical limitations:</p>
 <ol>
@@ -295,7 +294,7 @@
 
 
 <p>In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be <strong>1-Lipschitz</strong>, that is:</p>
-<p>$$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$</p>
+$$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}^n$$
 <h2 id="our-method">Our method</h2>
 <p>Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied <em>by construction</em>. On top of this architecture, we minimize a loss that does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:</p>
 
@@ -312,7 +311,7 @@
 <h3 id="step-1-sampling">Step 1: Sampling</h3>
 <p>Our method takes as input any oriented geometry $\Omega$. This includes point cloud with normals, triangle soups and surface meshes. The first step is to extract a dataset from the input geometry. We define a domain $D \subset \mathbb{R}^n$ as a loose axis-aligned bounding box of $\Omega$ and sample it uniformly.</p>
 <h3 id="step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</h3>
-<p>The second step is to compute labels $y(x) \in \{-1,1\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
+<p>The second step is to compute labels $y(x) \in \\{-1,1\\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
 
     <img class="figure" 
     src="/img/1lipSDF/gargoyle.jpeg" 
@@ -327,11 +326,11 @@
 <p>Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.</p>
 <h3 id="step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</h3>
 <p>Once the labels $y$ have been computed, we define some $1$-Lipschitz architecture to approximate the SDF. $1$-Lipschitz neural networks have been extensively studied in theoretical deep learning for their robustness to adversarial attacks and overfitting. Several architectures that are Lipschitz by construction were designed throughout the years. We use the architecture proposed by <a href="https://arxiv.org/abs/2303.03169">Araujo et al.</a>, although any Lipschitz architecture can be used.</p>
-<p>On top of the Lipschitz network, we propose to minimize the <em>hinge-Kantorovitch-Rubinstein</em> (hKR) loss. This binary classification loss was first proposed by <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html">Serrurier et al.</a>. For binary labels $y \in \{-1,1\}$, hyperparameters $\lambda&gt;0$ and $m&gt;0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:</p>
-<p>$$\mathcal{L}_{hKR} = \mathcal{L}_{KR} + \lambda \mathcal{L}_{hinge}^m$$</p>
+<p>On top of the Lipschitz network, we propose to minimize the <em>hinge-Kantorovitch-Rubinstein</em> (hKR) loss. This binary classification loss was first proposed by <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html">Serrurier et al.</a>. For binary labels $y \in \\{-1,1\\}$, hyperparameters $\lambda>0$ and $m>0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:</p>
+$$\mathcal{L}\_{hKR} = \mathcal{L}\_{KR} + \lambda \mathcal{L}\_{hinge}^m$$
 <p>defined as:</p>
-<p>$$\mathcal{L}_{KR}(f_\theta,y) = \int_D -yf_\theta(x) \, \rho(x) dx$$
-$$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\,\rho(x)dx.$$</p>
+$$\mathcal{L}\_{KR}(f\_\theta,y) = \int\_D -yf\_\theta(x) \\, \rho(x) dx$$
+$$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\right)\\,\rho(x)dx.$$
 <p>We show in the paper that, under mild assumptions on $\rho$, the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$ up to an error that is bounded by $m$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.</p>
 <h2 id="gallery-of-results">Gallery of results</h2>
 
@@ -363,15 +362,15 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
 </div>
 
 <h2 id="bibtex">BibTeX</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bibtex" data-lang="bibtex"><span style="color:#a6e22e">@inproceedings</span>{coiffier20241,
-  <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">{1-Lipschitz Neural Distance Fields}</span>,
-  <span style="color:#a6e22e">author</span>=<span style="color:#e6db74">{Coiffier, Guillaume and B{\&#39;e}thune, Louis}</span>,
-  <span style="color:#a6e22e">booktitle</span>=<span style="color:#e6db74">{COMPUTER GRAPHICS forum}</span>,
-  <span style="color:#a6e22e">volume</span>=<span style="color:#e6db74">{43}</span>,
-  <span style="color:#a6e22e">number</span>=<span style="color:#e6db74">{5}</span>,
-  <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bibtex" data-lang="bibtex"><span style="display:flex;"><span><span style="color:#a6e22e">@inproceedings</span>{coiffier20241,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">{1-Lipschitz Neural Distance Fields}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span>=<span style="color:#e6db74">{Coiffier, Guillaume and B{\&#39;e}thune, Louis}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">booktitle</span>=<span style="color:#e6db74">{COMPUTER GRAPHICS forum}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">volume</span>=<span style="color:#e6db74">{43}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">number</span>=<span style="color:#e6db74">{5}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
         </div>
         
         </article>
@@ -397,7 +396,7 @@ $$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\
 
 
 
-<script type="text/javascript" src="/bundle.min.b66ca78575c5a257714b9b805cec38c36e873ee6a439d4fafcfcdbdcef6c61f850c1763deac2a3b1612865d9457c06812251cbd66b803603ec4a126d20bf0c25.js" integrity="sha512-tmynhXXFoldxS5uAXOw4w26HPuakOdT6/Pzb3O9sYfhQwXY96sKjsWEoZdlFfAaBIlHL1muANgPsShJtIL8MJQ=="></script>
+<script type="text/javascript" src="/bundle.min.88376889638f370cae226506534088c51ec0669eb34c7ddfc6388d854e3891ff2b2acfb5a26766803d23ed5ef4986014021ce16919302f5a99951ab43b5ceb70.js" integrity="sha512-iDdoiWOPNwyuImUGU0CIxR7AZp6zTH3fxjiNhU44kf8rKs&#43;1omdmgD0j7V70mGAUAhzhaRkwL1qZlRq0O1zrcA=="></script>
 
 
 

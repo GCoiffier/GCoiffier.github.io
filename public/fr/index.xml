@@ -6,150 +6,91 @@
     <description>Recent content on Guillaume Coiffier - Site Personnel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://GCoiffier.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Informations générales</title>
       <link>https://GCoiffier.github.io/fr/cv/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/info/</guid>
-      <description>Depuis début 2024, je suis en post-doctorat à l&amp;rsquo;Université Catholique de Louvain (Belgique), où je travaille sur des déformations injectives de maillages dans le contexte du projet X-mesh, mené par Jean-François Remacle et Nicolas Moës.
-J&amp;rsquo;ai effectué ma thèse au LORIA, à l&amp;rsquo;Université de Lorraine, sous la direction de Etienne Corman et Dmitry Sokolov. Elle a été soutenue le 6 décembre 2023.
-Thématiques de recherche  Traitement numérique de la géométrie Maillage Paramétrisation de maillage Apprentissage automatique et représentations neuronales implicites de la géométrie  Contact  Email: guillaume.</description>
+      <description>Depuis début 2024, je suis en post-doctorat à l&amp;rsquo;Université Catholique de Louvain (Belgique), où je travaille sur des déformations injectives de maillages dans le contexte du projet X-mesh, mené par Jean-François Remacle et Nicolas Moës.&#xA;J&amp;rsquo;ai effectué ma thèse au LORIA, à l&amp;rsquo;Université de Lorraine, sous la direction de Etienne Corman et Dmitry Sokolov. Elle a été soutenue le 6 décembre 2023.&#xA;Thématiques de recherche Traitement numérique de la géométrie Maillage Paramétrisation de maillage Apprentissage automatique et représentations neuronales implicites de la géométrie Contact Email: guillaume.</description>
     </item>
-    
     <item>
       <title>Formation</title>
       <link>https://GCoiffier.github.io/fr/cv/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/education/</guid>
-      <description>[2020-2023] Doctorat  Algorithmes de paramétrisation globale pour maillages quadrilatéraux
-LORIA, Université de Lorraine, Nancy, France
-Sous la supervision de Dmitry Sokolov et Etienne Corman
-Thèse soutenue le 6 décembre 2023
-[2016-2020] Diplôme de l&amp;rsquo;École Normale Supérieure de Lyon  École Normale Supérieure de Lyon, France
-[2016-2019] License puis Master en Informatique Fondamentale  École Normale Supérieure de Lyon, France
-[2013-2016] Classes Préparatoires aux Grandes Ecoles, MPSI puis MP  Lycée Henri Wallon, Valenciennes, France</description>
+      <description>[2020-2023] Doctorat Algorithmes de paramétrisation globale pour maillages quadrilatéraux&#xA;LORIA, Université de Lorraine, Nancy, France&#xA;Sous la supervision de Dmitry Sokolov et Etienne Corman&#xA;Thèse soutenue le 6 décembre 2023&#xA;[2016-2020] Diplôme de l&amp;rsquo;École Normale Supérieure de Lyon École Normale Supérieure de Lyon, France&#xA;[2016-2019] License puis Master en Informatique Fondamentale École Normale Supérieure de Lyon, France&#xA;[2013-2016] Classes Préparatoires aux Grandes Ecoles, MPSI puis MP Lycée Henri Wallon, Valenciennes, France</description>
     </item>
-    
     <item>
       <title>Parcours Académique</title>
       <link>https://GCoiffier.github.io/fr/cv/positions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/positions/</guid>
-      <description>[Depuis Jan. 2024] Post-doctorat - Assistant de recherche  Maillage d&amp;rsquo;interfaces dans des simulations par éléments finis.
-Université Catholique de Louvain, Louvain-la-Neuve, Belgique
-Membre de l&amp;rsquo;équipe projet X-mesh, menée par Jean-François Remacle et Nicolas Moës.
-[Sep. 2020 - Dec. 2023] Doctorat  Algorithmes de paramétrisation globale pour maillages quadrilatéraux
-LORIA, Université de Lorraine, Nancy, France
-Encadrée par Dmitry Sokolov et Etienne Corman
-Thèse soutenue le 6 décembre 2023
-[Jan. 2020 - Juin 2020] Stage de recherche  Recherche automatique d&amp;rsquo;architectures de réseaux de neurones profonds</description>
+      <description>[Depuis Jan. 2024] Post-doctorat - Assistant de recherche Maillage d&amp;rsquo;interfaces dans des simulations par éléments finis.&#xA;Université Catholique de Louvain, Louvain-la-Neuve, Belgique&#xA;Membre de l&amp;rsquo;équipe projet X-mesh, menée par Jean-François Remacle et Nicolas Moës.&#xA;[Sep. 2020 - Dec. 2023] Doctorat Algorithmes de paramétrisation globale pour maillages quadrilatéraux&#xA;LORIA, Université de Lorraine, Nancy, France&#xA;Encadrée par Dmitry Sokolov et Etienne Corman&#xA;Thèse soutenue le 6 décembre 2023&#xA;[Jan. 2020 - Juin 2020] Stage de recherche Recherche automatique d&amp;rsquo;architectures de réseaux de neurones profonds</description>
     </item>
-    
     <item>
       <title>Publications</title>
       <link>https://GCoiffier.github.io/fr/cv/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/publications/</guid>
       <description>Voir la liste des publications ou Google Scholar</description>
     </item>
-    
     <item>
       <title>Conférences et colloques</title>
       <link>https://GCoiffier.github.io/fr/cv/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/talks/</guid>
-      <description>Conférences internationales   The Method of Moving Frames for Surface Global Parametrization
-SIGGRAPH 2024
-  1-Lipschitz Neural Distance Fields
-Symposium on Geometry Processing 2024 [Video]
-:trophy: Best Paper Award
-  3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks
-Petroleum Geostatistics 2019 [Abstract]
-  Conférences nationales   Robust Neural Distance Fields using 1-Lipschitz Neural Networks
-Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique</description>
+      <description>Conférences internationales The Method of Moving Frames for Surface Global Parametrization&#xA;SIGGRAPH 2024&#xA;1-Lipschitz Neural Distance Fields&#xA;Symposium on Geometry Processing 2024 [Video]&#xA;:trophy: Best Paper Award&#xA;3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks&#xA;Petroleum Geostatistics 2019 [Abstract]&#xA;Conférences nationales Robust Neural Distance Fields using 1-Lipschitz Neural Networks&#xA;Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique&#xA;Marseille, 27 mars 2024 [Slides]&#xA;The Method of Moving Frames for Surface Global Parametrization</description>
     </item>
-    
     <item>
       <title>Enseignement</title>
       <link>https://GCoiffier.github.io/fr/cv/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/teaching/</guid>
-      <description>[2024-2025] Professeur assistant  École Polytechnique de Louvain
- Computational Geometry (LMECA2170) [Slides]  [2022-2023] Chargé de TD  École des Mines de Nancy
- Programmation et Structures de Données (1A) Recherche Opérationnelle (1A) Algorithmes et Complexité (1A)  [2020-2022] Chargé de TD  Faculté des Sciences et Technologies de Nancy
- Algorithmique et programmation en python (L1) Projet de code : jeu vidéo en C (L1) Automates et Langages (L2) Optimisation, recherche opérationnelle (L3)  [2018-2021] Animateur du stage d&amp;rsquo;initiation à l&amp;rsquo;informatique Girls Can Code!</description>
+      <description>[2024-2025] Professeur assistant École Polytechnique de Louvain&#xA;Computational Geometry (LMECA2170) [Slides] [2022-2023] Chargé de TD École des Mines de Nancy&#xA;Programmation et Structures de Données (1A) Recherche Opérationnelle (1A) Algorithmes et Complexité (1A) [2020-2022] Chargé de TD Faculté des Sciences et Technologies de Nancy&#xA;Algorithmique et programmation en python (L1) Projet de code : jeu vidéo en C (L1) Automates et Langages (L2) Optimisation, recherche opérationnelle (L3) [2018-2021] Animateur du stage d&amp;rsquo;initiation à l&amp;rsquo;informatique Girls Can Code!</description>
     </item>
-    
     <item>
       <title>Médiation Scientifique</title>
       <link>https://GCoiffier.github.io/fr/cv/mediation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/mediation/</guid>
-      <description>Fête de la Science 2023 : Géométrie Numérique : Lapins, Cartes et Coutures, Conférence grand public, Lycée Louis Vincent, Metz [Video]
-  Fête de la Science 2023 : Face à Face - rencontre avec des collégiens de Bouligny et Vandoeuvre-les-Nancy
-  Ma Thèse en 180 secondes : Finale 2022 de l&amp;rsquo;Université de Lorraine [Video]
-  Nuit des Chercheurs 2022
-  Chiche! : Interventions en classe de seconde dans le cadre du programme 1 scientifique, 1 classe : chiche !</description>
+      <description>Fête de la Science 2023 : Géométrie Numérique : Lapins, Cartes et Coutures, Conférence grand public, Lycée Louis Vincent, Metz [Video]&#xA;Fête de la Science 2023 : Face à Face - rencontre avec des collégiens de Bouligny et Vandoeuvre-les-Nancy&#xA;Ma Thèse en 180 secondes : Finale 2022 de l&amp;rsquo;Université de Lorraine [Video]&#xA;Nuit des Chercheurs 2022&#xA;Chiche! : Interventions en classe de seconde dans le cadre du programme 1 scientifique, 1 classe : chiche !</description>
     </item>
-    
     <item>
       <title>Prix et distinctions</title>
       <link>https://GCoiffier.github.io/fr/cv/awards/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/cv/awards/</guid>
-      <description>Prix du meilleur article pour 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024
-  Prix de la meilleure présentation pour 1-Lipschitz Neural Distance Fields, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, 2024
-  2e prix de l&amp;rsquo;Université de Lorraine à Ma thèse en 180 secondes
-  2e prix du meilleur article pour Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2020</description>
+      <description>Prix du meilleur article pour 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024&#xA;Prix de la meilleure présentation pour 1-Lipschitz Neural Distance Fields, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, 2024&#xA;2e prix de l&amp;rsquo;Université de Lorraine à Ma thèse en 180 secondes&#xA;2e prix du meilleur article pour Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2020</description>
     </item>
-    
     <item>
       <title>Manuscrit de thèse : Algorithmes de paramétrisation globale pour maillages quadrangulés</title>
       <link>https://GCoiffier.github.io/fr/publications/phd_thesis/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/publications/phd_thesis/</guid>
-      <description>Thèse encadrée par Dmitry Sokolov et Etienne Corman.
-Soutenue le 6 décembre 2023 à l&amp;rsquo;Université de Lorraine.
-Jury  Xavier Goaoc, Université de Lorraine [Président] Mirela Ben-Chen, Technion Institut de Technologie d&amp;rsquo;Israel [Rapporteur] Marco Tarini, Université de Milan [Rapporteur] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Encadrant] Dmitry Sokolov, Université de Lorraine [Encadrant]  </description>
+      <description>Thèse encadrée par Dmitry Sokolov et Etienne Corman.&#xA;Soutenue le 6 décembre 2023 à l&amp;rsquo;Université de Lorraine.&#xA;Jury Xavier Goaoc, Université de Lorraine [Président] Mirela Ben-Chen, Technion Institut de Technologie d&amp;rsquo;Israel [Rapporteur] Marco Tarini, Université de Milan [Rapporteur] Bruno Lévy, Inria, Centre de l&amp;rsquo;Université de Lorraine Pooran Memari, CNRS, Ecole Polytechnique Mélina Skouras, Inria, Centre de l&amp;rsquo;Université de Grenoble Etienne Corman, CNRS, LORIA [Encadrant] Dmitry Sokolov, Université de Lorraine [Encadrant] </description>
     </item>
-    
     <item>
       <title>Lapins, Cartes et Coutures</title>
       <link>https://GCoiffier.github.io/fr/blog/fds_2023_louis_vincent/</link>
       <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/blog/fds_2023_louis_vincent/</guid>
-      <description>   </description>
+      <description> </description>
     </item>
-    
     <item>
       <title>Ma thèse en 180 secondes</title>
       <link>https://GCoiffier.github.io/fr/blog/mt180/</link>
       <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/blog/mt180/</guid>
       <description>Passage à 58:16</description>
     </item>
-    
     <item>
       <title>JFIG Concours Shadertoy 2020</title>
       <link>https://GCoiffier.github.io/fr/blog/jfig_shader/</link>
       <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/fr/blog/jfig_shader/</guid>
-      <description>Depuis 2020 est organisé, à l&amp;rsquo;occasion des Journées Françaises de l&amp;rsquo;Informatique Graphique, un concours shadertoy. Ceci est ma soumission de l&amp;rsquo;année 2020, ainsi que la vidéo explicative :
-https://www.shadertoy.com/view/WlSBRV   </description>
+      <description>Depuis 2020 est organisé, à l&amp;rsquo;occasion des Journées Françaises de l&amp;rsquo;Informatique Graphique, un concours shadertoy. Ceci est ma soumission de l&amp;rsquo;année 2020, ainsi que la vidéo explicative :&#xA;https://www.shadertoy.com/view/WlSBRV </description>
     </item>
-    
   </channel>
 </rss>

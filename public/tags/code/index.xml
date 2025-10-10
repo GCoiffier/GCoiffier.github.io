@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>code on Guillaume Coiffier - Personal Website</title>
+    <title>Code on Guillaume Coiffier - Personal Website</title>
     <link>https://GCoiffier.github.io/tags/code/</link>
-    <description>Recent content in code on Guillaume Coiffier - Personal Website</description>
+    <description>Recent content in Code on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://GCoiffier.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Visualizing Frame Fields</title>
       <link>https://GCoiffier.github.io/blog/frame_fields_polyscope/</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/blog/frame_fields_polyscope/</guid>
-      <description>This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available on github if you want to try it out.
- Stanford bunny
- CAD model
-  </description>
+      <description>This project is a small demo of some of the frame field algorithms that I implemented over time. The code is available on github if you want to try it out.&#xA;Stanford bunny&#xA;CAD model</description>
     </item>
-    
     <item>
       <title>Mouette: the python library</title>
       <link>https://GCoiffier.github.io/blog/mouette/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/blog/mouette/</guid>
-      <description>Mouette is my personal python library for handling point clouds, polylines, surface and volume meshes. It also contains various geometry processing algorithm I encountered in my work, like shortest-paths, old-school parametrization or frame fields.
-Mouette (French for seagull) stands for Maillages, OUtils Et Traitement auTomatique de la géométriE (French for &amp;ldquo;Meshes, Tools and Geometry Processing&amp;rdquo;).
-Source code: https://github.com/GCoiffier/mouette
-Installation Using pip: pip install mouette
-Overview Mouette allows to easily load data from various file format and access geometrical primitives</description>
+      <description>Mouette is my personal python library for handling point clouds, polylines, surface and volume meshes. It also contains various geometry processing algorithm I encountered in my work, like shortest-paths, old-school parametrization or frame fields.&#xA;Mouette (French for seagull) stands for Maillages, OUtils Et Traitement auTomatique de la géométriE (French for &amp;ldquo;Meshes, Tools and Geometry Processing&amp;rdquo;).&#xA;Source code: https://github.com/GCoiffier/mouette&#xA;Installation Using pip: pip install mouette&#xA;Overview Mouette allows to easily load data from various file format and access geometrical primitives</description>
     </item>
-    
   </channel>
 </rss>

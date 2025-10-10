@@ -5,98 +5,63 @@
     <link>https://GCoiffier.github.io/cv/</link>
     <description>Recent content in Cvs on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://GCoiffier.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://GCoiffier.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://GCoiffier.github.io/cv/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/info/</guid>
-      <description>Since 2024, I am a post-doc at the Catholic University of Louvain in Louvain-la-Neuve (Belgium), where I work on injective deformation of meshes in the context of the X-mesh project, lead by Jean-François Remacle and Nicolas Moës.
-I obtained a PhD from the University of Lorraine under the supervision of Etienne Corman and Dmitry Sokolov. I defended my PhD in December 2023.
-Research Interests  Geometry Processing Meshing Mesh parametrization Deep learning and neural implicit representations  Contact infos  Email: guillaume.</description>
+      <description>Since 2024, I am a post-doc at the Catholic University of Louvain in Louvain-la-Neuve (Belgium), where I work on injective deformation of meshes in the context of the X-mesh project, lead by Jean-François Remacle and Nicolas Moës.&#xA;I obtained a PhD from the University of Lorraine under the supervision of Etienne Corman and Dmitry Sokolov. I defended my PhD in December 2023.&#xA;Research Interests Geometry Processing Meshing Mesh parametrization Deep learning and neural implicit representations Contact infos Email: guillaume.</description>
     </item>
-    
     <item>
       <title>Current and past positions</title>
       <link>https://GCoiffier.github.io/cv/positions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/positions/</guid>
-      <description>[Since Jan. 2024] Post-doc / Research Assistant
-Université Catholique de Louvain, Louvain-la-Neuve, Belgium
-Meshing sharp physical interfaces in finite element simulation
-Member of the X-mesh team lead by Jean-François Remacle and Nicolas Moës
-  [Sep. 2020 - Dec. 2023] PhD Student
-LORIA, University of Lorraine, Nancy, France
-Global parametrization algorithmes for quadmeshing
-Supervisors: Dmitry Sokolov and Etienne Corman
-Thesis defended on December 6th, 2023
-  [Jan. 2020 - June 2020] Research internship</description>
+      <description>[Since Jan. 2024] Post-doc / Research Assistant&#xA;Université Catholique de Louvain, Louvain-la-Neuve, Belgium&#xA;Meshing sharp physical interfaces in finite element simulation&#xA;Member of the X-mesh team lead by Jean-François Remacle and Nicolas Moës&#xA;[Sep. 2020 - Dec. 2023] PhD Student&#xA;LORIA, University of Lorraine, Nancy, France&#xA;Global parametrization algorithmes for quadmeshing&#xA;Supervisors: Dmitry Sokolov and Etienne Corman&#xA;Thesis defended on December 6th, 2023&#xA;[Jan. 2020 - June 2020] Research internship</description>
     </item>
-    
     <item>
       <title>Education</title>
       <link>https://GCoiffier.github.io/cv/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/education/</guid>
-      <description>[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman
-[2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France
-[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France</description>
+      <description>[2020-2023] PhD, Global Parametrization Algorithms for Quadmeshing &amp;ndash; LORIA, Université de Lorraine, Nancy, France &amp;ndash; Under the supervision of Dmitry Sokolov and Etienne Corman&#xA;[2016-2020] Ms Student in Computer Science &amp;ndash; École Normale Supérieure de Lyon, Lyon, France&#xA;[2013-2016] French &amp;ldquo;Preparatory classes&amp;rdquo;, Mathematics-Physics-Computer Science &amp;ndash; Lycée Henri Wallon, Valenciennes, France</description>
     </item>
-    
     <item>
       <title>Conferences, Seminars and Workshops</title>
       <link>https://GCoiffier.github.io/cv/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/talks/</guid>
-      <description>International conferences   The Method of Moving Frames for Surface Global Parametrization SIGGRAPH 2024
-  1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing 2024 [Video]
-:trophy: Best Paper Award
-  3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks, Petroleum Geostatistics 2019 [Abstract]
-  National (French) conferences and workshops   Robust Neural Distance Fields using 1-Lipschitz Neural Networks, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, Marseille, 27 mars 2024 [Slides]</description>
+      <description>International conferences The Method of Moving Frames for Surface Global Parametrization SIGGRAPH 2024&#xA;1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing 2024 [Video]&#xA;:trophy: Best Paper Award&#xA;3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks, Petroleum Geostatistics 2019 [Abstract]&#xA;National (French) conferences and workshops Robust Neural Distance Fields using 1-Lipschitz Neural Networks, Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique, Marseille, 27 mars 2024 [Slides]</description>
     </item>
-    
     <item>
       <title>Publications</title>
       <link>https://GCoiffier.github.io/cv/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/publications/</guid>
       <description>See the list of publications or Google Scholar</description>
     </item>
-    
     <item>
       <title>Teaching</title>
       <link>https://GCoiffier.github.io/cv/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/teaching/</guid>
-      <description>[2024-2025] Lecturer, École Polytechnique de Louvain  Computational Geometry (LMECA2170) [Slides]  [2022-2023] Teaching Assistant, École des Mines de Nancy  Programmation and Data Structures Operational Research Algorithms and Complexity  [2020-2022] Teaching Assistant, Faculty of Sciences and Technology, Nancy, France  Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research  [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France </description>
+      <description>[2024-2025] Lecturer, École Polytechnique de Louvain Computational Geometry (LMECA2170) [Slides] [2022-2023] Teaching Assistant, École des Mines de Nancy Programmation and Data Structures Operational Research Algorithms and Complexity [2020-2022] Teaching Assistant, Faculty of Sciences and Technology, Nancy, France Algorithms and programmation in Python Coding Project: Video game in C Automata, Grammars and Languages Optimization, Operational Research [2018-2021] Advisor for the boot camp Girls Can Code!, Lyon, France </description>
     </item>
-    
     <item>
       <title>Popular Science</title>
       <link>https://GCoiffier.github.io/cv/mediation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/mediation/</guid>
-      <description>I take part in Inria&amp;rsquo;s program Chiche! whose goal is to make each French high school student meet a computer scientist. With this program, I&amp;rsquo;ve met a dozen of classes in high schools of eastern France between 2021 and 2023.
-  In 2022, I participated in the international French-speaking contest of popular science Ma thèse en 180 secondes, where I got the second best prize of the University of Lorraine for my talk.</description>
+      <description>I take part in Inria&amp;rsquo;s program Chiche! whose goal is to make each French high school student meet a computer scientist. With this program, I&amp;rsquo;ve met a dozen of classes in high schools of eastern France between 2021 and 2023.&#xA;In 2022, I participated in the international French-speaking contest of popular science Ma thèse en 180 secondes, where I got the second best prize of the University of Lorraine for my talk.</description>
     </item>
-    
     <item>
       <title>Awards</title>
       <link>https://GCoiffier.github.io/cv/awards/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://GCoiffier.github.io/cv/awards/</guid>
-      <description>  Best paper award for 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024
-  2nd best paper for Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2021
-  </description>
+      <description>Best paper award for 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024&#xA;2nd best paper for Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2021</description>
     </item>
-    
   </channel>
 </rss>
