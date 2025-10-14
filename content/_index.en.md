@@ -1,3 +1,3 @@
-I am currently a post-doc in computer science in the _Catholic University of Louvain_ (Université Catholique de Louvain, UCL) in Louvain-la-Neuve, Belgium. I work on the project [X-Mesh](https://www.x-mesh.eu/) which aims at meshing sharp physical interfaces in numerical simulations.
+I am currently an Inria researcher ("Chargé de recherche") in Grenoble, France. I work on the CRAFT team, which studies the computationnal design and fabrication of objects with mechanical functions.
 
 My area of research is the domain of _Digital Geometry Processing_. I am more precisely interested in the representations of the different geometry in computer science (point clouds, triangle meshes, quadmeshes, signed distance functions, ...), conversion algorithms between (reconstruction, remeshing, ...) as well as some useful applications of modern Deep Learning in the field.

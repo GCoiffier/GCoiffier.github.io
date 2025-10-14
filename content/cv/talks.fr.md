@@ -3,7 +3,7 @@ title="Conférences et colloques"
 weight=5
 +++
 
-## Conférences internationales 
+#### Conférences internationales 
 
 - _The Method of Moving Frames for Surface Global Parametrization_  
 &emsp; **SIGGRAPH 2024**
@@ -17,7 +17,7 @@ weight=5
 &emsp; **Petroleum Geostatistics 2019** [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)
 
 
-## Conférences nationales
+#### Conférences nationales
 
 - _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_  
 &emsp; **Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique**   
@@ -33,7 +33,7 @@ weight=5
 &emsp; Nancy (en ligne), 25 novembre 2020 [[Video]](https://www.youtube.com/watch?v=XBqRO-0Fo4I&t=674s)     
 
 
-## Exposés et Séminaires
+#### Exposés et Séminaires
 - _Améliorer les représentations géométriques à budget constant_, exposé à l’Inria Grenoble, 27 novembre 2024
 - _Améliorer les représentations géométriques à budget constant_, exposé au LIRIS, Lyon, 8 novembre 2024
 - _Parametrization algorithms for quad-remeshing_, exposé au XLIM, Limoges, 28 février 2024

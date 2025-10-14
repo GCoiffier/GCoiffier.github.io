@@ -14,18 +14,6 @@
                 href="https://GCoiffier.github.io/fr/cv/info/"
                 />
   </url><url>
-    <loc>https://GCoiffier.github.io/fr/cv/education/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://GCoiffier.github.io/cv/education/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://GCoiffier.github.io/fr/cv/education/"
-                />
-  </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/positions/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,6 +24,18 @@
                 rel="alternate"
                 hreflang="fr-FR"
                 href="https://GCoiffier.github.io/fr/cv/positions/"
+                />
+  </url><url>
+    <loc>https://GCoiffier.github.io/fr/cv/education/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://GCoiffier.github.io/cv/education/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://GCoiffier.github.io/fr/cv/education/"
                 />
   </url><url>
     <loc>https://GCoiffier.github.io/fr/cv/publications/</loc>

@@ -3,7 +3,7 @@ title="Conferences, Seminars and Workshops"
 weight=4
 +++
 
-## International conferences
+#### International conferences
 
 - _The Method of Moving Frames for Surface Global Parametrization_ **SIGGRAPH 2024**
 
@@ -13,7 +13,7 @@ weight=4
 - _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_, **Petroleum Geostatistics 2019**  [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)
 
 
-## National (French) conferences and workshops
+#### National (French) conferences and workshops
 
 - _Robust Neural Distance Fields using 1-Lipschitz Neural Networks_, **Rencontres des jeunes chercheurs du groupe de travail en modélisation géométrique**, Marseille, 27 mars 2024  [[Slides]](/pdf/1lip_slides.pdf)  
 &emsp; :trophy: *Best Presentation Award*
@@ -23,7 +23,7 @@ weight=4
 - _Ajustement de surfaces paramétriques sur nuages de points_, **Journées Françaises de l'Informatique Graphique**, Nancy (online), November 25th, 2020 [[Video]](https://www.youtube.com/watch?v=XBqRO-0Fo4I&t=674s)     
 &emsp; :trophy: *2nd Best Paper Award*  
 
-## Seminars and presentations
+#### Seminars and presentations
 - _Improving geometrical data structures under fixed memory budget_, talk at Inria Grenoble, France, November 27th, 2024
 - _Improving geometrical data structures under fixed memory budget_, talk at LIRIS, Lyon, France, November 8th, 2024
 - _Parametrization algorithms for quad-remeshing_, talk at XLIM, Limoges, France, February 28th, 2024
