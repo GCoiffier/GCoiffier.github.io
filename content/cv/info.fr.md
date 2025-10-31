@@ -16,5 +16,5 @@ J'ai effectué ma thèse au LORIA, à l'Université de Lorraine, sous la directi
 - Apprentissage automatique et représentations neuronales implicites de la géométrie
 
 ### Contact
-&emsp; **Email:** guillaume DOT coiffier AT uclouvain DOT be  
+&emsp; **Email:** guillaume DOT coiffier AT inria DOT fr  
 &emsp; **Adresse**: 655 Av. de l'Europe, 38330 Montbonnot-Saint-Martin

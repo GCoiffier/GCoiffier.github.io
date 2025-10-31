@@ -16,6 +16,6 @@ I obtained a PhD from the University of Lorraine under the supervision of [Etien
 - Deep learning and neural implicit representations
 
 ### Contact infos
-&emsp; **Email:** guillaume DOT coiffier AT uclouvain DOT be  
+&emsp; **Email:** guillaume DOT coiffier AT inria DOT fr  
 &emsp; **Address**: 655 Avenue de l'Europe, 38330 Montbonnot-Saint-Martin, France
 
