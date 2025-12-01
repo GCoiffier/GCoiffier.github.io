@@ -1,3 +1,3 @@
-Je suis actuellement chargé de recherche Inria au Centre Inria de l'Université Grenoble Alpes. Je travaille dans l'équipe CRAFT, qui étudie la conception numérique d'objets à fonctions mécaniques.
+Je suis actuellement chargé de recherche Inria au Centre Inria de l'Université Grenoble Alpes. Je travaille dans l'équipe [CRAFT](https://team.inria.fr/craft/), qui étudie la conception numérique d'objets à fonctions mécaniques.
 
 Mon domaine de recherche est le _traitement numérique de la géométrie_, où je m’intéresse aux différentes représentations numériques de données géométriques (nuage de points, triangulation, quadrangulation, fonction de distance signée,...), aux algorithmes de conversion entre ces représentations (reconstruction, remaillage,...), ainsi qu'aux applications que peut avoir l'apprentissage profond dans ce domaine.

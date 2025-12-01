@@ -1,3 +1,3 @@
-I am currently an Inria researcher ("Chargé de recherche") in Grenoble, France. I work on the CRAFT team, which studies the computationnal design and fabrication of objects with mechanical functions.
+I am currently an Inria researcher ("Chargé de recherche") in Grenoble, France. I work on the [CRAFT](https://team.inria.fr/craft/) team, which studies the computationnal design and fabrication of objects with mechanical functions.
 
 My area of research is the domain of _Digital Geometry Processing_. I am more precisely interested in the representations of the different geometry in computer science (point clouds, triangle meshes, quadmeshes, signed distance functions, ...), conversion algorithms between (reconstruction, remeshing, ...) as well as some useful applications of modern Deep Learning in the field.
