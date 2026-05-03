@@ -2,18 +2,22 @@ baseURL = "https://GCoiffier.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Guillaume Coiffier"
-theme = "hello-friend-ng"
+# theme = "hello-friend-ng"
+theme = "hugo-blog-awesome"
 
 [params]
 disableReadOtherPosts = false
 enableSharingButtons = true
 enableGlobalLanguageMenu = true
 enableEmoji = true
+
+background_css = "css/background.css"
 home_css = "css/home.css"
 publication_css = "css/publication.css"
 blog_css = "css/blog.css"
 figure_css = "css/figure.css"
 cv_css = "css/cv.css"
+
 math = false # enable math by adding math=true in frontmatter
 toc = false # enable table of content at the beginning of a post by adding toc=true in frontmatter
 

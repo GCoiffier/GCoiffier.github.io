@@ -2,7 +2,7 @@
 title = "ThriftyNets: Convolutional Neural Networks With Tiny Parameter Budget"
 date="2021-03-30"
 published_where="IoT"
-published_date="30 March 2021"
+published_date="2021"
 authors = "Guillaume Coiffier, Ghouthi Boukli Hacene, Vincent Gripon"
 
 thumbnail = "/img/thriftynet_thumbnail.jpg"

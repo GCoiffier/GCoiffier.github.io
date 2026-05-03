@@ -10,11 +10,12 @@
 
 
 .blog-container {
-    width: 49%;
+    width: 45%;
     float: left;
     border-radius: 10px;
     overflow:auto;
     margin: 5px 5px;
+    margin-bottom: 50px;
 }
 
 .blog-container:hover {
@@ -38,9 +39,10 @@
 
 .blog-info{
     text-align:left;
-    padding:30px 0;
+    padding:10px 0;
     text-decoration:none;
     overflow:auto;
+    margin-right: 20px;
   }
 
 .blog-description {
@@ -72,7 +74,7 @@
 }
 
 .blog-list-tags {
-    margin-top: 10px;
+    margin-top: 0px;
     display: block;
 }
 
@@ -83,7 +85,6 @@
     border-radius: 4px;
     box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
     box-sizing:border-box;
-    color: #24292E;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 12px;
@@ -95,6 +96,10 @@
     white-space: nowrap;
     word-wrap: break-word;
   }
+
+html.dark .blog-tag {
+    color: #000000;
+}
 
 .blog-tag.video {
     background-color: #679FE0;

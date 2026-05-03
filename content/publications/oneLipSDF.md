@@ -1,8 +1,8 @@
 +++
 title = "1-Lipschitz Neural Distance Fields"
-date="2024-06-20"
+date="2024-06-24"
 published_where="Symposium on Geometry Processing (Computer Graphics Forum)"
-published_date="24 June 2024"
+published_date="2024"
 authors = "Guillaume Coiffier, Louis Béthune"
 
 thumbnail = "/img/1lipSDF/thumbnail.jpeg"
@@ -26,7 +26,7 @@ toc=true
 
 This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the _Signed Distance Function_ (SDF) of $\Omega$, which is defined as:
 
-$$ S\_\Omega(x) = \left[\mathbb{1}\_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}\_{\Omega}(x) \right] \min\_{p \in \partial \Omega} ||x - p||$$
+$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$
 
 where $\partial \Omega$ is the boundary of $\Omega$.
 
@@ -34,12 +34,12 @@ where $\partial \Omega$ is the boundary of $\Omega$.
 alt="Definition of an implicit surface" 
 num="1"
 caption="An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface." 
-style="width:100%; max-width:600px;" 
+style="width:100%; max-width:800px;" 
 >}}
 
 An important property of SDFs is that they satisfy an _Eikonal equation_:
 
-$$\left\\{ \begin{array}{lll} ||\nabla S(x)|| &= 1 \quad &\forall x \in \mathbb{R}^n \\\\ S(x) &= 0 \quad &\forall x \in \partial \Omega \\\\ \nabla S(x) &= n(x) \quad &\forall x \in \partial \Omega \end{array} \right.$$
+$$\left\{ \begin{array}{lll} ||\nabla S(x)|| &= 1 \quad &\forall x \in \mathbb{R}^n \\ S(x) &= 0 \quad &\forall x \in \partial \Omega \\ \nabla S(x) &= n(x) \quad &\forall x \in \partial \Omega \end{array} \right.$$
 
 Having access to the SDF of an object allows for easy geometrical queries and efficient rendering via [ray marching](https://iquilezles.org/articles/raymarchingdf/). For example, the projection onto the surface of $\Omega$ can be defined as:
 
@@ -56,7 +56,7 @@ The problem with SDFs is that they are difficult to compute. For simple shapes, 
 {{< figure src="/img/1lipSDF/grad.jpeg"
 num=2
 caption="Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound." 
-style="width:100%; max-width:600px;"
+style="width:100%; max-width:800px;"
 >}}
 
 Why is this second point a problem? If the gradient exceeds unit norm, there is a risk that the function $f_\theta$ overestimates the true distance, which breaks the validity of geometrical queries like projection on the surface (Fig 3. center). If the implicit function always underestimates the distance (Fig 3. right), iterating the projection process will always yield the correct result at the cost of more computation time.
@@ -65,7 +65,7 @@ Why is this second point a problem? If the gradient exceeds unit norm, there is 
 alt="Projection query on an implicit surface"
 num=3
 caption="Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query." 
-style="width:100%; max-width:600px;" 
+style="width:100%; max-width:800px;" 
 >}}
 
 In summary, it is desirable that the neural function always underestimate the true distance. In mathematical terms, this boils down to requiring $f_\theta$ to be **1-Lipschitz**, that is:
@@ -81,7 +81,7 @@ Our method aims at building a neural distance field that is garanteed to preserv
 alt="Overview of our method"  
 num=4
 caption="Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object."
-style="width:100%; max-width:600px;"
+style="width:100%; max-width:800px;"
 >}}
 
 
@@ -91,13 +91,13 @@ Our method takes as input any oriented geometry $\Omega$. This includes point cl
 
 ### Step 2: Separating the interior and the exterior
 
-The second step is to compute labels $y(x) \in \\{-1,1\\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the _Generalized Winding Number_ as proposed by [Baril et al.](https://www.dgp.toronto.edu/projects/fast-winding-numbers/) and implemented in [libigl](https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes). Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface "winds around" $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.
+The second step is to compute labels $y(x) \in \{-1,1\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the _Generalized Winding Number_ as proposed by [Baril et al.](https://www.dgp.toronto.edu/projects/fast-winding-numbers/) and implemented in [libigl](https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes). Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface "winds around" $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.
 
 {{< figure src="/img/1lipSDF/gargoyle.jpeg" 
 alt="Field of generalized winding number computed on two representations of a gargoyle model. Top row: clean manifold surface mesh. Bottom row: point cloud." 
 num=5
 caption="The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition." 
-style="width:100%; max-width:600px;" 
+style="width:100%; max-width:800px;" 
 >}}
 
 Alternatively, one can define $y=-1$ for points on the surface of $\Omega$ and $y=1$ everywhere else. In the end, this will result in an unsigned distance field of the boundary. Doing this also extends our method to open surfaces or curves.
@@ -108,12 +108,12 @@ Once the labels $y$ have been computed, we define some $1$-Lipschitz architectur
 
 On top of the Lipschitz network, we propose to minimize the _hinge-Kantorovitch-Rubinstein_ (hKR) loss. This binary classification loss was first proposed by [Serrurier et al.](https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html). For binary labels $y \in \\{-1,1\\}$, hyperparameters $\lambda>0$ and $m>0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:
 
-$$\mathcal{L}\_{hKR} = \mathcal{L}\_{KR} + \lambda \mathcal{L}\_{hinge}^m$$
+$$\mathcal{L}_{hKR} = \mathcal{L}_{KR} + \lambda \mathcal{L}_{hinge}^m$$
 
 defined as:
 
-$$\mathcal{L}\_{KR}(f\_\theta,y) = \int\_D -yf\_\theta(x) \\, \rho(x) dx$$
-$$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\right)\\,\rho(x)dx.$$
+$$\mathcal{L}_{KR}(f_\theta,y) = \int_D -yf_\theta(x) \\, \rho(x) dx$$
+$$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\,\rho(x)dx.$$
 
 We show in the paper that, under mild assumptions on $\rho$, the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$ up to an error that is bounded by $m$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.
 
@@ -123,13 +123,13 @@ We show in the paper that, under mild assumptions on $\rho$, the minimizer of th
 alt="Various geometrical objects reconstructed from the zero level set of a trained Lipschitz network" 
 num=6
 caption="Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned." 
-style="width:100%; max-width:600px;"
+style="width:100%; max-width:800px;"
 >}}
 
 {{< figure src="/img/1lipSDF/elephant.jpeg" 
 num=7
 caption="Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model." 
-style="width:100%; max-width:600px;"
+style="width:100%; max-width:800px;"
 >}}
 
 ## Talk video

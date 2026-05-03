@@ -11,8 +11,7 @@ J'ai effectué ma thèse au LORIA, à l'Université de Lorraine, sous la directi
 
 ### Thématiques de recherche
 - Traitement numérique de la géométrie
-- Paramétrisation de maillage
-- Maillage, remaillage
+- Maillage, paramétrisation de maillage
 - Apprentissage automatique et représentations neuronales implicites de la géométrie
 
 ### Contact

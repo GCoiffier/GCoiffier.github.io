@@ -2,3 +2,15 @@ h4 {
     font-size: larger;
     margin-bottom: -0.4cm;
 }
+
+.cv {
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    padding-right: 100px;
+    margin: auto;
+}
+
+li {
+    line-height:130%;
+}

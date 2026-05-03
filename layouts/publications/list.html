@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+<link rel="stylesheet" href="{{ .Site.Params.background_css | absURL }}">
 <link rel="stylesheet" href="{{ .Site.Params.publication_css | absURL }}">
 
 {{ $pages := where .Site.RegularPages "Section" "publications"}}
@@ -33,15 +34,15 @@
                         </a>
 
                         {{ if .Params.authors }}
-                        <br> <a class="paper-list-author"> {{.Params.Authors }} </a>
+                        <br> <span class="paper-list-author"> {{.Params.Authors }} </span>
                         {{ end }}
 
                         {{ if .Params.published_where}} 
-                        <br> <a class="paper-list-published"> {{.Params.published_where}}</a>
+                        <br> <span class="paper-list-published"> {{.Params.published_where}}</span>
                         {{ end }}
 
                         {{if .Params.award }}
-                        <br> <a class="paper-list-award"> 🏆 {{.Params.award}} </a>
+                        <br> <span class="paper-list-award"> 🏆 {{.Params.award}} </span>
                         {{end}}
                         
                         <div class="paper-list-buttons">

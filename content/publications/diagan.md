@@ -2,7 +2,7 @@
 title = "3D Geological Image Synthesis from 2D Examples using Generative Adversarial Networks"
 date="2020-10-28"
 published_where="Frontiers in Water"
-published_date="28 October 2020"
+published_date="2020"
 authors = "Guillaume Coiffier, Philippe Renard, Sylvain Lefebvre"
 
 thumbnail = "/img/diagan_thumbnail.jpg"

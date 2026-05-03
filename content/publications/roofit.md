@@ -3,7 +3,7 @@ title = "Parametric Surface Fitting on Airborne Lidar Point Clouds for Building 
 date="2021-11-01"
 
 published_where="Computer-Aided Design"
-published_date="01 November 2021"
+published_date="2021"
 authors = "Guillaume Coiffier, Justine Basselin, Nicolas Ray, Dmitry Sokolov"
 
 thumbnail = "/img/roofit_thumbnail.jpg"

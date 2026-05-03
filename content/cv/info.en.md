@@ -11,9 +11,8 @@ I obtained a PhD from the University of Lorraine under the supervision of [Etien
 
 ### Research Interests
 - Geometry Processing
-- Mesh parametrization
-- Meshing, remeshing
-- Deep learning and neural implicit representations
+- Meshing, remeshing, mesh parametrization
+- Neural implicit surfaces and neural distance fields
 
 ### Contact infos
 &emsp; **Email:** guillaume DOT coiffier AT inria DOT fr  

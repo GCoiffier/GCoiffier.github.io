@@ -2,7 +2,7 @@
 title = "Fast practical untangling of simplicial P2 and P3 curvilinear meshes"
 date="2025-01-28"
 published_where="International Meshing Rountable"
-published_date="28 January 2025"
+published_date="2025"
 authors = "Guillaume Coiffier, Amaury Johnen, Jean-François Remacle"
 
 thumbnail = "/img/untangle_pn/thumbnail.jpg"
@@ -12,7 +12,7 @@ abstract = "The aim of this article is to couple the ideas proposed by [1,2] and
 
 web = "https://internationalmeshingroundtable.com/assets/papers/2025/1014-compressed.pdf"
 pdf = "/pdf/article_pn_compressed.pdf"
-
+slides= "/pdf/pn_untangle_slides.pdf"
 
 math=false
 toc=false

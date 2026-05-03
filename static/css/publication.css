@@ -1,5 +1,11 @@
 /* SINGLE */
 
+.paper {
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
 .paper-posts {
   width: 100%;
   max-width: 1200px;
@@ -9,19 +15,27 @@
 }
 
 .paper-title {
-    text-align:center;
+  padding-top: 50px;
+  text-align:center;
 }
 
 .paper-author {
-    font-size: x-large;
+  text-align: center;
+  font-size: large;
+  text-decoration: none;
 }
 
 .paper-published {
-    font-style: italic;
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .paper-award {
   margin-top: 5px;
+  text-align: center;
+  font-size: large;
   color : #FBC02D;
 }
 
@@ -34,13 +48,20 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: justify;
+    font-style: italic;
 }
 
 .paper-cover {
   border-radius: 10px;
   overflow: hidden;
+  flex: none;
+  object-fit: cover;
   perspective: 1px;
+  max-width: 1000px;
   width:100%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .paper-content {
@@ -89,15 +110,18 @@
 
 
 .paper-list-group {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .paper-list-year {
-  font-size: xxx-large;
+  font-size: xx-large;
+}
+
+html.dark .paper-list-title {
+  color:#EDEFF2;
 }
 
 .paper-list-title {
-  color:#EDEFF2;
   font-size:larger;
   font-weight:600;
   text-decoration:none;
@@ -147,7 +171,6 @@
   }
 }
 
-
 li.paper-container {
   border-radius: 10px;
   clear: none; 
@@ -159,6 +182,10 @@ li.paper-container {
   background-color: #46494c;
   text-decoration: none;
   transition-duration: 0.2s;
+}
+
+html.light .paper-container:hover {
+  background-color: #EBF3F5;
 }
 
 
@@ -189,6 +216,22 @@ li.paper-container {
 }
 
 
+hr {
+    margin-bottom: 10px;
+    height: 1px;
+    font-size: 0;
+    border: 0;
+}
+
+html.dark hr {
+  color:#46494c;
+  background-color: #46494c;
+}
+
+html.light hr {
+  color:gray;
+  background-color: gray;
+}
 
 
 
@@ -201,7 +244,6 @@ li.paper-container {
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing:border-box;
-  color: #24292E;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -222,6 +264,10 @@ li.paper-container {
   margin-bottom: 10px;
 }
 
+html.dark .paper-button {
+  color: #24292E;
+}
+
 .paper-button:hover {
   background-color: #F3F4F6;
   text-decoration: none;
@@ -231,7 +277,6 @@ li.paper-container {
 .paper-button:disabled {
   background-color: #FAFBFC;
   border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
   cursor: default;
 }
 

@@ -1,123 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
-<meta name="description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:" />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
-<meta name="theme-color" content="" />
-<link rel="canonical" href="https://GCoiffier.github.io/publications/onelipsdf/" />
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title itemprop="name">1-Lipschitz Neural Distance Fields | Guillaume Coiffier - Personal Website</title>
+<meta property="og:title" content="1-Lipschitz Neural Distance Fields | Guillaume Coiffier - Personal Website" />
+<meta name="twitter:title" content="1-Lipschitz Neural Distance Fields | Guillaume Coiffier - Personal Website" />
+<meta itemprop="name" content="1-Lipschitz Neural Distance Fields | Guillaume Coiffier - Personal Website" />
+<meta name="application-name" content="1-Lipschitz Neural Distance Fields | Guillaume Coiffier - Personal Website" />
+<meta property="og:site_name" content="" />
 
-    <title>
-        
-            1-Lipschitz Neural Distance Fields :: Guillaume Coiffier - Personal Website 
-        
-    </title>
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
 
-
-
-
-<link rel="stylesheet" href="/main.7d1b805f582bb3c46d1c96e1c8a3b521f3feb98bd039f0c42cfa9690a13e47c6.css" integrity="sha256-fRuAX1grs8RtHJbhyKO1IfP&#43;uYvQOfDELPqWkKE&#43;R8Y=">
+  <link rel="alternate" hreflang="en" href="https://GCoiffier.github.io/publications/onelipsdf/" title="English" />
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="1-Lipschitz Neural Distance Fields">
-<meta itemprop="description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"><meta itemprop="datePublished" content="2024-06-20T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-06-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1324">
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
+
+<meta name="generator" content="Hugo 0.123.7">
+
+    
+    <meta property="og:title" content="1-Lipschitz Neural Distance Fields" />
+<meta property="og:description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://GCoiffier.github.io/publications/onelipsdf/" /><meta property="article:section" content="publications" />
+<meta property="article:published_time" content="2024-06-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-06-24T00:00:00+00:00" />
+
+
+
+    
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="1-Lipschitz Neural Distance Fields"/>
 <meta name="twitter:description" content="Signed Distance Function This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the Signed Distance Function (SDF) of $\Omega$, which is defined as:"/>
 
 
+    
 
-
-
-
-
-    <meta property="article:published_time" content="2024-06-20 00:00:00 &#43;0000 UTC" />
-
-
-
-
-
-
-
-
-
-
-
-    </head>
+    <link rel="canonical" href="https://GCoiffier.github.io/publications/onelipsdf/">
+    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
-        <body>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://GCoiffier.github.io/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+    crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+
     
     
-        <div class="container">
-            <header class="header">
-    <span class="header__inner">
-        <a href="/" style="text-decoration: none;">
-    <div class="logo">
-        
-            <span class="logo__mark">></span>
-            <span class="logo__text ">
-                hello</span>
-            <span class="logo__cursor" style=
-                  "
-                   
-                   ">
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://GCoiffier.github.io/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
             </span>
-        
-    </div>
-</a>
+        </label>
 
-
-        <span class="header__right">
-            
-                <nav class="menu">
-    <ul class="menu__inner"><li><a href="/cv">CV</a></li><li><a href="/publications">Publications</a></li><li><a href="/blog">Misc</a></li>
-        <div class="submenu">
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">en</a>
-                <div class="dropdown-content">
-                    
-                        
-                    
-                </div>
-            </li>
-        </div>
-    </ul>
-</nav>
-
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
-            
-        </span>
-    </span>
-</header>
-
-
-            <div class="content">
+        <div class="trigger">
+            <ul class="trigger-container">
                 
+                
+                <li>
+                    <a class="menu-link " href="/cv">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/publications">
+                        Publications
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog">
+                        Misc
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span> </span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
 
+
+<link rel="stylesheet" href="https://GCoiffier.github.io/css/background.css">
 <link rel="stylesheet" href="https://GCoiffier.github.io/css/publication.css">
 <link rel="stylesheet" href="https://GCoiffier.github.io/css/figure.css">
 
@@ -135,92 +170,93 @@
 
 
 
-<main class="post">
-        <div class="post-info">
-            
-            </p>
+<main class="paper">
+    <div class="post-info">
+        
+        </p>
+    </div>
+
+    <article>
+        <h1 class="paper-title"> 1-Lipschitz Neural Distance Fields </h1>
+
+        <div class="paper-author">
+            Guillaume Coiffier, Louis Béthune
         </div>
 
-        <article>
-            <h1 class="paper-title"> 1-Lipschitz Neural Distance Fields </h1>
-
-            <div class="paper-author">
-                Guillaume Coiffier, Louis Béthune
-			</div>
-
-            <div class="published">
-                 <a class="paper-published"> Symposium on Geometry Processing (Computer Graphics Forum)</a>,
-                 <a> 24 June 2024</a> 
-            </div>
-            
-            
-            <div class="paper-award">
-                🏆 Best Paper Award
-            </div>
-            
-
-            
-                <figure class="paper-cover">
-                    <img src="https://GCoiffier.github.io/img/1lipSDF/cover.jpeg" alt="1-Lipschitz Neural Distance Fields" />
-                
-                    
-                </figure>
-            
-            
-            <div class="paper-links">
-                
-
-                 
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=https://arxiv.org/abs/2407.09505> pdf </a>
-                </a> 
-                
-                
-                 
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=http://doi.org/10.1111/cgf.15128> doi </a> 
-                </a>
-                
-                
-                 
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=/pdf/poster_1lip.pdf> poster </a>
-                </a> 
-                
-
-                 
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=/pdf/1lip_supplemental.pdf> supplemental </a> 
-                </a>
-                
-                
-                
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=https://github.com/GCoiffier/1-Lipschitz-Neural-Distance-Fields> code </a> 
-                </a>
-                
-
-                
-                <a style="padding:10px;"> 
-                    <a class="paper-button" href=/pdf/1lip_slides.pdf> slides </a> 
-                </a>
-                
-
-                
-            </div>
-			
-        
-        <hr />
-        
-        <div class="paper-abstract">
-            Neural implicit surfaces are a promising tool for geometry processing that represent a solid object as the zero level set of a neural network. Usually trained to approximate a signed distance function of the considered object, these methods exhibit great visual fidelity and quality near the surface, yet their properties tend to degrade with distance, making geometrical queries hard to perform without the help of complex range analysis techniques. Based on recent advancements in Lipschitz neural networks, we introduce a new method for approximating the signed distance function of a given object. As our neural function is made 1-Lipschitz by construction, it cannot overestimate the distance, which guarantees robustness even far from the surface. Moreover, the 1-Lipschitz constraint allows us to use a different loss function, called the hinge-Kantorovitch-Rubinstein loss, which pushes the gradient as close to unit-norm as possible, thus reducing computation costs in iterative queries. As this loss function only needs a rough estimate of occupancy to be optimized, this means that the true distance function need not to be known. We are therefore able to compute neural implicit representations of even bad quality geometry such as noisy point clouds or triangle soups. We demonstrate that our methods is able to approximate the distance function of any closed or open surfaces or curves in the plane or in space, while still allowing sphere tracing or closest point projections to be performed robustly.
+        <div class="paper-published">
+             Symposium on Geometry Processing (Computer Graphics Forum),
+              2024 
         </div>
         
         
-        <hr />
+        <div class="paper-award">
+            Best Paper Award 🏆 
+        </div>
         
-            <div class="paper-toc">
-                <nav id="TableOfContents">
+
+        
+            <figure class="paper-cover">
+                <img src="https://GCoiffier.github.io/img/1lipSDF/cover.jpeg" alt="1-Lipschitz Neural Distance Fields" />
+            
+                
+            </figure>
+        
+        
+        <div class="paper-links">
+            
+
+             
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=https://arxiv.org/abs/2407.09505> PDF </a>
+            </a> 
+            
+            
+             
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=http://doi.org/10.1111/cgf.15128> DOI </a> 
+            </a>
+            
+            
+             
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=/pdf/poster_1lip.pdf> Poster </a>
+            </a> 
+            
+
+             
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=/pdf/1lip_supplemental.pdf> Supplemental </a> 
+            </a>
+            
+            
+            
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=https://github.com/GCoiffier/1-Lipschitz-Neural-Distance-Fields> Code </a> 
+            </a>
+            
+
+            
+            <a style="padding:10px;"> 
+                <a class="paper-button" href=/pdf/1lip_slides.pdf> Slides </a> 
+            </a>
+            
+
+            
+        </div>
+        
+    
+    <hr />
+    
+    <div class="paper-abstract">
+        Neural implicit surfaces are a promising tool for geometry processing that represent a solid object as the zero level set of a neural network. Usually trained to approximate a signed distance function of the considered object, these methods exhibit great visual fidelity and quality near the surface, yet their properties tend to degrade with distance, making geometrical queries hard to perform without the help of complex range analysis techniques. Based on recent advancements in Lipschitz neural networks, we introduce a new method for approximating the signed distance function of a given object. As our neural function is made 1-Lipschitz by construction, it cannot overestimate the distance, which guarantees robustness even far from the surface. Moreover, the 1-Lipschitz constraint allows us to use a different loss function, called the hinge-Kantorovitch-Rubinstein loss, which pushes the gradient as close to unit-norm as possible, thus reducing computation costs in iterative queries. As this loss function only needs a rough estimate of occupancy to be optimized, this means that the true distance function need not to be known. We are therefore able to compute neural implicit representations of even bad quality geometry such as noisy point clouds or triangle soups. We demonstrate that our methods is able to approximate the distance function of any closed or open surfaces or curves in the plane or in space, while still allowing sphere tracing or closest point projections to be performed robustly.
+    </div>
+    
+    
+    <hr />
+    
+    <h2> Table of contents </h2>
+        <div class="paper-toc">
+            <nav id="TableOfContents">
   <ol>
     <li><a href="#signed-distance-function">Signed Distance Function</a></li>
     <li><a href="#neural-distance-fields">Neural Distance Fields</a></li>
@@ -236,28 +272,28 @@
     <li><a href="#bibtex">BibTeX</a></li>
   </ol>
 </nav>
-            </div>
-        <hr />
+        </div>
+    <hr />
+    
         
-            
-        <div class="paper-content">
-            <h2 id="signed-distance-function">Signed Distance Function</h2>
+    <div class="paper-content">
+        <h2 id="signed-distance-function">Signed Distance Function</h2>
 <p>This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the <em>Signed Distance Function</em> (SDF) of $\Omega$, which is defined as:</p>
-$$ S\_\Omega(x) = \left[\mathbb{1}\_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}\_{\Omega}(x) \right] \min\_{p \in \partial \Omega} ||x - p||$$
+$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$
 <p>where $\partial \Omega$ is the boundary of $\Omega$.</p>
 
     <img class="figure" 
     src="/img/1lipSDF/implicit_def.jpeg" 
      alt="Definition of an implicit surface"  
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 1. </a> An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 1. </a> An implicit surface is defined as the level set of some continuous function. Among all possible functions, the signed distance function best preserves geometrical properties far from the surface.</p>
     
 
 
 <p>An important property of SDFs is that they satisfy an <em>Eikonal equation</em>:</p>
-$$\left\\{ \begin{array}{lll} ||\nabla S(x)|| &= 1 \quad &\forall x \in \mathbb{R}^n \\\\ S(x) &= 0 \quad &\forall x \in \partial \Omega \\\\ \nabla S(x) &= n(x) \quad &\forall x \in \partial \Omega \end{array} \right.$$
+$$\left\{ \begin{array}{lll} ||\nabla S(x)|| &= 1 \quad &\forall x \in \mathbb{R}^n \\ S(x) &= 0 \quad &\forall x \in \partial \Omega \\ \nabla S(x) &= n(x) \quad &\forall x \in \partial \Omega \end{array} \right.$$
 <p>Having access to the SDF of an object allows for easy geometrical queries and efficient rendering via <a href="https://iquilezles.org/articles/raymarchingdf/">ray marching</a>. For example, the projection onto the surface of $\Omega$ can be defined as:</p>
 $$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$
 <h2 id="neural-distance-fields">Neural Distance Fields</h2>
@@ -274,10 +310,10 @@ $$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$
     <img class="figure" 
     src="/img/1lipSDF/grad.jpeg" 
      
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 2. </a> Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 2. </a> Plot of a the gradient norm of neural distance fields on a simple 2D dolphin silhouette. While minimizing the eikonal loss stabilizes the gradient norm, only a Lipschitz network guarantees a unit bound.</p>
     
 
 
@@ -286,10 +322,10 @@ $$\pi_\Omega(x) = x - S_\Omega(x) \nabla S_\Omega(x).$$
     <img class="figure" 
     src="/img/1lipSDF/queries.jpeg" 
      alt="Projection query on an implicit surface"  
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 3. </a> Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 3. </a> Closest point query on an implicit surface. Underestimating the true distance is a necessary condition for the validity of the query.</p>
     
 
 
@@ -301,25 +337,25 @@ $$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}
     <img class="figure" 
     src="/img/1lipSDF/botijo_pipeline.jpeg" 
      alt="Overview of our method"  
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 4. </a> Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 4. </a> Given an input geometry in the form of an oriented point cloud or a triangle soup, we uniformly sample points in a domain containing the desired geometry. Defining negative samples as points of the geometry and positive samples everywhere else yields an unsigned distance field when minimizing the hKR loss. On the other hand, partitioning samples as inside or outside the shape leads to an approximation of the signed distance function of the object.</p>
     
 
 
 <h3 id="step-1-sampling">Step 1: Sampling</h3>
 <p>Our method takes as input any oriented geometry $\Omega$. This includes point cloud with normals, triangle soups and surface meshes. The first step is to extract a dataset from the input geometry. We define a domain $D \subset \mathbb{R}^n$ as a loose axis-aligned bounding box of $\Omega$ and sample it uniformly.</p>
 <h3 id="step-2-separating-the-interior-and-the-exterior">Step 2: Separating the interior and the exterior</h3>
-<p>The second step is to compute labels $y(x) \in \\{-1,1\\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
+<p>The second step is to compute labels $y(x) \in \{-1,1\}$ for each sampled point $x$. These labels will indicate if the given point is inside or outside of $\Omega$. We propose to use the <em>Generalized Winding Number</em> as proposed by <a href="https://www.dgp.toronto.edu/projects/fast-winding-numbers/">Baril et al.</a> and implemented in <a href="https://libigl.github.io/libigl-python-bindings/igl_docs/#fast_winding_number_for_meshes">libigl</a>. Intuitively, the winding number $w_\Omega$ of a surface $\partial \Omega$ at point $x$ is the sum of signed solid angles between $x$ and surface patches on $\partial \Omega$. For a closed smooth manifold, the values amounts at how many times the surface &ldquo;winds around&rdquo; $x$, yielding an integer value. When computed on imperfect geometries, $w_\Omega$ becomes a continuous function (Fig.5). Through careful thresholding, it is still possible to determine points that are inside or outside the shape with high confidence.</p>
 
     <img class="figure" 
     src="/img/1lipSDF/gargoyle.jpeg" 
      alt="Field of generalized winding number computed on two representations of a gargoyle model. Top row: clean manifold surface mesh. Bottom row: point cloud."  
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 5. </a> The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 5. </a> The generalized winding number is a robust way of knowing whether a point is inside or outside some geometrical object. For a clean manifold mesh (top row), the GWN takes integer values and classifies the inside from the outside. For imperfect geometries like oriented point clouds (bottom), the GWN is a continuous function that can be thresholded to recover the inside/outside partition.</p>
     
 
 
@@ -327,20 +363,20 @@ $$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}
 <h3 id="step-3-training-a-1-lipschitz-network">Step 3: Training a 1-Lipschitz network</h3>
 <p>Once the labels $y$ have been computed, we define some $1$-Lipschitz architecture to approximate the SDF. $1$-Lipschitz neural networks have been extensively studied in theoretical deep learning for their robustness to adversarial attacks and overfitting. Several architectures that are Lipschitz by construction were designed throughout the years. We use the architecture proposed by <a href="https://arxiv.org/abs/2303.03169">Araujo et al.</a>, although any Lipschitz architecture can be used.</p>
 <p>On top of the Lipschitz network, we propose to minimize the <em>hinge-Kantorovitch-Rubinstein</em> (hKR) loss. This binary classification loss was first proposed by <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Serrurier_Achieving_Robustness_in_Classification_Using_Optimal_Transport_With_Hinge_Regularization_CVPR_2021_paper.html">Serrurier et al.</a>. For binary labels $y \in \\{-1,1\\}$, hyperparameters $\lambda>0$ and $m>0$ and density function $\rho(x)$ over $D$, the hKR loss is the sum of two terms:</p>
-$$\mathcal{L}\_{hKR} = \mathcal{L}\_{KR} + \lambda \mathcal{L}\_{hinge}^m$$
+$$\mathcal{L}_{hKR} = \mathcal{L}_{KR} + \lambda \mathcal{L}_{hinge}^m$$
 <p>defined as:</p>
-$$\mathcal{L}\_{KR}(f\_\theta,y) = \int\_D -yf\_\theta(x) \\, \rho(x) dx$$
-$$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\right)\\,\rho(x)dx.$$
+$$\mathcal{L}_{KR}(f_\theta,y) = \int_D -yf_\theta(x) \\, \rho(x) dx$$
+$$\mathcal{L}_{hinge}^m(f_\theta,y) = \int_D \max\left(0, m-yf_\theta(x)\right)\,\rho(x)dx.$$
 <p>We show in the paper that, under mild assumptions on $\rho$, the minimizer of the hKR loss over all possible $1$-Lipschitz functions is the SDF of $\Omega$ up to an error that is bounded by $m$. This means that minimizing the hKR loss will lead to a very good approximation of the SDF.</p>
 <h2 id="gallery-of-results">Gallery of results</h2>
 
     <img class="figure" 
     src="/img/1lipSDF/gallery.jpeg" 
      alt="Various geometrical objects reconstructed from the zero level set of a trained Lipschitz network"  
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 6. </a> Surface extracted from the zero level set of a 1-Lipschitz network trained with our method. Blue surface correspond to signed distance fields while green ones are unsigned.</p>
     
 
 
@@ -348,10 +384,10 @@ $$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\rig
     <img class="figure" 
     src="/img/1lipSDF/elephant.jpeg" 
      
-     style="width:100%; max-width:600px;"  
+     style="width:100%; max-width:800px;"  
     />
     
-    <p class="figure-caption"  style="width:100%; max-width:600px;" > <a style="font-weight: bold;">Figure 7. </a> Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model.</p>
+    <p class="figure-caption"  style="width:100%; max-width:800px;" > <a style="font-weight: bold;">Figure 7. </a> Robust geometrical queries performed on a Lipschitz neural implicit representation of the elephant model.</p>
     
 
 
@@ -371,34 +407,37 @@ $$\mathcal{L}\_{hinge}^m(f\_\theta,y) = \int\_D \max\left(0, m-yf\_\theta(x)\rig
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
-        </div>
+    </div>
+    
+    </article>
+
+    <div class="post-info">
         
-        </article>
+        
+    </div>
+</main>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
 
-        <div class="post-info">
-            
-            
-  		</div>
-    </main>
-
-            </div>
-
-            
-                <footer class="footer">
-    
-    
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2026 .
+        
+    </small>
 </footer>
 
-            
-        </div>
-
-        
 
 
 
-<script type="text/javascript" src="/bundle.min.88376889638f370cae226506534088c51ec0669eb34c7ddfc6388d854e3891ff2b2acfb5a26766803d23ed5ef4986014021ce16919302f5a99951ab43b5ceb70.js" integrity="sha512-iDdoiWOPNwyuImUGU0CIxR7AZp6zTH3fxjiNhU44kf8rKs&#43;1omdmgD0j7V70mGAUAhzhaRkwL1qZlRq0O1zrcA=="></script>
 
 
 
-    </body>
+    
+    <script src="https://GCoiffier.github.io/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js" integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script>
+
+    
+
+</body>
 </html>

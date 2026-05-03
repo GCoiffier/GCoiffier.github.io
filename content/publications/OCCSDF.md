@@ -2,7 +2,7 @@
 title = "Robust One-Class Classification with Signed Distance Function using 1-Lipschitz Neural Networks"
 date="2023-01-26"
 published_where="Proceedings of the 40th International Conference on Machine Learning (ICML 2023)"
-published_date="26 January 2023"
+published_date="2023"
 authors = "Louis Béthune, Paul Novello, Thibaut Boissin, Guillaume Coiffier, Mathieu Serrurier, Quentin Vincenot, Andres Troya-Galvis"
 
 thumbnail = "/img/occsdf_thumbnail.jpg"
