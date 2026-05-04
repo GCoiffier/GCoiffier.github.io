@@ -279,7 +279,7 @@ stroke-linejoin="round" class="feather feather-home">
     <div class="paper-content">
         <h2 id="signed-distance-function">Signed Distance Function</h2>
 <p>This work aims at computing good quality implicit representation of implicit objects. Instead of relying on discrete structures like point clouds, voxel grid or meshes to represent a geometrical object, those representations define surface and curves as the level set (usually the zero level set) of some function. Among the infinity of continuous functions that can implicitly represent a given an object $\Omega \subset \mathbb{R}^n$, the one that best preserves the properties of $\Omega$ far from its zero level set is the <em>Signed Distance Function</em> (SDF) of $\Omega$, which is defined as:</p>
-$$ S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$
+$$S_\Omega(x) = \left[\mathbb{1}_{\mathbb{R}^n \backslash \Omega}(x) - \mathbb{1}_{\Omega}(x) \right] \min_{p \in \partial \Omega} ||x - p||$$
 <p>where $\partial \Omega$ is the boundary of $\Omega$.</p>
 
     <img class="figure" 
