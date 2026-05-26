@@ -12,7 +12,7 @@ abstract = "Generative Adversarial Networks (GAN) are becoming an alternative to
 
 web = "https://www.frontiersin.org/journals/water/articles/10.3389/frwa.2020.560598/full"
 doi = "https://dx.doi.org/10.3389/frwa.2020.560598"
-pdf = ""
+pdf = "https://inria.hal.science/hal-02992194"
 code = "https://github.com/randlab/diaGAN"
 supplemental = "https://github.com/randlab/DiAGAN_Examples/tree/master"
 +++
