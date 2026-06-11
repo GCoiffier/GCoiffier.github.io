@@ -6,7 +6,7 @@
     <description>Recent content on Guillaume Coiffier - Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://GCoiffier.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://GCoiffier.github.io/cv/info/</link>
@@ -110,6 +110,17 @@ In 2022, I participated in the international French-speaking contest of popular 
       
       <description>Best paper award for 1-Lipschitz Neural Distance Fields, Symposium on Geometry Processing, 2024
 2nd best paper for Ajustement de surfaces paramétriques sur nuages de points (Video), JFIG 2021</description>
+      
+    </item>
+    
+    <item>
+      <title>Compactly supported detail field for high quality neural implicit surfaces</title>
+      <link>https://GCoiffier.github.io/publications/neural_detail_field/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://GCoiffier.github.io/publications/neural_detail_field/</guid>
+      
+      <description></description>
       
     </item>
     

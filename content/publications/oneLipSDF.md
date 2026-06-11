@@ -75,7 +75,7 @@ $$|f_\theta(a) - f_\theta(b)| \leqslant ||b-a|| \quad \forall a,b \in \mathbb{R}
 
 ## Our method
 
-Our method aims at building a neural distance field that is garanteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied _by construction_. On top of this architecture, we minimize a loss that does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:
+Our method aims at building a neural distance field that is guaranteed to preserve geometrical properties far from the zero level set. In particular, we use a $1$-Lipschitz neural network so that the Lipschitz constraint will be satisfied _by construction_. On top of this architecture, we minimize a loss that does not need to know the ground truth distance, thus transforming the usual regression problem in a classification problem. Our method is summarized by this diagram:
 
 {{< figure src="/img/1lipSDF/botijo_pipeline.jpeg" 
 alt="Overview of our method"  
