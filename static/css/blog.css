@@ -18,6 +18,12 @@
     margin-bottom: 50px;
 }
 
+@media (max-width: 900px) {
+  .blog-container {
+    width: 90%;
+  }
+}
+
 .blog-container:hover {
     background-color: #46494c;
     text-decoration: none;

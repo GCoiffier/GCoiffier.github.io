@@ -103,6 +103,7 @@ html.dark .home-section em {
 
 .home-about {
     max-width: 1200px;
+    width: 90%;
     padding-right: 5%;
     padding-left: 5%;
     text-align: justify;
