@@ -138,7 +138,7 @@ style="width:100%; max-width:800px;"
 
 ## BibTeX
 ```bibtex
-@inproceedings{coiffier20241,
+@inproceedings{coiffier2024,
   title={1-Lipschitz Neural Distance Fields},
   author={Coiffier, Guillaume and B{\'e}thune, Louis},
   booktitle={COMPUTER GRAPHICS forum},
