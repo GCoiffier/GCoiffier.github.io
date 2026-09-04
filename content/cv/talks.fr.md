@@ -5,16 +5,15 @@ weight=5
 
 #### Conférences internationales 
 
-- _The Method of Moving Frames for Surface Global Parametrization_  
-&emsp; **SIGGRAPH 2024**
+- _Compactly supported detail field for high quality neural implicit surfaces_, **Symposium on Geometry Processing 2026** [[Video]](https://youtu.be/6TjE79BCZpY)
 
-- _1-Lipschitz Neural Distance Fields_  &emsp;  [[Video]](https://youtu.be/3e5lt7UXjeY)  
-&emsp; **Symposium on Geometry Processing 2024**   
+- _The Method of Moving Frames for Surface Global Parametrization_,  **SIGGRAPH 2024**
+
+- _1-Lipschitz Neural Distance Fields_, **Symposium on Geometry Processing 2024** [[Video]](https://youtu.be/3e5lt7UXjeY)  
 &emsp; :trophy: *Best Paper Award*
 
 
-- _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_   &emsp; [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)  
-&emsp; **Petroleum Geostatistics 2019** 
+- _3D Geological Image Synthesis from 2D Examples Using Generative Adversarial Networks_, **Petroleum Geostatistics 2019**  [[Abstract]](https://www.earthdoc.org/content/papers/10.3997/2214-4609.201902198)  
 
 
 #### Conférences nationales
@@ -40,7 +39,8 @@ weight=5
 
 
 #### Exposés et Séminaires
-- _Améliorer les représentations géométriques à budget constant_, exposé à l’Inria Grenoble, 27 novembre 2024
+- _Neural distance fields for implicit representations of geometrical objects_, Journées Sciences et Prospective 2026 du centre Inria de l'Université Grenoble Alpes, 3 Septembre 2026
+- _Améliorer les représentations géométriques à budget constant_, exposé à au centre Inria de l'Université Grenoble Alpes, 27 novembre 2024
 - _Améliorer les représentations géométriques à budget constant_, exposé au LIRIS, Lyon, 8 novembre 2024
 - _Parametrization algorithms for quad-remeshing_, exposé au XLIM, Limoges, 28 février 2024
 - _Parametrization algorithms for quad-remeshing_, exposé au LIS, Marseille, 16 février 2024
